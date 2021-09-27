@@ -1,4 +1,65 @@
 * 
 {
     font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Seach part */
+.search_part{
+    width: 100%;
+    height: 430px;
+    /* border: 1px solid black; */
+    background-image: url("https://a.travel-assets.com/travel-assets-manager/55ba0ade-3f4b-4018-908c-dacdd8933227/SEA_Mar_May_storefront_1680x485.jpg?impolicy=fcrop&w=1680&h=485&q=medium");
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+}
+
+.search{
+    width: 75%;
+    height: 300px;
+    margin: auto;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+}
+
+.search_top{
+    width: 100%;
+    height: 30%;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 10px;
+}
+
+.s_t{
+    width: 95%;
+    height: 100%;
+    /* border: 1px solid black; */
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.s_t > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+    height: 65%;
+}
+
+/* common properties */
+
+.font_color_1{
+    color: #343b53;
+}
+
+.font_family{
+    font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
 }
