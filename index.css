@@ -1,4 +1,16 @@
 * 
 {
     font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Seach part */
+.search_part{
+    width: 100%;
+    height: 400px;
+    /* border: 1px solid black; */
+    background-image: url("https://a.travel-assets.com/travel-assets-manager/55ba0ade-3f4b-4018-908c-dacdd8933227/SEA_Mar_May_storefront_1680x485.jpg?impolicy=fcrop&w=1680&h=485&q=medium");
+    background-size: cover;
+    background-position: center;
 }
