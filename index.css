@@ -1,4 +1,4 @@
-* 
+*
 {    
     font-family: 'Open Sans', sans-serif;  
     margin:0;
@@ -48,8 +48,24 @@
     flex-direction: column;
     align-items: center;
     width: 20%;
-    justify-content: space-between;
-    height: 65%;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.s_t > div:hover{
+    cursor: pointer;
+}
+
+.search_bottom{
+    background-color: white;
+    width: 100%;
+    max-height: 200px;
+}
+
+.s_b{
+    border-top: 1px solid rgb(184, 184, 184);
+    width: 95%;
+    margin: auto;
 }
 
 /* common properties */
@@ -77,6 +93,7 @@
    font-weight: 600;
    text-align: right;
    color: rgb(49, 48, 48);
+   border-bottom: 1px solid rgb(201, 201, 201);
 }
 
 @media screen and (max-width:1100px){
