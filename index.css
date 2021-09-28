@@ -56,6 +56,18 @@
     cursor: pointer;
 }
 
+.search_bottom{
+    background-color: white;
+    width: 100%;
+    max-height: 200px;
+}
+
+.s_b{
+    border-top: 1px solid rgb(184, 184, 184);
+    width: 95%;
+    margin: auto;
+}
+
 /* common properties */
 
 .font_color_1{
