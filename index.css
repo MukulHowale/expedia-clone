@@ -321,7 +321,7 @@ color: rgb(39, 38, 38);
     margin-top: 10px;
 }
 .second_part > div:nth-child(1){
-    width: 30%;
+    width: 35%;
 }
 .second_part > div:nth-child(1) >img{
     width: 100%;
