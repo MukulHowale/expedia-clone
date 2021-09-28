@@ -71,61 +71,15 @@
     margin: auto;
 }
 
-/* components */
+/* flight components */
 
-.s_b > div:nth-child(1){
+#flightTravelDiv{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 2%;
     height: 50px;
-}
-
-.s_b > div:nth-child(1) > button{
-    border-radius: 5px;
-    background-color: white;
     border: 1px solid black;
-    text-align: left;
-    padding: 1%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
 }
 
-.s_b > div:nth-child(1) > button:nth-child(1){
-    width: 45.5%;
-}
 
-.s_b > div:nth-child(1) > button:nth-child(1) > div{
-    display: flex;
-    flex-direction: column;
-}
-
-.s_b > div:nth-child(1) > button:nth-child(2), button:nth-child(3){
-    width: 17%;
-}
-
-.s_b > div:nth-child(1) > button:nth-child(4){
-    width: 30%;
-}
-
-.s_b > div:nth-child(2){
-    width: 100%;
-    margin-top: 20px;
-    height: 50px;
-}
-
-.s_b > div:nth-child(2) > button{
-    height: 100%;
-    width: 15%;
-    margin-left: 41%;
-    border-radius: 5px;
-    background-color: #3662d8;
-    border: none;
-    padding: 1%;
-    color: white;
-    cursor: pointer;
-}
 
 
 /* common properties */
@@ -142,12 +96,20 @@
     font-weight: 400;
 }
 
+.font_weight_3{
+    font-weight: 600;
+}
+
 .font_size_1{
     font-size: 14px;
 }
 
 .font_size_2{
     font-size: 16px;
+}
+
+.font_size_3{
+    font-size: 12px;
 }
 
 .font_family{

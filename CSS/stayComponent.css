@@ -1,0 +1,54 @@
+#stayBtnDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    height: 50px;
+}
+
+#stayBtnDiv > button{
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #343b53;
+    text-align: left;
+    padding: 1%;
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    cursor: pointer;
+}
+
+#stayBtnDiv > button:nth-child(1){
+    width: 45.5%;
+}
+
+#stayBtnDiv > button:nth-child(1) > div{
+    display: flex;
+    flex-direction: column;
+}
+
+#stayBtnDiv > button:nth-child(2), button:nth-child(3){
+    width: 17%;
+}
+
+#stayBtnDiv > button:nth-child(4){
+    width: 30%;
+}
+
+#searchBtnDiv{
+    width: 100%;
+    margin-top: 20px;
+    height: 50px;
+}
+
+#searchBtnDiv > button{
+    height: 100%;
+    width: 15%;
+    margin-left: 41%;
+    border-radius: 10px;
+    background-color: #3662d8;
+    border: none;
+    padding: 1%;
+    color: white;
+    cursor: pointer;
+}

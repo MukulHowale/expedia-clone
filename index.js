@@ -1,7 +1,9 @@
 
 let s = document.getElementsByClassName("s_t");
 
-let clickStay = () =>{
+let sb = document.getElementsByClassName('s_b');
+
+let clickStay = (stayComp) =>{
     let staySpan = s[0].children[0];
     staySpan.lastElementChild.style.color = "#3662d8";
     staySpan.style.borderBottom = "2px solid #3662d8";
@@ -10,6 +12,9 @@ let clickStay = () =>{
         temp.lastElementChild.style.color = "#343b53";
         temp.style.borderBottom = "none";
     }
+    sb[0].innerHTML = "";
+    sb[0].innerHTML = stayComp();
+    console.log(stayComp);
 }
 
 let clickFlights = () =>{
@@ -64,3 +69,6 @@ let clickThings = () =>{
         temp.style.borderBottom = "none";
     }
 }
+
+
+export default clickStay;

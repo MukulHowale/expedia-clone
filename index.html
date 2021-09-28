@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expedia Travel: Vacations, Cheap Flights, Airline Tickets & Airfares</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en"/>
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href=".\css\stayComponent.css">
 </head>
 <body>
     <div class="navbar">
@@ -33,7 +34,7 @@
         <div class="search">
             <div class="search_top">
                 <div class="s_t">
-                    <div id="stays" onclick="clickStay()">
+                    <div id="stays">
                         <span class="iconify font_color_1" data-icon="fa-solid:hotel" data-width="24" data-height="32"></span>
                         <span class="font_color_1 font_family font_weight_1 font_size_1">Stays</span>
                     </div>
@@ -57,51 +58,19 @@
             </div>
             <div class="search_bottom">
                 <div class="s_b">
-                    <div>
-                        <button class="font_family font_size_2 font_weight_2 font_color_1">
-                            <span class="iconify" data-icon="carbon:location-filled" data-width="22" data-height="22"></span>
-                            <div>
-                                <span id="goingTo">
-                                    Going to
-                                </span>
-                                <div id="place">
-                                    
-                                </div>
-                            </div>
-                        </button>
-                        <button class="font_family font_size_2 font_weight_2">
-                            <span class="iconify" data-icon="ic:baseline-date-range" data-width="22" data-height="22"></span>
-                            Check-in
-                            <div>
+                    <div id="flightTravelDiv">
 
-                            </div>
-                        </button>
-                        <button class="font_family font_size_2 font_weight_2">
-                            <span class="iconify" data-icon="ic:baseline-date-range" data-width="22" data-height="22"></span>
-                            Check-out
-                            <div>
-
-                            </div>
-                        </button>
-                        <button class="font_family font_size_2 font_weight_2">
-                            <span class="iconify" data-icon="bi:person-fill" data-width="22" data-height="22"></span>
-                            Travellers
-                            <div>
-
-                            </div>
-                        </button>
                     </div>
-                    <div>
-                        <button class="font_family font_size_2 font_weight_2">Search</button>
+                    <div id="flightBtnDiv">
+
+                    </div>
+                    <div id="searchBtnDiv">
+                        <button class="font_family font_size_2 font_weight_3">Search</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
 
 
     <div class="mid_part">
@@ -211,10 +180,6 @@
     </div>
 
 
-
-
-
-
     <div class="footer">
         <div><img src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg" alt="Expedia Group"></div>
       <div>
@@ -258,3 +223,19 @@
 </body>
 </html>
 <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+<script type="module">
+    import stayComponent from "./components/stayComponent.js";
+
+    import clickStay from "./index.js";
+
+    let stays = document.getElementById("stays");
+
+    stays.addEventListener("click", () =>{
+        clickStay(stayComponent);
+    })
+
+    window.onload = () =>{
+        // clickStay(stayComponent);
+    }
+
+</script>
