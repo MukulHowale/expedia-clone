@@ -321,3 +321,68 @@ color: rgb(39, 38, 38);
     height: 15px;
     padding-right: 10px;
 }
+
+/*Mid part */
+.mid_part{
+    width: 80%;
+    margin:100px auto 0px;
+}
+
+.back_image{
+    background: url('https://a.travel-assets.com/travel-assets-manager/gmvd-1482-bookearly-emea/667x320.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    opacity: 2;
+    background-position: center;
+}
+.back_image p{
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    margin: 10px;
+}
+.back_image p:nth-child(1){
+    display: inline-block;
+    margin-top: 200px;
+    margin-bottom: 0px;
+}
+.back_image p:nth-child(2){
+    color: #343b53;
+}
+.second_part{
+    display: flex;
+    border: 0.5px solid #c9cac9;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.second_part > div:nth-child(1){
+    width: 30%;
+}
+.second_part > div:nth-child(1) >img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 250px;
+    margin-bottom: -5px;
+}
+.second_part > div:nth-child(2){
+    display: flex;
+    width: 70%;
+}
+.qr_code{
+    width: 35%;
+}
+.qr_code > img{
+    width: 90%;
+    margin: 20px 20px 0px 5px;
+}
+.qr_code > p{
+    font-size: 13px;
+    font-weight: 700;
+    padding-left: 30px;
+    margin-top: -5px;
+}
+
