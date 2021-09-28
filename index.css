@@ -1,6 +1,8 @@
 * 
 {
     font-family: 'Open Sans', sans-serif;  
+    margin:0;
+    padding: 0;
 }
 
 /* Seach part */
@@ -152,6 +154,11 @@ margin-bottom: 2%;
 color: rgb(58, 57, 57);
 margin-top: 0;
 }
+.footer p
+{
+ margin-top: 6%;
+}
+
 .footer p:hover
 {
   text-decoration: underline;
@@ -160,8 +167,8 @@ margin-top: 0;
 .footer_Copyright
 {
 text-align: center;
-font-size: 13px;
-width: 80%;
+font-size: 11px;
+width: 90%;
 margin:auto;
 margin-bottom: 2%;
 margin-top: 2%;
