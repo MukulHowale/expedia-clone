@@ -1,7 +1,13 @@
 * 
 {
+<<<<<<< HEAD
     font-family: 'Open Sans', sans-serif;
     
+=======
+    font-family: 'Open Sans', sans-serif;  
+    margin:0;
+    padding: 0;
+>>>>>>> 4fbd7a388a490e3deb70894d6392340b772b1b28
 }
 
 /* Seach part */
@@ -153,6 +159,11 @@ margin-bottom: 2%;
 color: rgb(58, 57, 57);
 margin-top: 0;
 }
+.footer p
+{
+ margin-top: 6%;
+}
+
 .footer p:hover
 {
   text-decoration: underline;
@@ -161,8 +172,8 @@ margin-top: 0;
 .footer_Copyright
 {
 text-align: center;
-font-size: 13px;
-width: 80%;
+font-size: 11px;
+width: 90%;
 margin:auto;
 margin-bottom: 2%;
 margin-top: 2%;
