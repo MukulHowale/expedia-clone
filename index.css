@@ -203,6 +203,9 @@ color: rgb(39, 38, 38);
   position:absolute;
   border-radius: 7px;
   width: 20%;
+  margin-left: 2%;
+  margin-top: 1%;
+  font-size: 17px;
   box-shadow: 5px 10px 18px #272727;
   display: none;
 }
@@ -216,9 +219,9 @@ color: rgb(39, 38, 38);
 }
 .category ul
 {
-  margin-top: 5%;
+  margin-top: 4%;
   text-align: left;
-  padding-left: 8%;
+  padding-left: 10%;
  
 }
 .category ul:hover
@@ -232,6 +235,12 @@ color: rgb(39, 38, 38);
 }
 
 .category img
+{
+    height: 15px;
+    padding-right: 10px;
+}
+
+.category  .font_color_1
 {
     height: 15px;
     padding-right: 10px;
