@@ -46,22 +46,22 @@ let flightComponent = () =>{
     <div class="font_family font_size_2 font_weight_2">
         <span class="iconify font_color_1" data-icon="ic:baseline-date-range" data-width="22" data-height="22"></span>
         <div>
-            <span class="font_color_1">
+            <span class="font_color_1 font_size_3">
                 Departing
             </span>
             <div id="depart" class="font_color_1">
-
+                <input class="d" type="date">
             </div>
         </div>
     </div>
     <div class="font_family font_size_2 font_weight_2">
         <span class="iconify font_color_1" data-icon="ic:baseline-date-range" data-width="22" data-height="22"></span>
         <div>
-            <span class="font_color_1">
+            <span class="font_color_1 font_size_3">
                 Returning
             </span>
             <div id="return" class="font_color_1">
-
+                <input class="d" type="date">
             </div>
         </div>
     </div>
