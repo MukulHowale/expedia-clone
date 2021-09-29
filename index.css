@@ -59,7 +59,7 @@
 .search_bottom{
     background-color: white;
     width: 100%;
-    max-height: 200px;
+    max-height: 300px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -73,12 +73,6 @@
 
 /* flight components */
 
-#flightTravelDiv{
-    width: 100%;
-    height: 50px;
-    border: 1px solid black;
-}
-
 
 
 
@@ -86,6 +80,18 @@
 
 .font_color_1{
     color: #343b53;
+}
+
+.font_color_2{
+    color:#3662d8;
+}
+
+.background_color_1{
+    background-color: #E7EDFD;
+}
+
+.background_color_2{
+    background-color: white;
 }
 
 .font_weight_1{
