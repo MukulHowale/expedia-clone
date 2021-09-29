@@ -138,13 +138,31 @@
         </div>  
     </div>
 
+
+<div class="footer">
+</div>
+<hr>
+
+<div class="footerCopyright">
+</div>
+
+
 </body>
 </html>
 
 <script type="module">
      import navbar from "/components/navbarImport.js";
-     let divNavbar = document.getElementsByClassName("navbar");
+     let divNavbar = document.querySelector(".navbar");
      divNavbar.innerHTML=navbar();
+
+     import footer from "/components/footerImport.js";
+     let divFooter = document.querySelector(".footer");
+     divFooter.innerHTML=footer();
+
+     import footerCopyright from "/components/footerCopyright.js";
+     let divfooterCopyright = document.querySelector(".footerCopyright");
+     divfooterCopyright.innerHTML=footerCopyright();
+   
    
    
 /*
