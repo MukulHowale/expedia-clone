@@ -1,0 +1,169 @@
+*
+{
+    font-family: 'Open Sans', sans-serif;  
+    margin: 0;
+    padding: 0;
+}
+/*---------------------------------left part-----------------*/
+.chooseFlight div
+{
+  padding: 2%;
+}
+.selection
+{
+    display: flex;
+    width: 70%;
+    margin-left: 5%;
+}
+.select_Way
+{
+    font-size: 16px;
+}
+
+.selection div
+{
+    margin-left: 4%;
+}
+
+.select_Way
+{
+  border: none;
+  color: #3662D8;
+}
+
+.select_Way pti5ons:hover 
+{
+  cursor: pointer;
+  background-color: #c1c7db;
+  text-decoration: underline;
+}
+
+
+.chooseFlight
+{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    height: 630px;
+    background-color: #F8F5F4;
+}
+ 
+.chooseFlight
+{
+   padding: 2% 5% 2% 5%;
+}
+
+
+.filter p , h1
+{
+ margin-top: 5px;
+margin-bottom: 5px;
+}
+
+.filter h1
+{
+    font-size: 20px;
+}
+.stops 
+{
+    font-size: 15px;
+}
+
+
+.stops >:first-child {
+    font-weight: 700;
+}
+
+.stops>:nth-child(2)
+{
+    font-weight: 700;
+}
+
+@media screen {
+.stops
+{
+    display: grid;
+    grid-template:'a b' 
+                   'c d' 
+                   'e f'; 
+}      
+}
+
+.time
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.time p
+{
+    text-align: center;
+    padding-top: 7%;
+}
+.time div
+{
+    margin: 9% 9% 9% 0;
+    border-radius: 7px;
+    background-color: white;
+    border: 1px solid rgb(155, 154, 154);
+}
+
+.time div:hover
+{
+    background-color: #E7EDFD;
+    cursor: pointer;
+}
+/*----------------------------------right part---------------------------------*/
+.rightPart
+{
+    text-align: center;
+}
+
+/*----------------------------------middle part---------------------------------*/
+
+.middlePart h1
+{
+  font-size: 17px;
+}
+.dayWisePrices
+{ 
+  display: grid;
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+}
+.dayWisePrices div
+{
+  border: 1px solid gray;
+  height: 40px;
+  background-color: white;
+  border-radius: 4px;
+  margin: 4%;
+}
+.sortByPrice p{
+    font-size: 13px;
+}
+.sortByPrice
+{
+    display: flex;
+}
+#selectPrice
+{
+    font-size:large;
+}
+
+.dayWisePrices div:hover
+{
+    background-color: #E7EDFD;
+    cursor: pointer;
+}
+
+
+.display div
+{
+  background-color: white;
+  margin: 3%;
+  border-radius: 4px;
+  height: 60px;
+}
+.display div:hover
+{
+    background-color: #E7EDFD;
+    cursor: pointer;
+}

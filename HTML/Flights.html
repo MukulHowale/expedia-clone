@@ -6,19 +6,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheap Flights, Airfares and Air Tickets | Expedia</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en"/>
-    <link rel="stylesheet" href="/CSS/temporaryFile.css">
+    <link rel="stylesheet" href="/CSS/Flights.css">
+ <style>
+
+ </style>
 </head>
 <body>
-    
+    <div class="navbar">
+
+    </div>
+
+
+    <div class="selection">
+        <div>
+            <select name="One way"  class="select_Way">
+             <option value="oneWay">One way</option>
+             <option value="return">Return</option>
+             <option value="multiCity">Multi-city</option>
+            </select>
+       </div>
+        <div>
+            <select name="One way"  class="select_Way">
+                <option value="oneWay">1 traveller</option>
+               </select>
+        </div>
+        <div>
+            <select name="One way"  class="select_Way">
+                <option value="oneWay">Economy</option>
+               </select>
+        </div>
+        <div>
+            <select  class="select_Way">
+                <option value="Economy">Air airline</option>
+               </select>
+        </div>
+        <div>
+            <select  class="select_Way">
+                <option value="oneWay"> More options</option>
+               </select>
+        </div>
+    </div>
+   
+    <div class="chooseFlight">
+        
+        <div class="filter">
+            <h1>Filter by</h1>  
+            <div class="stops">
+              <div style="grid-area: 'a';"><p>Stops</p></div>
+              <div style="grid-area: 'b';"><p>From</p></div>
+              <div style="grid-area: 'c';"> <input type="checkbox">__Direct</div>
+              <div style="grid-area: 'd';"><p>Rs4,593</p></div>
+              <div style="grid-area: 'e';"><input type="checkbox">__1 stop</div>
+              <div style="grid-area: 'f';"><p>Rs4,593</p></div>
+            </div>
+
+            <div class="stops">
+              <div style="grid-area: 'a';"><p>Airlines</p></div>
+              <div style="grid-area: 'b';"><p>From</p></div>
+              <div style="grid-area: 'c';"> <input type="checkbox">__Indigo</div>
+              <div style="grid-area: 'd';"><p>Rs4,593</p></div>
+              <div style="grid-area: 'e';"><input type="checkbox">__Vistara</div>
+              <div style="grid-area: 'f';"><p>Rs8,593</p></div>
+            </div>
+            <h1>Departure time </h1>  
+            <div class="time">
+                <div>
+                    <img src="/Images/sunrise.svg" >
+                    <p>Morning</p>
+                    <p>(05.00-11.59)</p>
+                </div>
+                <div>
+                    <img src="/Images/noon.svg" >
+                    <p>Afternoon</p>
+                    <p>(12.00-17.59)</p>
+                </div>
+                <div>
+                    <img src="/Images/evening.png" >
+                    <p>Evening</p>
+                    <p>(17.00-23.59)</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="middlePart">
+         
+         <h1>Choose departing flight</h1>
+         <div class="dayWisePrices">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+         </div>
+          <hr>
+          <div class="sortByPrice">
+            <div>
+             <p>Prices displayed include taxes and may 
+              change based on availability. You can review any additional 
+              fees before checkout. Prices are not final until you 
+              complete your purchase.</p>
+            </div>
+            <div>
+                <select name="select Price" id="selectPrice">
+                  <option value="Lowest">Price(Lowest)</option>
+                  <option value="Highest">Price(Highest)</option>
+                </select>
+            </div>
+            </div>
+
+            <div class="display">
+              <div>
+
+              </div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          
+        </div>
+
+
+
+
+
+        <div class="rightPart">
+            <img src="https://tpc.googlesyndication.com/simgad/17447823249981941085?" alt="">
+        </div>  
+    </div>
+
 </body>
 </html>
 
 <script type="module">
      import navbar from "/components/navbarImport.js";
-    let divNavbar = document.createElement("div")
-    divNavbar.innerHTML=navbar();
-    document.body.append(divNavbar);
-
+     let divNavbar = document.getElementsByClassName("navbar");
+     divNavbar.innerHTML=navbar();
+   
+   
+/*
     import midPart from "/components/midPartImport.js";
     let divmidPart = document.createElement("div")
     divmidPart.innerHTML=midPart();
@@ -29,4 +158,5 @@
     let divFooter = document.createElement("div")
     divFooter.innerHTML=footer();
     document.body.append(divFooter);
+    */
 </script>
