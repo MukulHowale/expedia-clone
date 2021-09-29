@@ -20,6 +20,13 @@
     divNavbar.innerHTML=navbar();
     document.body.append(divNavbar);
 
+
+    import midPart from "/components/midPartImport.js";
+    let divmidPart = document.createElement("div")
+    divmidPart.innerHTML=midPart();
+    document.body.append(divmidPart);
+
+
     import footer from "/components/footerImport.js";
     let divFooter = document.createElement("div")
     divFooter.innerHTML=footer();
