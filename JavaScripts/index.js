@@ -14,10 +14,9 @@ let clickStay = (stayComp) =>{
     }
     sb[0].innerHTML = "";
     sb[0].innerHTML = stayComp();
-    console.log(stayComp);
 }
 
-let clickFlights = () =>{
+let clickFlights = (flightComp) =>{
     let flightSpan = s[0].children[1];
     flightSpan.lastElementChild.style.color = "#3662d8";
     flightSpan.style.borderBottom = "2px solid #3662d8";
@@ -29,6 +28,8 @@ let clickFlights = () =>{
         temp.lastElementChild.style.color = "#343b53";
         temp.style.borderBottom = "none";
     }
+    sb[0].innerHTML = "";
+    sb[0].innerHTML = flightComp();
 }
 
 let clickCars = () =>{
@@ -71,4 +72,4 @@ let clickThings = () =>{
 }
 
 
-export default clickStay;
+export {clickStay, clickFlights};

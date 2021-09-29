@@ -6,7 +6,7 @@
     height: 50px;
 }
 
-#stayBtnDiv > button{
+#stayBtnDiv > div{
     border-radius: 10px;
     background-color: white;
     border: 1px solid #343b53;
@@ -18,20 +18,24 @@
     cursor: pointer;
 }
 
-#stayBtnDiv > button:nth-child(1){
+#stayBtnDiv > div:nth-child(1){
     width: 45.5%;
 }
 
-#stayBtnDiv > button:nth-child(1) > div{
+#stayBtnDiv > div:nth-child(1) > div{
     display: flex;
     flex-direction: column;
 }
 
-#stayBtnDiv > button:nth-child(2), button:nth-child(3){
+#stayBtnDiv > div:nth-child(2){
     width: 17%;
 }
 
-#stayBtnDiv > button:nth-child(4){
+#stayBtnDiv > div:nth-child(3){
+    width: 17%;
+}
+
+#stayBtnDiv > div:nth-child(4){
     width: 30%;
 }
 
