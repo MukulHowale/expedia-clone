@@ -2,9 +2,9 @@ let flightComponent = () =>{
     return `
     <div id="flightTravelDiv">
     <div>
-        <button class="font_color_2 font_weight_3 font_size_1 background_color_1" onclick="re()">Return</button>
-        <button class="font_color_1 font_weight_3 font_size_1 background_color_2" onclick="oneWay()">One-way</button>
-        <button class="font_color_1 font_weight_3 font_size_1 background_color_2" onclick="multi()">Multi-city</button>
+        <button id="re" class="font_color_2 font_weight_3 font_size_1 background_color_1">Return</button>
+        <button id="oneWay" class="font_color_1 font_weight_3 font_size_1 background_color_2">One-way</button>
+        <button id="multi" class="font_color_1 font_weight_3 font_size_1 background_color_2">Multi-city</button>
     </div>
     <div>
         <p id="travel" class="font_color_2 font_size_1">
@@ -30,6 +30,9 @@ let flightComponent = () =>{
         </div>
     </div>
     <div class="font_family font_size_2 font_weight_2">
+        <div>
+        <span class="iconify" data-icon="line-md:arrows-horizontal" data-flip="vertical"></span>
+        </div>
         <span class="iconify font_color_1" data-icon="carbon:location-filled" data-width="22" data-height="22"></span>
         <div>
             <span class="goingTo font_color_1">

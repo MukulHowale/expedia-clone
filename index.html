@@ -57,7 +57,7 @@
             </div>
             <div class="search_bottom">
                 <div class="s_b">
-                   
+
                 </div>
             </div>
         </div>
@@ -213,12 +213,13 @@
 </div>
 </body>
 </html>
-<script src=".\JavaScripts\flightTravel.js"></script>
 <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
 <script type="module">
     import stayComponent from "./components/stayComponent.js";
 
     import flightComponent from "./components/flightComponent.js"
+
+    import {re, oneWay, multi} from "./JavaScripts/flightTravel.js";
 
     import {clickStay, clickFlights} from "./JavaScripts/index.js";
 
@@ -226,16 +227,34 @@
 
     stays.addEventListener("click", () =>{
         clickStay(stayComponent);
-    })
+    });
 
     let fly = document.getElementById("flights");
 
     fly.addEventListener("click", () =>{
         clickFlights(flightComponent);
-    })
+
+        let re1 = document.getElementById("re");
+
+        let oneWay1 = document.getElementById("oneWay");
+
+        let multi1 = document.getElementById("multi");
+
+        re1.addEventListener("click", ()=>{
+            re();
+        })
+
+        oneWay1.addEventListener("click", () =>{
+            oneWay();
+        })
+
+        multi1.addEventListener("click", ()=>{
+            multi();
+
+        })
+    });
 
     window.onload = () =>{
         clickStay(stayComponent);
     }
-
 </script>
