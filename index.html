@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href=".\CSS\stayComponent.css">
     <link rel="stylesheet" href=".\CSS\flightComponent.css">
+    <link rel="stylesheet" href=".\CSS\carsComponent.css">
+    <link rel="stylesheet" href=".\CSS\packageComponent.css">
+    <link rel="stylesheet" href=".\CSS\thingsComponent.css">
     <link type="image/x-icon" href="https://www.expedia.co.in/favicon.ico" sizes="16x16 32x32" rel="icon" />
 </head>
 <body>
@@ -41,15 +44,15 @@
                         <span class="iconify font_color_1" data-icon="mdi:airplane" data-width="32" data-height="32"></span>
                         <span class="font_color_1 font_family font_weight_1 font_size_1">Flights</span>
                     </div>
-                    <div id="cars" onclick="clickCars()">
+                    <div id="cars">
                         <span class="iconify font_color_1" data-icon="bx:bxs-car" data-width="32" data-height="32"></span>
                         <span class="font_color_1 font_family font_weight_1 font_size_1">Cars</span>
                     </div>
-                    <div id="packages" onclick="clickPack()">
+                    <div id="packages">
                         <span class="iconify font_color_1" data-icon="ic:baseline-luggage" data-width="32" data-height="32"></span>
                         <span class="font_color_1 font_family font_weight_1 font_size_1">Packages</span>
                     </div>
-                    <div id="things" onclick="clickThings()">
+                    <div id="things">
                         <span class="iconify font_color_1" data-icon="jam:inbox-f" data-width="32" data-height="32"></span>
                         <span class="font_color_1 font_family font_weight_1 font_size_1">Things to do</span>
                     </div>
@@ -57,7 +60,7 @@
             </div>
             <div class="search_bottom">
                 <div class="s_b">
-
+                    
                 </div>
             </div>
         </div>
@@ -217,11 +220,17 @@
 <script type="module">
     import stayComponent from "./components/stayComponent.js";
 
-    import flightComponent from "./components/flightComponent.js"
+    import flightComponent from "./components/flightComponent.js";
+
+    import carsComponent from "./components/carsComponent.js";
+
+    import packageComponent from "./components/packageComponent.js";
+
+    import thingsComponent from "./components/thingsComponent.js"
 
     import {re, oneWay, multi} from "./JavaScripts/flightTravel.js";
 
-    import {clickStay, clickFlights} from "./JavaScripts/index.js";
+    import {clickStay, clickFlights, clickCars, clickPack, clickThings} from "./JavaScripts/index.js";
 
     let stays = document.getElementById("stays");
 
@@ -253,6 +262,24 @@
 
         })
     });
+
+    let car = document.getElementById("cars");
+
+    car.addEventListener("click", () =>{
+        clickCars(carsComponent);
+    })
+
+    let pack = document.getElementById("packages");
+
+    pack.addEventListener("click", () =>{
+        clickPack(packageComponent);
+    })
+
+    let thing = document.getElementById("things");
+
+    thing.addEventListener("click", () =>{
+        clickThings(thingsComponent);
+    })
 
     window.onload = () =>{
         clickStay(stayComponent);

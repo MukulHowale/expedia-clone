@@ -1,23 +1,18 @@
-let flightComponent = () =>{
+let packageComponent = () =>{
     return `
-    <div id="flightTravelDiv">
-    <div>
-        <button id="re" class="font_color_2 font_weight_3 font_size_1 background_color_1">Return</button>
-        <button id="oneWay" class="font_color_1 font_weight_3 font_size_1 background_color_2">One-way</button>
-        <button id="multi" class="font_color_1 font_weight_3 font_size_1 background_color_2">Multi-city</button>
-    </div>
+    <div id="packTravelDiv">
     <div>
         <p id="travel" class="font_color_2 font_size_1">
-            1 traveller
+            1 room
             <span class="iconify" data-icon="dashicons:arrow-down-alt2" style="color: #3662d8;"></span>
         </p>
         <p id="economy" class="font_color_2 font_size_1">
-            Economy
+           2 travellers
             <span class="iconify" data-icon="dashicons:arrow-down-alt2" style="color: #3662d8;"></span>
         </p>
     </div>
 </div>
-<div id="flightBtnDiv">
+<div id="packBtnDiv">
     <div class="font_family font_size_2 font_weight_2">
         <span class="iconify font_color_1" data-icon="carbon:location-filled" data-width="22" data-height="22"></span>
         <div>
@@ -31,7 +26,7 @@ let flightComponent = () =>{
     </div>
     <div class="font_family font_size_2 font_weight_2">
         <div>
-        <span class="iconify font_color_1" data-icon="line-md:arrows-horizontal" data-flip="vertical"></span>
+            <span class="iconify font_color_1" data-icon="line-md:arrows-horizontal" data-flip="vertical"></span>
         </div>
         <span class="iconify font_color_1" data-icon="carbon:location-filled" data-width="22" data-height="22"></span>
         <div>
@@ -66,10 +61,16 @@ let flightComponent = () =>{
         </div>
     </div>
 </div>
+<div id="need">
+    <span class="font_size_1 font_color_1">
+        <input type="checkbox">
+        I only need accommodation for part of my trip
+    </span>
+</div>
 <div id="searchBtnDiv">
     <button class="font_family font_size_2 font_weight_3">Search</button>
 </div>
     `
 }
 
-export default flightComponent;
+export default packageComponent;
