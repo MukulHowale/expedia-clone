@@ -32,7 +32,7 @@ let clickFlights = (flightComp) =>{
     sb[0].innerHTML = flightComp();
 }
 
-let clickCars = () =>{
+let clickCars = (carsComp) =>{
     let carSpan = s[0].children[2];
     carSpan.lastElementChild.style.color = "#3662d8";
     carSpan.style.borderBottom = "2px solid #3662d8";
@@ -44,9 +44,11 @@ let clickCars = () =>{
         temp.lastElementChild.style.color = "#343b53";
         temp.style.borderBottom = "none";
     }
+    sb[0].innerHTML = "";
+    sb[0].innerHTML = carsComp();
 }
 
-let clickPack = () =>{
+let clickPack = (packageComp) =>{
     let packSpan = s[0].children[3];
     packSpan.lastElementChild.style.color = "#3662d8";
     packSpan.style.borderBottom = "2px solid #3662d8";
@@ -58,9 +60,11 @@ let clickPack = () =>{
         temp.lastElementChild.style.color = "#343b53";
         temp.style.borderBottom = "none";
     }
+    sb[0].innerHTML = "";
+    sb[0].innerHTML = packageComp();
 }
 
-let clickThings = () =>{
+let clickThings = (thingsComp) =>{
     let thingsSpan = s[0].children[4];
     thingsSpan.lastElementChild.style.color = "#3662d8";
     thingsSpan.style.borderBottom = "2px solid #3662d8";
@@ -69,7 +73,9 @@ let clickThings = () =>{
         temp.lastElementChild.style.color = "#343b53";
         temp.style.borderBottom = "none";
     }
+    sb[0].innerHTML = "";
+    sb[0].innerHTML = thingsComp();
 }
 
 
-export {clickStay, clickFlights};
+export {clickStay, clickFlights, clickCars, clickPack, clickThings};
