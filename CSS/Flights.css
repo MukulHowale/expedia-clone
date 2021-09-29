@@ -88,7 +88,13 @@
     height: 30px;
 }
 
- .navbar img, p:hover
+ .navbar img
+{
+    cursor: pointer;
+    color: #3662D8;
+}
+
+.navbar p
 {
     cursor: pointer;
     color: #3662D8;
@@ -142,7 +148,54 @@
 
 
 
-/*---------------------------------left part-----------------*/
+/*---------------------------------top part-----------------*/
+
+.traveller_part
+{
+    width: 20%;
+    border: 1px solid black;
+    font-size: 15px;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1%;
+}
+.traveller_part>:nth-child(5)
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    margin-top: 5%;
+}
+#doneCancel div
+{
+  color: #3662D8;
+}
+#doneCancel div:hover
+{
+  background-color: #E7EDFD;
+  cursor: pointer;
+}
+
+
+.adults
+{
+  display: grid;
+  grid-template-columns: 60% 10% 20% 10%;
+  padding-top: 5%;
+  font-weight: 600;
+}
+.adults button
+{
+    border-radius: 50%;
+    font-size: large;
+}
+.adults p
+{
+  font-size: 12px;
+}
+
+
 .chooseFlight div
 {
   padding: 2%;
@@ -151,30 +204,27 @@
 {
     display: flex;
     width: 70%;
-    margin-left: 5%;
-}
-.select_Way
-{
-    font-size: 16px;
+    margin:2% 0 2% 3%;
 }
 
-.selection div
-{
-    margin-left: 4%;
-}
+
+
 
 .select_Way
 {
   border: none;
   color: #3662D8;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.select_Way pti5ons:hover 
+.select_Way:hover 
 {
   cursor: pointer;
-  background-color: #c1c7db;
+  background-color: #edeff5;
   text-decoration: underline;
 }
+/*---------------------------------left part-----------------*/
 
 
 .chooseFlight

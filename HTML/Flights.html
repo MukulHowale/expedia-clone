@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheap Flights, Airfares and Air Tickets | Expedia</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en"/>
-    <link rel="stylesheet" href="/CSS/Flights.css">
+    <link rel="stylesheet" href="../CSS/Flights.css">
  <style>
 
  </style>
@@ -18,29 +18,60 @@
 
 
     <div class="selection">
-        <div>
+        <div style="    padding-left: 4%; ">
             <select name="One way"  class="select_Way">
              <option value="oneWay">One way</option>
              <option value="return">Return</option>
              <option value="multiCity">Multi-city</option>
             </select>
        </div>
-        <div>
-            <select name="One way"  class="select_Way">
-                <option value="oneWay">1 traveller</option>
-               </select>
+       <div style="    padding-left: 4%;" >
+               <div class="select_Way"> 1 traveller ˅</div>
+            <!------------------------------------------------------------>   
+               <div class="traveller_part">
+                  <p>We allow up to 6 travellers total per booking.</p>
+                <div class="adults">
+                   <div>Adults
+                        <p>18 and older</p>
+                   </div>
+                   <div><button>-</button>   </div>
+                   <div class="passengerCount">1</div>
+                   <div><button>+</button>   </div>
+                </div>
+                <div class="adults">
+                    <div>Children
+                         <p>Age 2 and 17</p>
+                    </div>
+                    <div><button>-</button>   </div>
+                    <div class="passengerCount">0</div>
+                    <div><button>+</button>   </div>
+                 </div>
+                 <div class="adults">
+                    <div>Infants
+                         <p>Younger than 2</p>
+                    </div>
+                    <div><button>-</button>   </div>
+                    <div class="passengerCount">0</div>
+                    <div><button>+</button>   </div>
+                 </div>
+                 <div id="doneCancel">
+                     <div>Cancel</div>
+                     <div>Done</div>
+                 </div>
+               </div>
+
         </div>
-        <div>
+        <div style="    padding-left: 4%; ">
             <select name="One way"  class="select_Way">
                 <option value="oneWay">Economy</option>
                </select>
         </div>
-        <div>
+        <div style="    padding-left: 4%; ">
             <select  class="select_Way">
                 <option value="Economy">Air airline</option>
                </select>
         </div>
-        <div>
+        <div style="    padding-left: 4%; ">
             <select  class="select_Way">
                 <option value="oneWay"> More options</option>
                </select>
@@ -163,18 +194,4 @@
      let divfooterCopyright = document.querySelector(".footerCopyright");
      divfooterCopyright.innerHTML=footerCopyright();
    
-   
-   
-/*
-    import midPart from "/components/midPartImport.js";
-    let divmidPart = document.createElement("div")
-    divmidPart.innerHTML=midPart();
-    document.body.append(divmidPart);
-
-
-    import footer from "/components/footerImport.js";
-    let divFooter = document.createElement("div")
-    divFooter.innerHTML=footer();
-    document.body.append(divFooter);
-    */
 </script>
