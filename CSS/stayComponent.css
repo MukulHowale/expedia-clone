@@ -16,6 +16,7 @@
     gap: 2%;
     align-items: center;
     cursor: pointer;
+    
 }
 
 #stayBtnDiv > div:nth-child(1){
