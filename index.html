@@ -65,7 +65,14 @@
             </div>
             <div class="search_bottom">
                 <div class="s_b">
+                    <div class="searchCity">
+                        <div class="search">
 
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -237,6 +244,8 @@
 
     import {clickStay, clickFlights, clickCars, clickPack, clickThings} from "./JavaScripts/index.js";
 
+    import get from "./JavaScripts/flightGetData.js"
+
     let stays = document.getElementById("stays");
 
     stays.addEventListener("click", () =>{
@@ -260,6 +269,21 @@
 
         oneWay1.addEventListener("click", () =>{
             oneWay();
+
+            let sb = document.getElementsByClassName("s_b");
+
+            let leave = sb[0].children[1].children[0];
+
+            leave.addEventListener("click" , () =>{
+                console.log("ok");
+            })
+
+            let go = sb[0].children[1].children[1];
+
+            go.addEventListener("click", () =>{
+                console.log("not oks");
+            })
+
         })
 
         multi1.addEventListener("click", ()=>{
@@ -285,6 +309,10 @@
     thing.addEventListener("click", () =>{
         clickThings(thingsComponent);
     })
+
+    // let getData = await get("pune");
+
+    // console.log(getData);
 
     window.onload = () =>{
         clickStay(stayComponent);
