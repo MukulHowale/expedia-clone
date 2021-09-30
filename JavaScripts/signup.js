@@ -62,6 +62,12 @@ async function signup(){
         let data = await res.json();
         console.log('data:', data);
 
+        fname.value = "";
+        lname.value = "";
+        email.value = "";
+        password.value = "";
+        confirm_password = "";
+
         location.assign("../index.html");
     }
 }
