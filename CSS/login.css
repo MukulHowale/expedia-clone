@@ -1,3 +1,4 @@
+/*---------------------------------similar styles----------------------------------------------*/
 *{
     font-family: 'Noto Sans', sans-serif;
 }
@@ -34,6 +35,7 @@ body{
     font-size: 13px;
     color: #616161;
     font-weight: 700;
+    margin: 10px 0px 5px;
 }
 #warning{
     margin-left: 20px;
@@ -56,8 +58,8 @@ body{
 .hide,#warning{
     display: none;
 }
-#email, #password{
-    width: 350px;
+#email, #password,#confirm_pass{
+    width: 370px;
     height: 33px;
     border-radius: 4px;
     border:1px solid gray;
@@ -130,3 +132,54 @@ body{
     padding:0px 5px 0px 10px;
 }
 
+
+
+/*-------------------------------signup div----------------------------------------*/
+.signup_div{
+    width: 75%;
+    height: 700px;
+    background-color: white;
+    margin: 10px auto 40px;
+    display: flex;
+    gap: 12%;
+}
+.signup_div >div:nth-child(1) > button{
+    width: 200px;
+}
+.leftpad{
+    padding-left: 20px;
+}
+.check{
+    background-color: #f5f5f5;
+    padding: 10px 20px 10px;
+    color: rgb(77, 75, 75);
+    margin:20px 0px 20px 20px;
+}
+.check > p{
+    margin-top: 0px;
+    font-size: 15px;
+}
+.check > div{
+    font-size: 13px;
+    line-height: 25px;
+}
+.check > div > i{
+    font-size: 14px;
+}
+.names{
+    display: flex;
+}
+.names > div{
+    width: 35%;
+}
+
+.names > div:nth-child(1){
+    margin-left: 20px;
+}
+#first_name, #surname{
+    width: 170px;
+    height: 33px;
+    border-radius: 4px;
+    border:1px solid gray;
+    box-shadow: 1px 0.5px   gray;
+}

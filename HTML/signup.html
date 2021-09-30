@@ -15,6 +15,95 @@
 </head>
 <body>
     <div class="navbar"></div>
+
+    <div class="heading">
+        <h2>Sign in or select an option</h2>
+    </div>
+    <div class="signup_div">
+        <div class="left_div">
+            <p>Create an account with your email</p>
+            <div id="warning">
+                <i class="fa fa-warning"></i>
+                Please complete all fields.
+            </div>
+            <div class="names">
+                <div>
+                    <p class="bold">First name</p>
+                    <input type="text" id="first_name">
+                    <p class="hide">Please enter first name using letters only.</p>
+                </div>
+                <div>
+                    <p class="bold">Surname</p>
+                    <input type="text" id="surname">
+                    <p class="hide">Please enter surname using letters only (minimum 2 characters).</p>
+                </div>
+            </div>
+            <p class="bold">Email Address</p>
+            <input type="email" id="email">
+            <p class="hide">Please enter your email address.</p>
+
+            <p class="bold">Password</p>
+            <input type="password" id="password">
+            <p class="hide">Please enter your password.</p>
+
+            <p class="bold">Confirm password</p>
+            <input type="password" id="confirm_pass">
+            <p class="hide">Please confirm password.</p>
+
+            <div class="check">
+                <p>Expedia Rewards members get even more!</p>
+                <div>
+                    <i class="fa fa-check"></i>
+                    Save money with Member Pricing
+                </div>
+                <div>
+                    <i class="fa fa-check"></i>
+                    Book free rewards travel with no blackout dates
+                </div>
+                <div>
+                    <i class="fa fa-check"></i>
+                    Get exclusive member deals and special offers
+                </div>
+            </div>
+            <div class=" leftpad">
+                <input type="checkbox">
+                <span class="grayc">Please send me Expedia.co.in emails with travel deals, special offers and other information.</span>
+            </div>
+            <p class="grayc">By signing into my Expedia Rewards account, I agree to the <span class="bluec">Terms of Use,
+                    Privacy Policy</span> and <span class="bluec">Expedia Rewards Terms and Conditions.</span></p>
+            <button>Create free account</button>
+        </div>
+        <div class="right_div">
+            <div>
+                <div>
+                    <i class="fa fa-google"></i>
+                    Sign in with Google
+                </div>
+                <div>
+                    <i class="fa fa-apple"></i>
+                    Sign in with Apple
+                </div>
+                <div>
+                    <i class="fa fa-facebook-official"></i>
+                    Sign in with Facebook
+                </div>
+            </div>
+            <div>
+                <div>
+                    <i class="fa fa-key"></i>
+                    we keep it private
+                </div>
+                <div>
+                    <i class="fa fa-shield"></i>
+                    Share only with permission
+                </div>
+                <div>
+                    <i class="fa fa-dot-circle-o"></i>
+                    Quick sign in- no passwords
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="module">
         import navbar from "../components/navbarImport.js"
         let nav = document.querySelector(".navbar");

@@ -88,7 +88,7 @@
     height: 30px;
 }
 
- .navbar img, p:hover
+ .navbar img,.navbar p:hover
 {
     cursor: pointer;
     color: #3662D8;
