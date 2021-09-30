@@ -17,11 +17,21 @@
 .left
 {
     font-size: 12px;
+    display: flex;
+}
+.left >:first-child
+{
+    width: 10%;
+}
+.bottom img
+{
+  width: 13px;
+  height: 13px;
 }
 
 .main >:nth-child(2)
 {
-    width: 40%;
+    width: 30%;
     border: 1px solid red;
     height: 280px;
     padding-left: 2%;
@@ -36,21 +46,65 @@
     padding: 2%;
 }
 
-.page div
-{
-    border: 1px solid palevioletred;
-    width: 100%;
-}
+
 .page >:first-child
 {
-    height: 100px;
+    height: 70px;
     margin-bottom: 2%;
+    border: 1px solid green;
+    width: 100%;
 }
 
 .page >:nth-child(2)
 {
-    height: 300px;
+    height: 500px;
+    border: 1px solid yellow;
+    width: 72%;
 }
+
+
+.right button
+{
+  font-size: 25px;
+  width: 100%;
+  background-color: #3662D8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-top: 2%;
+
+}
+.right button:hover
+{
+  background-color: #1d41a1;
+  cursor: pointer;
+}
+.bottom 
+{
+  font-size: 13px;
+  margin-top: 2%;
+}
+.bottom p
+{
+  margin-top: 4%;
+}
+
+.useFlex
+{
+    display: flex;
+    text-align: left;
+}
+.useFlex>:nth-child(2)
+{
+  
+    text-align: right;
+}
+.useFlex div
+{
+    width: 50%;
+    margin-top: 2%;
+}
+
 /*---------------------------------navbar-----------------*/
 
 .navbar
