@@ -350,12 +350,20 @@ margin-bottom: 5px;
   margin: 3%;
   border-radius: 4px;
   height: 60px;
+
 }
-.display div:hover
+
+
+/*----------------------------display----------*/
+
+.classInDisplay
 {
-    background-color: #E7EDFD;
-    cursor: pointer;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  text-align: center;
+  height: 30px;
 }
+
 
 /*--------------------------------------------------------- footer ----------------------------------------------*/
 

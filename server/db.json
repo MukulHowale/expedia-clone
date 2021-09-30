@@ -1,0 +1,36 @@
+{
+    "flights":[
+        {
+            "date":"2021-10-02",
+            "dep":"Pune",
+            "arr":"Mumbai",
+            "price":"Rs6,451",
+            "time":"18:15 - 19:40",
+            "airline":"Vistara"
+        },
+        {
+            "date":"2021-10-02",
+            "dep":"Pune",
+            "arr":"Mumbai",
+            "price":"Rs5,900",
+            "time":"14:45 - 16:20",
+            "airline":"Vistara"
+        },
+        {
+            "date":"2021-10-02",
+            "dep":"Pune",
+            "arr":"Mumbai",
+            "price":"Rs7,251",
+            "time":"21:10 - 22:40",
+            "airline":"Vistara"
+        },
+        {
+            "date":"2021-10-02",
+            "dep":"Pune",
+            "arr":"Mumbai",
+            "price":"Rs6,893",
+            "time":"13:35 - 15:40",
+            "airline":"Vistara"
+        }
+    ]
+}
