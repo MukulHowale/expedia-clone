@@ -7,6 +7,7 @@
     <title>Expedia Travel: Vacations, Cheap Flights, Airline Tickets & Airfares</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en"/>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href=".\CSS\searchFlight.css">
     <link rel="stylesheet" href=".\CSS\stayComponent.css">
     <link rel="stylesheet" href=".\CSS\flightComponent.css">
     <link rel="stylesheet" href=".\CSS\carsComponent.css">
@@ -66,10 +67,10 @@
             <div class="search_bottom">
                 <div class="s_b">
                     <div class="searchCity">
-                        <div class="search">
-
+                        <div class="searchC">
+                            <input class="font_family font_weight_1" type="text" oninput="wait(main,1000)" id="val" placeholder="Where are you leaving from?">
                         </div>
-                        <div>
+                        <div class="show">
 
                         </div>
                     </div>
@@ -244,7 +245,7 @@
 
     import {clickStay, clickFlights, clickCars, clickPack, clickThings} from "./JavaScripts/index.js";
 
-    import get from "./JavaScripts/flightGetData.js"
+    import {wait, main} from "./JavaScripts/flightGetData.js"
 
     let stays = document.getElementById("stays");
 
@@ -310,11 +311,21 @@
         clickThings(thingsComponent);
     })
 
+    let searchCityInput = document.getElementsByClassName("searchCity")[0].children[0].children[0];
+
+    // console.log(searchCityInput);
+
+    searchCityInput.addEventListener("input", () =>{
+        wait(main,100);
+    })
+
+    // console.log(searchCity);
+
     // let getData = await get("pune");
 
     // console.log(getData);
 
     window.onload = () =>{
-        clickStay(stayComponent);
+        // clickStay(stayComponent);
     }
 </script>
