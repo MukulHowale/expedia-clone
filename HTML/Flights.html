@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <div class="navbar">
+    <div class="navbar"  onclick="travellerFunctionHide()">
 
     </div>
 
@@ -24,9 +24,10 @@
              <option value="multiCity">Multi-city</option>
             </select>
        </div>
+        <!------------------------------------------------------------>   
+
        <div style="    padding-left: 4%;" >
-               <div class="select_Way"> 1 traveller ˅</div>
-            <!------------------------------------------------------------>   
+               <div class="select_Way" onclick="travellerFunction()"> 1 traveller ˅</div>
                <div class="traveller_part">
                   <p>We allow up to 6 travellers total per booking.</p>
                 <div class="adults">
@@ -54,12 +55,13 @@
                     <div><button>+</button>   </div>
                  </div>
                  <div id="doneCancel">
-                     <div>Cancel</div>
+                     <div onclick="travellerFunction()">Cancel</div>
                      <div>Done</div>
                  </div>
                </div>
-
         </div>
+               <!------------------------------------------------------------>   
+
         <div style="    padding-left: 4%; ">
             <select name="One way"  class="select_Way">
                 <option value="oneWay">Economy</option>
@@ -77,7 +79,7 @@
         </div>
     </div>
    
-    <div class="chooseFlight">
+    <div class="chooseFlight" onclick="travellerFunctionHide()">
         
         <div class="filter">
             <h1>Filter by</h1>  
@@ -193,4 +195,23 @@
      let divfooterCopyright = document.querySelector(".footerCopyright");
      divfooterCopyright.innerHTML=footerCopyright();
    
+</script>
+
+<script>
+ function travellerFunction()
+ {
+     let anyName=document.querySelector(".traveller_part");
+     if(anyName.style.display==="none" ){
+        anyName.style.display = "block";
+      }
+     else{
+        anyName.style.display = "none";
+     }
+}
+
+function travellerFunctionHide()
+{
+    let anyName=document.querySelector(".traveller_part");
+    anyName.style.display = "none";
+}
 </script>
