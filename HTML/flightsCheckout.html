@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight details</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en"/>
+    <link rel="stylesheet" href="../CSS/flightsCheckout.css">
+</head>
+<body>
+    
+    <div class="navbar">
+    </div>
+
+    <div class="main">
+    <div class="page">
+        <div class="left">
+            <img src="https://images.trvl-media.com/media/content/expus/graphics/flights/no_change_fee.svg" alt="">
+              <h3>Stay flexible with no change fees</h3>
+              <p>We recommend booking a flight with no change fees in case your plans change.
+            </p>
+        </div>
+
+        <div class="bottom">
+
+        </div>
+    </div>
+
+    <div class="right">
+
+    </div>
+   </div>
+
+    <div class="footer">
+    </div>
+    <hr>
+    <div class="footerCopyright">
+    </div>
+    
+
+</body>
+</html>
+
+
+<script type="module">
+    import navbar from "../components/navbarImport.js";
+    let divNavbar = document.querySelector(".navbar");
+    divNavbar.innerHTML=navbar();
+
+    import footer from "../components/footerImport.js";
+    let divFooter = document.querySelector(".footer");
+    divFooter.innerHTML=footer();
+
+    import footerCopyright from "../components/footerCopyright.js";
+    let divfooterCopyright = document.querySelector(".footerCopyright");
+    divfooterCopyright.innerHTML=footerCopyright();
+  
+</script>
