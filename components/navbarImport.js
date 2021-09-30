@@ -14,7 +14,7 @@ function navbar()
         <div><img src="/Images/language.png" alt=""><p>English</p></div>
         <div><p>Support</p></div>
         <div><p>Trips</p></div>
-        <div><p>SignIN</p></div>
+        <div><p>Sign in</p></div>
    
           `
 }
