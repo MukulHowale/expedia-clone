@@ -92,6 +92,9 @@ body{
 .left_div > button:hover{
     background-color: #f1ba2f;
 }
+
+
+/*---------------------right div----------------------------*/
 .right_div{
     display: flex;
     flex-direction: column;
