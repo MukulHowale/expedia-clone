@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="image/x-icon" href="https://www.expedia.co.in/favicon.ico" sizes="16x16 32x32" rel="icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar"></div>
+    <div class="heading">
+        <h2>Sign in or select an option</h2>
+    </div>
+    <div class="login_div">
+        <div class="left_div">
+            <p>Sign in with your email</p>
+            <div id="warning">
+                <i class="fa fa-warning"></i>
+                You may have entered an unknown email address or an incorrect password.
+            </div>
+            <p class="bold">Email Address *</p>
+            <input type="email" id="email">
+            <p class="hide">Please enter your email address.</p>
+            <p class="bold">Password *</p>
+            <input type="password" id="password">
+            <p class="hide">Please enter your password.</p>
+            <p class="grayc">* required fileds</p>
+            <p class="grayc">By signing into my Expedia Rewards account, I agree to the <span class="bluec">Terms of Use, Privacy Policy</span> and <span class="bluec">Expedia Rewards Terms and Conditions.</span></p>
+            <p class="bluec">Forgot your password?</p>
+            <input type="checkbox">
+            <span class="grayc">Keep me signed in</span>
+            <button>Sign in</button>
+        </div>
+        <div class="right_div">
+            <div>
+                <div>
+                    <i class="fa fa-google"></i>
+                    Sign in with Google
+                </div>
+                <div>
+                    <i class="fa fa-apple"></i>
+                    Sign in with Apple
+                </div>
+                <div>
+                    <i class="fa fa-facebook-official"></i>
+                    Sign in with Facebook
+                </div>
+            </div>
+            <div>
+                <div>
+                    <i class="fa fa-key"></i>
+                    we keep it private
+                </div>
+                <div>
+                    <i class="fa fa-shield"></i>
+                    Share only with permission
+                </div>
+                <div>
+                    <i class="fa fa-dot-circle-o"></i>
+                    Quick sign in- no passwords
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        import navbar from "../components/navbarImport.js"
+        let nav = document.querySelector(".navbar");
+        nav.innerHTML = navbar();
+    </script>
+</body>
+</html>
