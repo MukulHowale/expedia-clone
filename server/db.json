@@ -1,125 +1,138 @@
 {
-    "flights":[
-        {
-            "price":"Rs6,451",
-            "time":"18:15 - 19:40",
-            "airline":"Vistara"
-        },
-        {
-            "price":"Rs5,900",
-            "time":"14:45 - 16:20",
-            "airline":"IndiGo"
-        },
-        {
-            "price":"Rs7,251",
-            "time":"21:10 - 22:40",
-            "airline":"Go First"
-        },
-        {
-            "price":"Rs5,124",
-            "time":"12:00 - 13:10",
-            "airline":"Vistara"
-        },
-        {
-            "price":"Rs4,211",
-            "time":"17:45 - 19:40",
-            "airline":"IndiGo"
-        },
-        {
-            "price":"Rs6,900",
-            "time":"09:15 - 11:10",
-            "airline":"Go First"
-        },
-        {
-            "price":"Rs9,121",
-            "time":"06:35 - 08:10",
-            "airline":"Vistara"
-        },
-        {
-            "price":"Rs6,893",
-            "time":"13:35 - 15:40",
-            "airline":"Go First"
-        },
-        {
-            "price":"Rs5,901",
-            "time":"11:45 - 13:15",
-            "airline":"vistara"
-        },
-
-
-
-        {
-            "price":"Rs4,211",
-            "time":"17:45 - 19:40",
-            "airline":"IndiGo"
-        },
-        {
-            "price":"Rs6,900",
-            "time":"09:15 - 11:10",
-            "airline":"Go First"
-        },
-        {
-            "price":"Rs6,893",
-            "time":"13:35 - 15:40",
-            "airline":"Go First"
-        },
-        {
-            "price":"Rs4,211",
-            "time":"17:45 - 19:40",
-            "airline":"Vistara"
-        },
-        {
-            "price":"Rs9,121",
-            "time":"06:35 - 08:10",
-            "airline":"Vistara"
-        },
-        {
-            "price":"Rs6,451",
-            "time":"18:15 - 19:40",
-            "airline":"Vistara"
-        },
-
-
-
-
-
-        {
-            "price":"Rs4,211",
-            "time":"17:45 - 19:40",
-            "airline":"IndiGo"
-        },
-        {
-            "price":"Rs6,900",
-            "time":"09:15 - 11:10",
-            "airline":"Go First"
-        },
-        {
-            "price":"Rs6,893",
-            "time":"13:35 - 15:40",
-            "airline":"Go First"
-        },
-        {
-            "price":"Rs4,211",
-            "time":"17:45 - 19:40",
-            "airline":"Vistara"
-        },
-        {
-            "price":"Rs9,121",
-            "time":"06:35 - 08:10",
-            "airline":"Vistara"
-        },
-        {
-            "price":"Rs5,911",
-            "time":"11:45 - 13:05",
-            "airline":"Go First"
-        },
-        {
-            "price":"Rs6,451",
-            "time":"18:15 - 19:40",
-            "airline":"Vistara"
-        }
-    ]
-
+  "flights": [
+    {
+      "price": "Rs6,451",
+      "departTime": "18:15",
+      "arriveTime": "19:40",
+      "airline": "Vistara"
+    },
+    {
+      "price": "Rs5,900",
+      "departTime": "14:45",
+      "arriveTime": "16:20",
+      "airline": "IndiGo"
+    },
+    {
+      "price": "Rs7,251",
+      "departTime": "21:10",
+      "arriveTime": "22:40",
+      "airline": "Go First"
+    },
+    {
+      "price": "Rs5,124",
+      "departTime": "12:00",
+      "arriveTime": "13:10",
+      "airline": "Vistara"
+    },
+    {
+      "price": "Rs4,211",
+      "departTime": "17:45",
+      "arriveTime": "19:40",
+      "airline": "IndiGo"
+    },
+    {
+      "price": "Rs6,900",
+      "departTime": "09:15 ",
+      "arriveTime": "11:10",
+      "airline": "Go First"
+    },
+    {
+      "price": "Rs9,121",
+      "departTime": "06:35",
+      "arriveTime": "08:10",
+      "airline": "Vistara"
+    },
+    {
+      "price": "Rs6,893",
+      "departTime": "13:35",
+      "arriveTime": "15:40",
+      "airline": "Go First"
+    },
+    {
+      "price": "Rs5,901",
+      "departTime": "11:45",
+      "arriveTime": "13:15",
+      "airline": "vistara"
+    },
+    {
+      "price": "Rs4,211",
+      "departTime": "17:45",
+      "arriveTime": "19:40",
+      "airline": "IndiGo"
+    },
+    {
+      "price": "Rs6,900",
+      "departTime": "09:15",
+      "arriveTime": "11:10",
+      "airline": "Go First"
+    },
+    {
+      "price": "Rs6,893",
+      "departTime": "13:35 ",
+      "arriveTime": "15:40",
+      "airline": "Go First"
+    },
+    {
+      "price": "Rs4,211",
+      "departTime": "17:45 ",
+      "arriveTime": "19:40",
+      "airline": "Vistara"
+    },
+    {
+      "price": "Rs9,121",
+      "departTime": "06:35 ",
+      "arriveTime": "08:10",
+      "airline": "Vistara"
+    },
+    {
+      "price": "Rs6,451",
+      "departTime": "18:15",
+      "arriveTime": "19:40",
+      "airline": "Vistara"
+    },
+    {
+      "price": "Rs4,211",
+      "departTime": "17:45",
+      "arriveTime": "19:40",
+      "airline": "IndiGo"
+    },
+    {
+      "price": "Rs6,900",
+      "departTime": "09:15",
+      "arriveTime": "11:10",
+      "airline": "Go First"
+    },
+    {
+      "price": "Rs6,893",
+      "departTime": "13:35",
+      "arriveTime": "15:40",
+      "airline": "Go First"
+    },
+    {
+      "price": "Rs4,211",
+      "departTime": "17:45",
+      "arriveTime": "19:40",
+      "airline": "Vistara"
+    },
+    {
+      "price": "Rs9,121",
+      "departTime": "06:35",
+      "arriveTime": "08:10",
+      "airline": "Vistara"
+    },
+    {
+      "price": "Rs5,911",
+      "departTime": "11:45 ",
+      "arriveTime": "13:05",
+      "airline": "Go First"
+    },
+    {
+      "price": "Rs6,451",
+      "departTime": "18:15 ",
+      "arriveTime": "19:40",
+      "airline": "Vistara"
+    }
+  ],
   "login-data": [
     {
       "firstName": "sandhya",
@@ -127,6 +140,20 @@
       "email": "sandhyamaram1234@gmail.com",
       "password": "123456789",
       "id": 1
+    },
+    {
+      "firstName": "Mukul",
+      "surname": "Howale",
+      "email": "mukulshowaleneo9000@gmail.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "firstName": "Itachi",
+      "surname": "Uchiha",
+      "email": "sharingan@gmail.com",
+      "password": "123456789",
+      "id": 3
     }
   ]
 }
