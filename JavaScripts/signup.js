@@ -46,7 +46,7 @@ async function signup(){
     if(password.value != confirm_password.value){
         war.style.display = "block";
     }
-    else{
+    else if(password.value == confirm_password.value && (password.value != "" || confirm_password.value != "")){
         display();
 
         let res = await fetch("http://localhost:5000/api/login-data", {
@@ -61,6 +61,12 @@ async function signup(){
         });
         let data = await res.json();
         console.log('data:', data);
+
+        fname.value = "";
+        lname.value = "";
+        email.value = "";
+        password.value = "";
+        confirm_password = "";
 
         location.assign("../index.html");
     }
