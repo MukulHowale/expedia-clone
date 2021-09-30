@@ -119,4 +119,14 @@
             "airline":"Vistara"
         }
     ]
+
+  "login-data": [
+    {
+      "firstName": "sandhya",
+      "surname": "maram",
+      "email": "sandhyamaram1234@gmail.com",
+      "password": "123456789",
+      "id": 1
+    }
+  ]
 }

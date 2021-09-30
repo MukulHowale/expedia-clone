@@ -347,10 +347,9 @@ margin-bottom: 5px;
 .display div
 {
   background-color: white;
-  margin: 3%;
+  margin-top: 2%;
   border-radius: 4px;
   height: 60px;
-
 }
 
 
@@ -361,7 +360,12 @@ margin-bottom: 5px;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   text-align: center;
-  height: 30px;
+}
+
+.classInDisplay:hover
+{
+  box-shadow: 5px 5px 5px 2px grey;
+  cursor: pointer;
 }
 
 
@@ -435,3 +439,21 @@ margin-top: 2%;
 cursor: text;
 color: rgb(39, 38, 38);    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
