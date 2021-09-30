@@ -34,28 +34,28 @@
                    <div>Adults
                         <p>18 and older</p>
                    </div>
-                   <div><button>-</button>   </div>
-                   <div class="passengerCount">1</div>
-                   <div><button>+</button>   </div>
+                   <div><button onclick="adultCountMinus()">-</button>   </div>
+                   <div class="adultCount" id="adultCount">5</div>
+                   <div><button onclick="adultCountPlus()">+</button>   </div>
                 </div>
                 <div class="adults">
                     <div>Children
                          <p>Age 2 and 17</p>
                     </div>
-                    <div><button>-</button>   </div>
-                    <div class="passengerCount">0</div>
-                    <div><button>+</button>   </div>
+                    <div><button onclick="childrenCountMinus()">-</button>   </div>
+                    <div class="childrenCount" id="childrenCount">0</div>
+                    <div><button onclick="childrenCountPlus()">+</button>   </div>
                  </div>
                  <div class="adults">
                     <div>Infants
                          <p>Younger than 2</p>
                     </div>
-                    <div><button>-</button>   </div>
-                    <div class="passengerCount">0</div>
-                    <div><button>+</button>   </div>
+                    <div><button onclick="infantsCountMinus()">-</button>   </div>
+                    <div class="infantsCount" id="infantsCount">0</div>
+                    <div><button onclick="infantsCountPlus()">+</button>   </div>
                  </div>
                  <div id="doneCancel">
-                     <div onclick="travellerFunction()">Cancel</div>
+                     <div onclick="travellerFunctionHide()">Cancel</div>
                      <div>Done</div>
                  </div>
                </div>
@@ -150,13 +150,35 @@
             </div>
 
             <div class="display">
-              <div>
-
+              <div class="classInDisplay">
+               <div>10:10-11:55</div>
+               <div>Direct</div>
+               <div><h1>Rs4,590</h1></div>
               </div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+
+              <div class="classInDisplay">
+                <div>10:10-11:55</div>
+                <div>Direct</div>
+                <div><h1>Rs4,590</h1></div>
+               </div>
+
+               <div class="classInDisplay">
+                <div>10:10-11:55</div>
+                <div>Direct</div>
+                <div><h1>Rs4,590</h1></div>
+               </div>
+
+               <div class="classInDisplay">
+                <div>10:10-11:55</div>
+                <div>Direct</div>
+                <div><h1>Rs4,590</h1></div>
+               </div>
+
+               <div class="classInDisplay">
+                <div>10:10-11:55</div>
+                <div>Direct</div>
+                <div><h1>Rs4,590</h1></div>
+               </div>
             </div>
           
         </div>
@@ -214,4 +236,59 @@ function travellerFunctionHide()
     let anyName=document.querySelector(".traveller_part");
     anyName.style.display = "none";
 }
+
+function adultCountMinus()
+{
+  let div=document.getElementById("adultCount")
+  htmlContent=div.innerHTML;
+  if(htmlContent!=0 ){
+  div.innerHTML=htmlContent-1;
+  }
+}
+ function childrenCountMinus()
+ {
+    let div=document.getElementById("childrenCount")
+    htmlContent1=div.innerHTML;
+   if(htmlContent1!=0 ){
+    div.innerHTML=htmlContent1-1;
+  }
+ }
+
+ function infantsCountMinus()
+ {
+    let div=document.getElementById("infantsCount")
+    htmlContent2=div.innerHTML;
+    if(htmlContent2!=0 ){
+    div.innerHTML=htmlContent2-1;
+   }
+}
+
+function adultCountPlus()
+{
+    let div=document.getElementById("adultCount")
+  htmlContent=div.innerHTML;
+   if(htmlContent!=6 ){
+  div.innerHTML=htmlContent-1+2;
+  }
+}
+
+function childrenCountPlus()
+{
+    let div=document.getElementById("childrenCount")
+  htmlContent=div.innerHTML;
+   if(htmlContent!=6 ){
+  div.innerHTML=htmlContent-1+2;
+  }
+}
+
+function infantsCountPlus()
+{
+    let div=document.getElementById("infantsCount")
+  htmlContent=div.innerHTML;
+   if(htmlContent!=6 ){
+  div.innerHTML=htmlContent-1+2;
+  }
+}
+
+
 </script>
