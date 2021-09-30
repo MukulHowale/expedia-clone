@@ -25,14 +25,19 @@
 
         <div class="bottom">
             <h1>Pune to Indore</h1>
-            <img src="../Images/takeoff.svg">
-            <p>Pune</p>
+            <div class="lastDiv">
+                <div><img src="../Images/takeoff.svg"></div>
+                <div>Pune</div>
+            </div>
+            
             <p>1h 45m flight</p>
             <p>IndiGo</p>
 
-            <img src="../Images/landing.svg">
-            <p>Indore</p>
-            <hr>
+            <div class="lastDiv">
+                <div><img src="../Images/landing.svg"></div>
+                <div>Indore</div>
+            </div>
+            <hr style="margin-top: 2%; margin-bottom: 2%;">
 
             <h3>Estimated bag fees</h3>
             <div class="useFlex">
@@ -79,6 +84,9 @@
     </div>
    </div>
 
+   <div class="mid_part">
+   </div>
+
     <div class="footer">
     </div>
     <hr>
@@ -94,6 +102,10 @@
     import navbar from "../components/navbarImport.js";
     let divNavbar = document.querySelector(".navbar");
     divNavbar.innerHTML=navbar();
+
+    import midPart from "../components/midPartImport.js";
+    let divMidPart = document.querySelector(".mid_part");
+    divMidPart.innerHTML=midPart();
 
     import footer from "../components/footerImport.js";
     let divFooter = document.querySelector(".footer");

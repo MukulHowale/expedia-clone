@@ -1,7 +1,6 @@
 function midPart()
 {
     return `
-    <div class="mid_part">
     <div class="back_image">
         <div>
             <p>Plan ahead and save</p>
@@ -105,7 +104,6 @@ function midPart()
         <p>Explore a world of travel with Expedia</p>
         <a href="">Discover new places and experiences</a>
     </div>
-</div>
 
      `
 }
