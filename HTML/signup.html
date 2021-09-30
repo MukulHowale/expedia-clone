@@ -26,6 +26,10 @@
                 <i class="fa fa-warning"></i>
                 Please complete all fields.
             </div>
+            <div id="warning2">
+                <i class="fa fa-warning"></i>
+                Passwords do not match.
+            </div>
             <div class="names">
                 <div>
                     <p class="bold">First name</p>
@@ -71,7 +75,7 @@
             </div>
             <p class="grayc">By signing into my Expedia Rewards account, I agree to the <span class="bluec">Terms of Use,
                     Privacy Policy</span> and <span class="bluec">Expedia Rewards Terms and Conditions.</span></p>
-            <button>Create free account</button>
+            <button onclick="signup()">Create free account</button>
         </div>
         <div class="right_div">
             <div>
@@ -109,5 +113,6 @@
         let nav = document.querySelector(".navbar");
         nav.innerHTML = navbar();
     </script>
+    <script src="../JavaScripts/login.js"></script>
 </body>
 </html>

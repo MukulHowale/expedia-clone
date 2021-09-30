@@ -37,7 +37,7 @@ body{
     font-weight: 700;
     margin: 10px 0px 5px;
 }
-#warning{
+#warning, #warning2{
     margin-left: 20px;
     background-color: #fad4d4;
     border-left: 3px solid #b80000;
@@ -46,7 +46,7 @@ body{
     font-size: 15px;
 
 }
-#warning > i{
+#warning > i,#warning2 > i{
     padding-right: 10px;
     font-size: 15px;
 }
@@ -55,7 +55,7 @@ body{
     color: #b8000f;
     font-size: 13px;
 }
-.hide,#warning{
+.hide,#warning,#warning2{
     display: none;
 }
 #email, #password,#confirm_pass{
@@ -65,7 +65,7 @@ body{
     border:1px solid gray;
     box-shadow: 1px 0.5px   gray;
 }
-#email:focus, #password:focus{
+#email:focus, #password:focus,#first_name:focus,#confirm_pass:focus,#surname:focus{
     outline: 2.5px solid black;
 }
 .grayc{
