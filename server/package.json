@@ -1,0 +1,25 @@
+{
+  "name": "mock-server",
+  "version": "1.0.0",
+  "description": "json server",
+  "main": "index.js",
+  "dependencies": {
+    "json-server": "^0.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "mock:api": "node json-server/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MukulHowale/mock-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MukulHowale/mock-server/issues"
+  },
+  "homepage": "https://github.com/MukulHowale/mock-server#readme"
+}
