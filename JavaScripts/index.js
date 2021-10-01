@@ -77,5 +77,10 @@ let clickThings = (thingsComp) =>{
     sb[0].innerHTML = thingsComp();
 }
 
+let seaCity = (searchCityComponent) =>{
+    let temp = document.getElementsByClassName("temp");
+    temp[0].innerHTML =  searchCityComponent();
+}
 
-export {clickStay, clickFlights, clickCars, clickPack, clickThings};
+
+export {clickStay, clickFlights, clickCars, clickPack, clickThings, seaCity};

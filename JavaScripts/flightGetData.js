@@ -1,19 +1,42 @@
 let timerId;
 
-let show = document.getElementsByClassName("show")[0];
+let f;
+
+let leaveText;
+
+let putText;
+
+// console.log(show);
 
 let showDetails = (e) =>{
+
+    // let leaveText = f.children[1].children[0];
+
+    console.log(leaveText);
+
+    leaveText.setAttribute("class","font_size_3")
+    leaveText.style.fontSize = "12px";
+
+    // let putText = f.children[1].children[1];
+
+    putText.innerText = `${e.target.children[0].innerText} ${e.target.children[1].innerText}`
+
     
 
-    console.log(e.target);
+    let sC = document.getElementsByClassName("temp")[0];
+
+    sC.innerHTML = "";
+    // return e.target
+
+    // console.log(e.target.children);
 }
 
 let appendCity = (m) =>{
+    let show = document.getElementsByClassName("searchCity")[0].children[1];
+
     show.innerHTML = null;
 
     let n = m.Places
-  
-    // console.log(show);
   
     n.forEach(({PlaceName,PlaceId,CountryName}) =>{
         let div = document.createElement('div');
@@ -59,28 +82,6 @@ let appendCity = (m) =>{
         show.append(div);
         
     })
-  
-    // if(n.length >= 4){
-    //     show.style.overflow = "scroll";
-    //     show.style.overflowX = "hidden";
-    //     show.style.borderBottomRightRadius = "5px";
-    // }
-    // else if(n.length == 4){
-    //     show.style.borderBottomRightRadius = "20px";
-    //     if(show.style.overflowY){
-    //         show.style.overflowY = "hidden";
-    //     }
-    // }
-    // else{
-    //     let temp = show.firstChild;
-    //     while(temp != show.lastChild){
-    //         temp = temp.nextSibling;
-    //     }
-    //     show.style.overflow = "hidden";
-    //     show.lastChild.style.borderBottomLeftRadius = "20px";
-    //     show.lastChild.style.borderBottomRightRadius = "20px";
-    //     show.style.border = "0px";
-    // }
 }
 
 let main = async () =>{
@@ -125,4 +126,41 @@ let get = async (city) =>{
     return res;
 }
 
-export {wait, main};
+let check = (pl) =>{
+    let sb = document.getElementsByClassName("s_b");
+
+    if(pl == 1){
+        f = sb[0].children[1].children[0];
+        leaveText = f.children[1].children[0];
+        putText = f.children[1].children[1];
+    }
+    else{
+        f = sb[0].children[1].children[1];
+        leaveText = f.children[2].children[0];
+        putText = f.children[2].children[1];
+    }
+}
+
+let saveCityDate = () =>{
+    let sb = document.getElementsByClassName("s_b");
+
+    let l = sb[0].children[1].children[0].children[1].children[1].innerText;
+
+    let g = sb[0].children[1].children[1].children[2].children[1].innerText;
+
+    let d = sb[0].children[1].children[2].children[1].children[1].children[0].value;
+
+    localStorage.setItem("storeCityDate", JSON.stringify([
+        {
+            "DepartCity" : l,
+            "ArriveCity" : g,
+            "Date" : d
+        }
+    ]))
+
+    var temp = JSON.parse(localStorage.getItem("storeCityDate"));
+
+    console.log(temp);
+}
+
+export {wait, main, check, saveCityDate};

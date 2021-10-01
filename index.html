@@ -66,14 +66,10 @@
             </div>
             <div class="search_bottom">
                 <div class="s_b">
-                    <div class="searchCity">
-                        <div class="searchC">
-                            <input class="font_family font_weight_1" type="text" oninput="wait(main,1000)" id="val" placeholder="Where are you leaving from?">
-                        </div>
-                        <div class="show">
+                    
+                </div>
+                <div class="temp">
 
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -241,11 +237,13 @@
 
     import thingsComponent from "./components/thingsComponent.js"
 
+    import searchCityComponent from "./components/searchCityComponent.js"
+
     import {re, oneWay, multi} from "./JavaScripts/flightTravel.js";
 
-    import {clickStay, clickFlights, clickCars, clickPack, clickThings} from "./JavaScripts/index.js";
+    import {clickStay, clickFlights, clickCars, clickPack, clickThings, seaCity} from "./JavaScripts/index.js";
 
-    import {wait, main} from "./JavaScripts/flightGetData.js"
+    import {wait, main, check, saveCityDate} from "./JavaScripts/flightGetData.js"
 
     let stays = document.getElementById("stays");
 
@@ -256,6 +254,7 @@
     let fly = document.getElementById("flights");
 
     fly.addEventListener("click", () =>{
+
         clickFlights(flightComponent);
 
         let re1 = document.getElementById("re");
@@ -273,16 +272,36 @@
 
             let sb = document.getElementsByClassName("s_b");
 
+            let btn1 = sb[0].children[2].children[0];
+
+            btn1.addEventListener("click", saveCityDate);
+
             let leave = sb[0].children[1].children[0];
 
             leave.addEventListener("click" , () =>{
-                console.log("ok");
+                seaCity(searchCityComponent);
+
+                let searchCityInput = document.getElementsByClassName("searchCity")[0].children[0].children[0];
+
+                searchCityInput.addEventListener("input", () =>{
+                    wait(main,100);
+                })
+
+                check(1);
             })
 
             let go = sb[0].children[1].children[1];
 
             go.addEventListener("click", () =>{
-                console.log("not oks");
+                seaCity(searchCityComponent);
+
+                let searchCityInput = document.getElementsByClassName("searchCity")[0].children[0].children[0];
+
+                searchCityInput.addEventListener("input", () =>{
+                    wait(main,100);
+                })
+
+                check(2);
             })
 
         })
@@ -311,21 +330,13 @@
         clickThings(thingsComponent);
     })
 
-    let searchCityInput = document.getElementsByClassName("searchCity")[0].children[0].children[0];
+    
 
-    // console.log(searchCityInput);
+    // let btn1 = sb[0].children;
 
-    searchCityInput.addEventListener("input", () =>{
-        wait(main,100);
-    })
-
-    // console.log(searchCity);
-
-    // let getData = await get("pune");
-
-    // console.log(getData);
+    // console.log(btn1);
 
     window.onload = () =>{
-        // clickStay(stayComponent);
+        clickStay(stayComponent);
     }
 </script>
