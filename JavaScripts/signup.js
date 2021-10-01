@@ -60,7 +60,6 @@ async function signup(){
         headers: { "Content-Type": "application/json" }
         });
         let data = await res.json();
-        console.log('data:', data);
 
         fname.value = "";
         lname.value = "";
