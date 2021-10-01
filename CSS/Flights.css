@@ -186,7 +186,7 @@
 {
     display: flex;
     width: 70%;
-    margin:4% 0 1% 3%;
+    margin:4% 0 2% 3%;
 }
 
 
@@ -207,12 +207,14 @@
   text-decoration: underline;
 }
 
+
 .flight_s{
   width: 70%;
   height: 110px;
   /* border: 1px solid black; */
   margin-left: 2%;
 }
+
 
 .s_b{
   width: 95%;
@@ -239,14 +241,13 @@
   font-size: 16px;
   font-weight: 500;
 }
-
 /*---------------------------------left part-----------------*/
 
 
 .chooseFlight
 {
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 25% 55% 20%;
     height: 750px;
     background-color: #F8F5F4;
 }
@@ -292,6 +293,8 @@ margin-bottom: 5px;
 }      
 }
 
+
+
 .time
 {
     display: grid;
@@ -332,14 +335,24 @@ margin-bottom: 5px;
   display: grid;
   grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
 }
-.dayWisePrices div
+.inDayWisePrices
 {
   border: 1px solid gray;
   height: 40px;
   background-color: white;
   border-radius: 4px;
   margin: 4%;
+  font-size: 11px;
+  text-align: center;
 }
+
+.inDayWisePrices>:nth-child(2)
+{
+  color: #0D7066;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .sortByPrice p{
     font-size: 13px;
 }
@@ -375,12 +388,31 @@ margin-bottom: 5px;
 
 
 /*----------------------------display----------*/
-
+.inDisplay
+{
+}
+.inDisplay>:first-child
+{
+  height: 40%;
+  font-size: large;
+  font-weight: 600;
+}
+.inDisplay>:nth-child(2)
+{
+  height: 40%;
+}
 .classInDisplay
 {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   text-align: center;
+  height: 70px !important;
+}
+
+.classInDisplay>:nth-child(3)
+{
+  font-size: large;
+  font-weight: 700;
 }
 
 .classInDisplay:hover

@@ -1,158 +1,180 @@
 {
   "flights": [
     {
-      "price": "Rs6,451",
+      "price": 6451,
       "time": "18:15 - 19:40",
       "departTime": "18:15",
       "arriveTime": "19:40",
-      "airline": "Vistara"
+      "airline": "Vistara",
+      "stop":"Direct"
     },
     {
-      "price": "Rs5,900",
+      "price": 5900,
       "time": "14:45 - 16:20",
       "departTime": "14:45",
       "arriveTime": "16:20",
       "airline": "IndiGo"
+      ,"stop":"1_stop"
     },
     {
-      "price": "Rs7,251",
+      "price": 7251,
       "time": "21:10 - 22:40",
       "departTime": "21:10",
       "arriveTime": "22:40",
-      "airline": "Go First"
+      "airline": "IndiGo",
+      "stop":"Direct"
     },
     {
-      "price": "Rs5,124",
+      "price": 5124,
       "time": "12:00 - 13:10",
       "departTime": "12:00",
       "arriveTime": "13:10",
       "airline": "Vistara"
+      ,"stop":"1_stop"
     },
     {
-      "price": "Rs4,211",
+      "price": 4211,
       "time": "17:45 - 19:40",
       "departTime": "17:45",
       "arriveTime": "19:40",
-      "airline": "IndiGo"
+      "airline": "IndiGo",
+      "stop":"Direct"
     },
     {
-      "price": "Rs6,900",
+      "price": 6900,
       "time": "09:15 - 11:10",
       "departTime": "09:15",
       "arriveTime": "11:10",
-      "airline": "Go First"
+      "airline": "vistara"
+      ,"stop":"1_stop"
     },
     {
-      "price": "Rs9,121",
+      "price": 9121,
       "time": "06:35 - 08:10",
       "departTime": "06:35",
       "arriveTime": "08:10",
-      "airline": "Vistara"
+      "airline": "Vistara",
+      "stop":"Direct"
     },
     {
-      "price": "Rs6,893",
+      "price": 6893,
       "time": "13:35 - 15:40",
       "departTime": "13:35",
       "arriveTime": "15:40",
-      "airline": "Go First"
+      "airline": "vistara",
+      "stop":"Direct"
     },
     {
-      "price": "Rs5,901",
+      "price": 5943,
       "time": "11:45 - 13:15",
       "departTime": "11:45",
       "arriveTime": "13:15",
-      "airline": "vistara"
+      "airline": "vistara",
+      "stop":"Direct"
     },
     {
-      "price": "Rs4,211",
+      "price": 3931,
       "time": "17:45 - 19:40",
       "departTime": "17:45",
       "arriveTime": "19:40",
       "airline": "IndiGo"
+      ,"stop":"1_stop"
     },
     {
-      "price": "Rs6,900",
+      "price": 6900,
       "time": "09:15 - 11:10",
       "departTime": "09:15",
       "arriveTime": "11:10",
-      "airline": "Go First"
+      "airline": "IndiGo"
+      ,"stop":"1_stop"
     },
     {
-      "price": "Rs6,893",
+      "price": 6893,
       "time": "13:35 - 15:40",
       "departTime": "13:35",
       "arriveTime": "15:40",
-      "airline": "Go First"
+      "airline": "IndiGo",
+      "stop":"Direct"
     },
     {
-      "price": "Rs4,211",
+      "price": 4433,
       "time": "17:45 - 19:40",
       "departTime": "17:45",
       "arriveTime": "19:40",
       "airline": "Vistara"
+      ,"stop":"1_stop"
     },
     {
-      "price": "Rs9,121",
+      "price": 9121,
       "time": "06:35 - 08:10",
       "departTime": "06:35",
       "arriveTime": "08:10",
-      "airline": "Vistara"
+      "airline": "IndiGo",
+      "stop":"Direct"
     },
     {
-      "price": "Rs6,451",
+      "price": 6451,
       "time": "18:15 - 19:40",
       "departTime": "18:15",
       "arriveTime": "19:40",
       "airline": "Vistara"
+      ,"stop":"1_stop"
     },
     {
-      "price": "Rs4,211",
+      "price": 4218,
+      "time": "17:45 - 19:40",
+      "departTime": "17:45",
+      "arriveTime": "19:40",
+      "airline": "IndiGo",
+      "stop":"Direct"
+    },
+    {
+      "price": 6900,
+      "time": "09:15 - 11:10",
+      "departTime": "09:15",
+      "arriveTime": "11:10",
+      "airline": "Vistara"
+      ,"stop":"1_stop"
+    },
+    {
+      "price": 6893,
+      "time": "13:35 - 15:40",
+      "departTime": "13:35",
+      "arriveTime": "15:40",
+      "airline": "IndiGo",
+      "stop":"Direct"
+    },
+    {
+      "price": 3451,
       "time": "17:45 - 19:40",
       "departTime": "17:45",
       "arriveTime": "19:40",
       "airline": "IndiGo"
+      ,"stop":"1_stop"
     },
     {
-      "price": "Rs6,900",
-      "time": "09:15 - 11:10",
-      "departTime": "09:15",
-      "arriveTime": "11:10",
-      "airline": "Go First"
-    },
-    {
-      "price": "Rs6,893",
-      "time": "13:35 - 15:40",
-      "departTime": "13:35",
-      "arriveTime": "15:40",
-      "airline": "Go First"
-    },
-    {
-      "price": "Rs4,211",
-      "time": "17:45 - 19:40",
-      "departTime": "17:45",
-      "arriveTime": "19:40",
-      "airline": "Vistara"
-    },
-    {
-      "price": "Rs9,121",
+      "price": 9121,
       "time": "06:35 - 08:10",
       "departTime": "06:35",
       "arriveTime": "08:10",
-      "airline": "Vistara"
+      "airline": "Vistara",
+      "stop":"Direct"
     },
     {
-      "price": "Rs5,911",
+      "price": 5911,
       "time": "11:45 - 13:05",
       "departTime": "11:45",
       "arriveTime": "13:05",
-      "airline": "Go First"
+      "airline": "Vistara"
+      ,"stop":"1_stop"
     },
     {
-      "price": "Rs6,451",
+      "price": 6451,
       "time": "18:15 - 19:40",
       "departTime": "18:15",
       "arriveTime": "19:40",
-      "airline": "Vistara"
+      "airline": "Vistara",
+      "stop":"Direct"
     }
   ],
   "login-data": [
@@ -190,6 +212,13 @@
       "email": "rahul@gmail.com",
       "password": "rahul",
       "id": 5
+    },
+    {
+      "firstName": "Shubham",
+      "surname": "Shegokar",
+      "email": "shubhamsandy.1@gmail.com",
+      "password": "12345",
+      "id": 6
     }
   ]
 }

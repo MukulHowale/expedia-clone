@@ -7,7 +7,6 @@
     <title>Cheap Flights, Airfares and Air Tickets | Expedia</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en"/>
     <link rel="stylesheet" href="../CSS/Flights.css">
-    <link rel="stylesheet" href="..\CSS\flightComponent.css">
 </head>
 <body>
 
@@ -60,7 +59,6 @@
                  </div>
                </div>
         </div>
-        
                <!------------------------------------------------------------>   
 
         <div style="    padding-left: 4%; ">
@@ -109,18 +107,18 @@
             </div>
             <h1>Departure time </h1>  
             <div class="time">
-                <div>
+                <div class="classOfTime1" onclick="changeDepartureColor('#3662D8','classOfTime1');">
                     <img src="/Images/sunrise.svg" >
                     <p>Morning</p>
                     <p>(05.00-11.59)</p>
                 </div>
-                <div>
-                    <img src="/Images/noon.svg" >
+                <div  class="classOfTime2" onclick="changeDepartureColor('#3662D8','classOfTime2');">
+                  <img src="/Images/noon.svg" >
                     <p>Afternoon</p>
                     <p>(12.00-17.59)</p>
                 </div>
-                <div>
-                    <img src="/Images/evening.png" >
+                <div class="classOfTime3"  onclick="changeDepartureColor('#3662D8','classOfTime3');">
+                  <img src="/Images/evening.png" >
                     <p>Evening</p>
                     <p>(17.00-23.59)</p>
                 </div>
@@ -132,13 +130,34 @@
          
          <h1>Choose departing flight</h1>
          <div class="dayWisePrices">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div class="inDayWisePrices">
+            <div>Tue, 5 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+          <div class="inDayWisePrices">
+            <div>Wed, 6 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+          <div class="inDayWisePrices">
+            <div>Thu, 7 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+          <div class="inDayWisePrices">
+            <div>Fri, 8 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+          <div class="inDayWisePrices">
+            <div>Sat, 9 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+          <div class="inDayWisePrices">
+            <div>Sun, 10 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+          <div class="inDayWisePrices">
+            <div>Mon, 11 Oct</div>
+            <div>Rs4,593</div>
+          </div>
          </div>
           <hr>
           <div class="sortByPrice">
@@ -183,7 +202,6 @@
 </body>
 </html>
 
-<script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
 <script type="module">
      import navbar from "../components/navbarImport.js";
      let divNavbar = document.querySelector(".navbar");
@@ -197,8 +215,6 @@
      let divfooterCopyright = document.querySelector(".footerCopyright");
      divfooterCopyright.innerHTML=footerCopyright();
 
-
-     
      import flightComponent from "../components/flightComponent.js";
      let sb = document.getElementsByClassName("s_b");
      sb[0].innerHTML = flightComponent();
@@ -222,7 +238,7 @@
 
     //  console.log(StoredData);
 
-     
+   
 </script>
 
 <script>
@@ -246,7 +262,6 @@ function travellerFunctionHide()
 function adultCountMinus()
 {
   let div=document.getElementById("adultCount")
-  
   let traveller=document.getElementById("totalTraveller")
   travellerText=traveller.innerHTML;
   var number = travellerText.match(/\d/g);
@@ -339,26 +354,78 @@ function peopleBooked()
   
 }
 
-function loadFlights()
+async function loadFlights()
 {
-  let sizeOfData=9;
+  let res= await fetch("http://localhost:5000/api/flights")
+  let data=await res.json()
+ // console.log(data[0].time)
+  let sizeOfData=data.length;
   let displayDiv=document.querySelector(".display");
+  data.sort(function(a, b) {
+    return parseFloat(a.price) - parseFloat(b.price);
+});
+  console.log(data)
   for(let i=0;i<sizeOfData;i++)
   {
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
      displayClass.addEventListener("click",move);  
-    for(let j=0;j<3;j++)
-    {
+   
       let div=document.createElement("div")
+      div.className="inDisplay";
+      let divv=document.createElement("div")
+      let divvv=document.createElement("div")
+      div.appendChild(divv)
+      div.appendChild(divvv)
+
+
+      let div1=document.createElement("div")
+      let div2=document.createElement("div")
+
       displayClass.appendChild(div)
-      div.innerHTML="dummy data";
-    }
+      displayClass.appendChild(div1)
+      displayClass.appendChild(div2)
+      divv.innerHTML=data[i].time;
+      divvv.innerHTML=data[i].airline;
+      div1.innerHTML=data[i].stop;
+      div2.innerHTML="Rs"+data[i].price;
+   
   }
 }
-
 loadFlights();
+
+function changeDepartureColor(color,div)
+{
+  if(div=="classOfTime1")
+  {
+    let a=document.querySelector(".classOfTime1");
+    a.style.background=color ;
+    let i=document.querySelector(".classOfTime2");
+    i.style.background='white' ;
+    let j=document.querySelector(".classOfTime3");
+    j.style.background='white' ;
+
+  }
+  else if(div=="classOfTime2")
+  {
+    let b=document.querySelector(".classOfTime2");
+    b.style.background=color ;
+    let c=document.querySelector(".classOfTime1");
+    c.style.background='white' ;
+    let d=document.querySelector(".classOfTime3");
+    d.style.background='white' ;
+  }
+   else if(div=="classOfTime3")
+  {
+    let e=document.querySelector(".classOfTime3");
+    e.style.background=color ;
+    let f=document.querySelector(".classOfTime1");
+    f.style.background='white' ;
+    let g=document.querySelector(".classOfTime2");
+    g.style.background='white' ;
+  }
+}
 
 function move()
 {
