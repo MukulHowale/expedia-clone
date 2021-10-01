@@ -92,19 +92,19 @@
             <div class="stops">
               <div style="grid-area: 'a';"><p>Stops</p></div>
               <div style="grid-area: 'b';"><p>From</p></div>
-              <div style="grid-area: 'c';"> <input type="checkbox">__Direct</div>
-              <div style="grid-area: 'd';"><p>Rs4,593</p></div>
-              <div style="grid-area: 'e';"><input type="checkbox">__1 stop</div>
-              <div style="grid-area: 'f';"><p>Rs4,593</p></div>
+              <div style="grid-area: 'c';"> <input onclick="selectDirectFlights()" type="checkbox">__Direct</div>
+              <div style="grid-area: 'd';"><p>Rs4,211</p></div>
+              <div style="grid-area: 'e';"><input onclick="selectOneStopFlights()" type="checkbox">__1 stop</div>
+              <div style="grid-area: 'f';"><p>Rs3,451</p></div>
             </div>
 
             <div class="stops">
               <div style="grid-area: 'a';"><p>Airlines</p></div>
               <div style="grid-area: 'b';"><p>From</p></div>
-              <div style="grid-area: 'c';"> <input type="checkbox">__Indigo</div>
-              <div style="grid-area: 'd';"><p>Rs4,593</p></div>
-              <div style="grid-area: 'e';"><input type="checkbox">__Vistara</div>
-              <div style="grid-area: 'f';"><p>Rs8,593</p></div>
+              <div style="grid-area: 'c';"> <input onclick="selectIndigo()" type="checkbox">__Indigo</div>
+              <div style="grid-area: 'd';"><p>Rs3,451</p></div>
+              <div style="grid-area: 'e';"><input onclick="selectVistara()" type="checkbox">__Vistara</div>
+              <div style="grid-area: 'f';"><p>Rs4,433</p></div>
             </div>
             <h1>Departure time </h1>  
             <div class="time">
@@ -169,9 +169,9 @@
               complete your purchase.</p>
             </div>
             <div>
-                <select name="select Price" id="selectPrice">
-                  <option value="Lowest">Price(Lowest)</option>
-                  <option value="Highest">Price(Highest)</option>
+                <select onchange="check(this.value)" name="select Price" id="selectPrice">
+                  <option  value="Lowest">Price(Lowest)</option>
+                  <option  value="Highest">Price(Highest)</option>
                 </select>
             </div>
             </div>
@@ -355,19 +355,209 @@ function peopleBooked()
   
 }
 
+/*-----------------------------------
+-----------------------------------------
+-----------------------------------------------
+-----------------------------------------------------*/
+async function selectDirectFlights()
+{
+  let myNode = document.querySelector(".display");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+  let sizeOfData=data.length;
+  let displayDiv=document.querySelector(".display");
+  for(let i=0;i<sizeOfData;i++)
+  {
+    if(data[i].stop==="Direct")
+    {
+    let displayClass=document.createElement("div")
+    displayDiv.appendChild(displayClass);
+    displayClass.className="classInDisplay";
+     displayClass.addEventListener("click",move);  
+      let div=document.createElement("div")
+      div.className="inDisplay";
+      let divv=document.createElement("div")
+      let divvv=document.createElement("div")
+      div.appendChild(divv)
+      div.appendChild(divvv)
+      let div1=document.createElement("div")
+      let div2=document.createElement("div")
+      displayClass.appendChild(div)
+      displayClass.appendChild(div1)
+      displayClass.appendChild(div2)
+      divv.innerHTML=data[i].time;
+      divvv.innerHTML=data[i].airline;
+      div1.innerHTML=data[i].stop;
+      div2.innerHTML="Rs"+data[i].price;
+    }
+  }
+}
+
+
+/*-----------------------------------
+-----------------------------------------
+-----------------------------------------------
+-----------------------------------------------------*/
+async function selectIndigo()
+{
+  let myNode = document.querySelector(".display");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+  let sizeOfData=data.length;
+  let displayDiv=document.querySelector(".display");
+  for(let i=0;i<sizeOfData;i++)
+  {
+    if(data[i].airline==="IndiGo")
+    {
+    let displayClass=document.createElement("div")
+    displayDiv.appendChild(displayClass);
+    displayClass.className="classInDisplay";
+     displayClass.addEventListener("click",move);  
+      let div=document.createElement("div")
+      div.className="inDisplay";
+      let divv=document.createElement("div")
+      let divvv=document.createElement("div")
+      div.appendChild(divv)
+      div.appendChild(divvv)
+      let div1=document.createElement("div")
+      let div2=document.createElement("div")
+      displayClass.appendChild(div)
+      displayClass.appendChild(div1)
+      displayClass.appendChild(div2)
+      divv.innerHTML=data[i].time;
+      divvv.innerHTML=data[i].airline;
+      div1.innerHTML=data[i].stop;
+      div2.innerHTML="Rs"+data[i].price;
+    }
+  }
+}
+
+
+/*-----------------------------------
+-----------------------------------------
+-----------------------------------------------
+-----------------------------------------------------*/
+async function selectVistara()
+{
+  let myNode = document.querySelector(".display");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+  let sizeOfData=data.length;
+  let displayDiv=document.querySelector(".display");
+  for(let i=0;i<sizeOfData;i++)
+  {
+    if(data[i].airline==="Vistara")
+    {
+    let displayClass=document.createElement("div")
+    displayDiv.appendChild(displayClass);
+    displayClass.className="classInDisplay";
+     displayClass.addEventListener("click",move);  
+      let div=document.createElement("div")
+      div.className="inDisplay";
+      let divv=document.createElement("div")
+      let divvv=document.createElement("div")
+      div.appendChild(divv)
+      div.appendChild(divvv)
+      let div1=document.createElement("div")
+      let div2=document.createElement("div")
+      displayClass.appendChild(div)
+      displayClass.appendChild(div1)
+      displayClass.appendChild(div2)
+      divv.innerHTML=data[i].time;
+      divvv.innerHTML=data[i].airline;
+      div1.innerHTML=data[i].stop;
+      div2.innerHTML="Rs"+data[i].price;
+    }
+  }
+}
+
+/*-----------------------------------
+-----------------------------------------
+-----------------------------------------------
+-----------------------------------------------------*/
+
+async function selectOneStopFlights()
+{
+  let myNode = document.querySelector(".display");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+
+  let sizeOfData=data.length;
+  let displayDiv=document.querySelector(".display");
+  for(let i=0;i<sizeOfData;i++)
+  {
+    if(data[i].stop==="1_stop")
+    {
+    let displayClass=document.createElement("div")
+    displayDiv.appendChild(displayClass);
+    displayClass.className="classInDisplay";
+     displayClass.addEventListener("click",move);  
+      let div=document.createElement("div")
+      div.className="inDisplay";
+      let divv=document.createElement("div")
+      let divvv=document.createElement("div")
+      div.appendChild(divv)
+      div.appendChild(divvv)
+      let div1=document.createElement("div")
+      let div2=document.createElement("div")
+      displayClass.appendChild(div)
+      displayClass.appendChild(div1)
+      displayClass.appendChild(div2)
+      divv.innerHTML=data[i].time;
+      divvv.innerHTML=data[i].airline;
+      div1.innerHTML=data[i].stop;
+      div2.innerHTML="Rs"+data[i].price;
+    }
+  }
+}
+
+/*-----------------------------------
+-----------------------------------------
+-----------------------------------------------
+-----------------------------------------------------*/
+var data;
 async function loadFlights()
 {
+  let myNode = document.querySelector(".display");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
   let res= await fetch("http://localhost:5000/api/flights")
-  let data=await res.json()
+   data=await res.json()
  // console.log(data[0].time)
   let sizeOfData=data.length;
   let displayDiv=document.querySelector(".display");
   data.sort(function(a, b) {
     return parseFloat(a.price) - parseFloat(b.price);
 });
-  console.log(data)
+
+
+ var minIndigo=100000000;
+ var vistara=100000000;
+ var minDirect=10000000;
+ var oneStop=10000000;
+
   for(let i=0;i<sizeOfData;i++)
   {
+    /*
+    if(data[i].price<minIndigo && data[i].airline==="IndiGo"){
+      minIndigo=data[i].price;
+    }
+    if(data[i].price<vistara && data[i].airline==="Vistara"){
+      vistara=data[i].price;
+    }
+    if(data[i].price<minDirect && data[i].stop==="Direct"){
+      minDirect=data[i].price;
+    }
+    if(data[i].price<oneStop && data[i].stop==="1_stop"){
+      oneStop=data[i].price;
+    }
+*/
+
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
@@ -391,10 +581,60 @@ async function loadFlights()
       divvv.innerHTML=data[i].airline;
       div1.innerHTML=data[i].stop;
       div2.innerHTML="Rs"+data[i].price;
-   
   }
 }
+
 loadFlights();
+
+function check(name)
+{
+  if(name==="Lowest")
+  {
+    loadFlights();
+  }
+  else{
+    loadFlightsDes();
+  }
+}
+
+/*-----------------------------------
+-----------------------------------------
+-----------------------------------------------
+-----------------------------------------------------*/
+async function loadFlightsDes()
+{
+  let myNode = document.querySelector(".display");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+  let sizeOfData=data.length;
+  let displayDiv=document.querySelector(".display");
+  data.sort(function(a, b) {
+    return parseFloat(b.price) - parseFloat(a.price);
+});
+  for(let i=0;i<sizeOfData;i++)
+  {
+    let displayClass=document.createElement("div")
+    displayDiv.appendChild(displayClass);
+    displayClass.className="classInDisplay";
+     displayClass.addEventListener("click",move);  
+      let div=document.createElement("div")
+      div.className="inDisplay";
+      let divv=document.createElement("div")
+      let divvv=document.createElement("div")
+      div.appendChild(divv)
+      div.appendChild(divvv)
+      let div1=document.createElement("div")
+      let div2=document.createElement("div")
+      displayClass.appendChild(div)
+      displayClass.appendChild(div1)
+      displayClass.appendChild(div2)
+      divv.innerHTML=data[i].time;
+      divvv.innerHTML=data[i].airline;
+      div1.innerHTML=data[i].stop;
+      div2.innerHTML="Rs"+data[i].price;
+  }
+}
 
 function changeDepartureColor(color,div)
 {
@@ -402,29 +642,46 @@ function changeDepartureColor(color,div)
   {
     let a=document.querySelector(".classOfTime1");
     a.style.background=color ;
+    a.style.color='white';
+
     let i=document.querySelector(".classOfTime2");
     i.style.background='white' ;
+    i.style.color='black' ;
+
     let j=document.querySelector(".classOfTime3");
     j.style.background='white' ;
+    j.style.color='black' ;
 
   }
   else if(div=="classOfTime2")
   {
     let b=document.querySelector(".classOfTime2");
     b.style.background=color ;
+    b.style.color='white';
+
     let c=document.querySelector(".classOfTime1");
     c.style.background='white' ;
+    c.style.color='black' ;
+
     let d=document.querySelector(".classOfTime3");
     d.style.background='white' ;
+    d.style.color='black' ;
+
   }
    else if(div=="classOfTime3")
   {
     let e=document.querySelector(".classOfTime3");
     e.style.background=color ;
+    e.style.color='white';
+
     let f=document.querySelector(".classOfTime1");
     f.style.background='white' ;
+    f.style.color='black' ;
+
     let g=document.querySelector(".classOfTime2");
     g.style.background='white' ;
+    g.style.color='black' ;
+
   }
 }
 
