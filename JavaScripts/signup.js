@@ -61,6 +61,9 @@ async function signup(){
         });
         let data = await res.json();
 
+        localStorage.setItem("loginStatus",1);
+        localStorage.setItem("userName",fname.value + " " + lname.value);
+
         fname.value = "";
         lname.value = "";
         email.value = "";

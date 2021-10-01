@@ -23,6 +23,8 @@ async function signin(){
         data.forEach(user => {
         if(user.email == user_email.value){
             if(user.password == user_pass.value){
+                localStorage.setItem("loginStatus",1);
+                localStorage.setItem("userName", user.firstName + " " + user.surname);
                 location.assign("../index.html");
                 hidep();
                 user_email.value = "";
