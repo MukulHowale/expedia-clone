@@ -7,6 +7,7 @@
     <title>Cheap Flights, Airfares and Air Tickets | Expedia</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en"/>
     <link rel="stylesheet" href="../CSS/Flights.css">
+    <link rel="stylesheet" href="..\CSS\flightComponent.css">
 </head>
 <body>
 
@@ -59,6 +60,7 @@
                  </div>
                </div>
         </div>
+        
                <!------------------------------------------------------------>   
 
         <div style="    padding-left: 4%; ">
@@ -76,6 +78,12 @@
                 <option value="oneWay"> More options</option>
                </select>
         </div>
+    </div>
+
+    <div class="flight_s">
+      <div class="s_b">
+
+      </div>
     </div>
    
     <div class="chooseFlight" onclick="travellerFunctionHide()">
@@ -175,6 +183,7 @@
 </body>
 </html>
 
+<script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
 <script type="module">
      import navbar from "../components/navbarImport.js";
      let divNavbar = document.querySelector(".navbar");
@@ -187,7 +196,33 @@
      import footerCopyright from "../components/footerCopyright.js";
      let divfooterCopyright = document.querySelector(".footerCopyright");
      divfooterCopyright.innerHTML=footerCopyright();
-   
+
+
+     
+     import flightComponent from "../components/flightComponent.js";
+     let sb = document.getElementsByClassName("s_b");
+     sb[0].innerHTML = flightComponent();
+
+     sb[0].removeChild(sb[0].children[0]);
+     let sTemp = sb[0].children[0];
+     sTemp.removeChild(sTemp.children[3]);
+     let sTemp2 = sb[0];
+     sTemp2.children[0].children[2].style.width = "28%";
+     sTemp2.children[1].style.marginTop = "2%";
+
+     let StoredData = JSON.parse(localStorage.getItem("storeCityDate"));
+     
+     sTemp2.children[0].children[0].children[1].children[0].style.fontSize = "12px";
+     sTemp2.children[0].children[0].children[1].children[1].innerText = StoredData[0].DepartCity;
+
+     sTemp2.children[0].children[1].children[2].children[0].style.fontSize = "12px";
+     sTemp2.children[0].children[1].children[2].children[1].innerText = StoredData[0].ArriveCity;
+
+     sTemp2.children[0].children[2].children[1].children[1].children[0].value = StoredData[0].Date;
+
+    //  console.log(StoredData);
+
+     
 </script>
 
 <script>
