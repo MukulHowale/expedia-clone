@@ -299,7 +299,12 @@
             go.addEventListener("click", () =>{
                 seaCity(searchCityComponent);
 
-                let searchCityInput = document.getElementsByClassName("searchCity")[0].children[0].children[0];
+                let searchCity = document.getElementsByClassName("searchCity");
+                searchCity[0].style.left = "540px";
+
+                console.log(searchCity);
+
+                let searchCityInput = searchCity[0].children[0].children[0];
 
                 searchCityInput.addEventListener("input", () =>{
                     wait(main,100);
@@ -334,14 +339,7 @@
         clickThings(thingsComponent);
     })
 
-    
-
-    // let btn1 = sb[0].children;
-
-    // console.log(btn1);
-
     window.onload = () =>{
         clickStay(stayComponent);
     }
 </script>
-<script src="index.js"></script>

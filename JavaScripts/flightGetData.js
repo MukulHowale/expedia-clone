@@ -10,25 +10,14 @@ let putText;
 
 let showDetails = (e) =>{
 
-    // let leaveText = f.children[1].children[0];
-
-    console.log(leaveText);
-
     leaveText.setAttribute("class","font_size_3")
     leaveText.style.fontSize = "12px";
 
-    // let putText = f.children[1].children[1];
-
     putText.innerText = `${e.target.children[0].innerText} ${e.target.children[1].innerText}`
-
-    
 
     let sC = document.getElementsByClassName("temp")[0];
 
     sC.innerHTML = "";
-    // return e.target
-
-    // console.log(e.target.children);
 }
 
 let appendCity = (m) =>{
@@ -161,6 +150,8 @@ let saveCityDate = () =>{
     var temp = JSON.parse(localStorage.getItem("storeCityDate"));
 
     console.log(temp);
+
+    window.location = "./HTML/Flights.html";
 }
 
 export {wait, main, check, saveCityDate};
