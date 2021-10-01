@@ -209,7 +209,7 @@
 
 .flight_s{
   width: 70%;
-  height: 90px;
+  height: 110px;
   /* border: 1px solid black; */
   margin-left: 2%;
 }
@@ -227,7 +227,7 @@
 }
 
 #searchBtnDiv > button{
-  height: 70%;
+  height: 55%;
   width: 100%;
   border-radius: 10px;
   background-color: #3662d8;
