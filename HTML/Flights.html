@@ -28,7 +28,7 @@
         <!------------------------------------------------------------>   
 
        <div style="    padding-left: 4%;" >
-               <div class="select_Way" onclick="travellerFunction()"> 1 traveller ˅</div>
+               <div class="select_Way" id="totalTraveller" onclick="travellerFunction()"> 1 traveller ˅</div>
                <div class="traveller_part">
                   <p>We allow up to 6 travellers total per booking.</p>
                 <div class="adults">
@@ -36,7 +36,7 @@
                         <p>18 and older</p>
                    </div>
                    <div><button onclick="adultCountMinus()">-</button>   </div>
-                   <div class="adultCount" id="adultCount">5</div>
+                   <div class="adultCount" id="adultCount">1</div>
                    <div><button onclick="adultCountPlus()">+</button>   </div>
                 </div>
                 <div class="adults">
@@ -57,7 +57,7 @@
                  </div>
                  <div id="doneCancel">
                      <div onclick="travellerFunctionHide()">Cancel</div>
-                     <div>Done</div>
+                     <div onclick="peopleBooked()">Done</div>
                  </div>
                </div>
         </div>
@@ -151,31 +151,31 @@
             </div>
 
             <div class="display">
-              <div class="classInDisplay">
+              <div class="classInDisplay" onclick="move()">
                <div>10:10-11:55</div>
                <div>Direct</div>
                <div><h1>Rs4,590</h1></div>
               </div>
 
-              <div class="classInDisplay">
+              <div class="classInDisplay" onclick="move()">
                 <div>10:10-11:55</div>
                 <div>Direct</div>
                 <div><h1>Rs4,590</h1></div>
                </div>
 
-               <div class="classInDisplay">
+               <div class="classInDisplay" onclick="move()">
                 <div>10:10-11:55</div>
                 <div>Direct</div>
                 <div><h1>Rs4,590</h1></div>
                </div>
 
-               <div class="classInDisplay">
+               <div class="classInDisplay" onclick="move()">
                 <div>10:10-11:55</div>
                 <div>Direct</div>
                 <div><h1>Rs4,590</h1></div>
                </div>
 
-               <div class="classInDisplay">
+               <div class="classInDisplay" onclick="move()">
                 <div>10:10-11:55</div>
                 <div>Direct</div>
                 <div><h1>Rs4,590</h1></div>
@@ -241,17 +241,31 @@ function travellerFunctionHide()
 function adultCountMinus()
 {
   let div=document.getElementById("adultCount")
+  
+  let traveller=document.getElementById("totalTraveller")
+  travellerText=traveller.innerHTML;
+  var number = travellerText.match(/\d/g);
+  number = number.join("");
+
   htmlContent=div.innerHTML;
-  if(htmlContent!=0 ){
-  div.innerHTML=htmlContent-1;
+  if(htmlContent!=0 )
+  {
+   div.innerHTML=htmlContent-1;
+   traveller.innerHTML=number-1+" traveller ˅"; 
   }
 }
  function childrenCountMinus()
  {
     let div=document.getElementById("childrenCount")
     htmlContent1=div.innerHTML;
+    let traveller=document.getElementById("totalTraveller")
+  travellerText=traveller.innerHTML;
+  var number = travellerText.match(/\d/g);
+  number = number.join("");
+
    if(htmlContent1!=0 ){
     div.innerHTML=htmlContent1-1;
+    traveller.innerHTML=number-1+" traveller ˅"; 
   }
  }
 
@@ -259,8 +273,14 @@ function adultCountMinus()
  {
     let div=document.getElementById("infantsCount")
     htmlContent2=div.innerHTML;
+    let traveller=document.getElementById("totalTraveller")
+  travellerText=traveller.innerHTML;
+  var number = travellerText.match(/\d/g);
+  number = number.join("");
+
     if(htmlContent2!=0 ){
     div.innerHTML=htmlContent2-1;
+    traveller.innerHTML=number-1+" traveller ˅"; 
    }
 }
 
@@ -268,8 +288,14 @@ function adultCountPlus()
 {
     let div=document.getElementById("adultCount")
   htmlContent=div.innerHTML;
+  let traveller=document.getElementById("totalTraveller")
+  travellerText=traveller.innerHTML;
+  var number = travellerText.match(/\d/g);
+  number = number.join("");
+
    if(htmlContent!=6 ){
   div.innerHTML=htmlContent-1+2;
+  traveller.innerHTML=number-1+2+" traveller ˅"; 
   }
 }
 
@@ -277,8 +303,14 @@ function childrenCountPlus()
 {
     let div=document.getElementById("childrenCount")
   htmlContent=div.innerHTML;
+  let traveller=document.getElementById("totalTraveller")
+  travellerText=traveller.innerHTML;
+  var number = travellerText.match(/\d/g);
+  number = number.join("");
+
    if(htmlContent!=6 ){
   div.innerHTML=htmlContent-1+2;
+  traveller.innerHTML=number-1+2+" traveller ˅"; 
   }
 }
 
@@ -286,10 +318,24 @@ function infantsCountPlus()
 {
     let div=document.getElementById("infantsCount")
   htmlContent=div.innerHTML;
+  let traveller=document.getElementById("totalTraveller")
+  travellerText=traveller.innerHTML;
+  var number = travellerText.match(/\d/g);
+  number = number.join("");
+
    if(htmlContent!=6 ){
   div.innerHTML=htmlContent-1+2;
+  traveller.innerHTML=number-1+2+" traveller ˅"; 
   }
 }
 
+function peopleBooked()
+{
+  
+}
 
+function move()
+{
+   window.location="flightsCheckout.html";
+}
 </script>
