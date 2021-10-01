@@ -16,20 +16,75 @@
     <div class="main">
     <div class="page">
         <div class="left">
-            <img src="https://images.trvl-media.com/media/content/expus/graphics/flights/no_change_fee.svg" alt="">
-              <h3>Stay flexible with no change fees</h3>
-              <p>We recommend booking a flight with no change fees in case your plans change.
-            </p>
+            <div><img src="https://images.trvl-media.com/media/content/expus/graphics/flights/no_change_fee.svg" alt=""></div>
+            <div> <h3>Stay flexible with no change fees</h3>
+                <p>We recommend booking a flight with no change fees in case your plans change.
+              </p></div>
+             
         </div>
 
         <div class="bottom">
+            <h1>Pune to Indore</h1>
+            <div class="lastDiv">
+                <div><img src="../Images/takeoff.svg"></div>
+                <div>Pune</div>
+            </div>
+            
+            <p>1h 45m flight</p>
+            <p>IndiGo</p>
 
+            <div class="lastDiv">
+                <div><img src="../Images/landing.svg"></div>
+                <div>Indore</div>
+            </div>
+            <hr style="margin-top: 2%; margin-bottom: 2%;">
+
+            <h3>Estimated bag fees</h3>
+            <div class="useFlex">
+                <div>Carry-on:</div>
+                <div>Included</div>
+            </div>
+            <div class="useFlex">
+                <div>1st checked bag:</div>
+                <div>Included</div>
+            </div>
+            <div class="useFlex">
+                <div>2nd checked bag:</div>
+                <div>Rs1,200 to Rs39,600</div>
+            </div>
+           <p>Baggage fees reflect the airline's standard fees based on 
+               the selected fare class. Fees may vary based on size and 
+               weight restrictions as well as loyalty programmes and other 
+               promotions. For more information, check with IndiGo</p>
+               <p>You can purchase checked bags from IndiGo or through 
+                   the link in your confirmation or check-in emails.</p>
         </div>
-    </div>
 
+         </div>
     <div class="right">
-
+    <h1>Price Summmary</h1>
+     <div class="useFlex">
+         <div><h4>Travellers</h4></div>
+         <div><h4>Rs9,940</h4></div>
+     </div>
+     <div class="useFlex">
+        <div><p>flight</p></div>
+        <div><p>Rs7,230</p></div>
     </div>
+    <div class="useFlex">
+        <div>Taxes and Fees</div>
+        <div>Rs1,890</div>
+    </div>
+    <hr style="margin-top: 2%;">
+    <div class="useFlex">
+        <div><h3>Trip Total</h3></div>
+        <div>Rs9,070.00</div>
+    </div>
+  <button>Checkout</button>
+    </div>
+   </div>
+
+   <div class="mid_part">
    </div>
 
     <div class="footer">
@@ -47,6 +102,10 @@
     import navbar from "../components/navbarImport.js";
     let divNavbar = document.querySelector(".navbar");
     divNavbar.innerHTML=navbar();
+
+    import midPart from "../components/midPartImport.js";
+    let divMidPart = document.querySelector(".mid_part");
+    divMidPart.innerHTML=midPart();
 
     import footer from "../components/footerImport.js";
     let divFooter = document.querySelector(".footer");
