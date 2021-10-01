@@ -2,7 +2,7 @@ function navbar()
 {
     return `
         <div><img src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27&2" alt="logo"></div>
-        <div><p id="category" >More travel ˅</p>
+        <div><p id="category" style="width:20%;">More travel ˅</p>
          <div class="category">
              <ul><img src="../Images/stays.svg" >  Stays</ul>
              <ul><img src="../Images/flights.svg" > Flights</ul>

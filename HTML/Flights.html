@@ -149,35 +149,7 @@
             </div>
 
             <div class="display">
-              <div class="classInDisplay" onclick="move()">
-               <div>10:10-11:55</div>
-               <div>Direct</div>
-               <div><h1>Rs4,590</h1></div>
-              </div>
-
-              <div class="classInDisplay" onclick="move()">
-                <div>10:10-11:55</div>
-                <div>Direct</div>
-                <div><h1>Rs4,590</h1></div>
-               </div>
-
-               <div class="classInDisplay" onclick="move()">
-                <div>10:10-11:55</div>
-                <div>Direct</div>
-                <div><h1>Rs4,590</h1></div>
-               </div>
-
-               <div class="classInDisplay" onclick="move()">
-                <div>10:10-11:55</div>
-                <div>Direct</div>
-                <div><h1>Rs4,590</h1></div>
-               </div>
-
-               <div class="classInDisplay" onclick="move()">
-                <div>10:10-11:55</div>
-                <div>Direct</div>
-                <div><h1>Rs4,590</h1></div>
-               </div>
+              
             </div>
           
         </div>
@@ -331,6 +303,27 @@ function peopleBooked()
 {
   
 }
+
+function loadFlights()
+{
+  let sizeOfData=9;
+  let displayDiv=document.querySelector(".display");
+  for(let i=0;i<sizeOfData;i++)
+  {
+    let displayClass=document.createElement("div")
+    displayDiv.appendChild(displayClass);
+    displayClass.className="classInDisplay";
+     displayClass.addEventListener("click",move);  
+    for(let j=0;j<3;j++)
+    {
+      let div=document.createElement("div")
+      displayClass.appendChild(div)
+      div.innerHTML="dummy data";
+    }
+  }
+}
+
+loadFlights();
 
 function move()
 {
