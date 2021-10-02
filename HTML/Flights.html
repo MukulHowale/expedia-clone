@@ -7,6 +7,7 @@
     <title>Cheap Flights, Airfares and Air Tickets | Expedia</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en"/>
     <link rel="stylesheet" href="../CSS/Flights.css">
+    <link type="image/x-icon" href="https://www.expedia.co.in/favicon.ico" sizes="16x16 32x32" rel="icon" />
     <link rel="stylesheet" href="..\CSS\flightComponent.css">
 </head>
 <body>
@@ -636,21 +637,64 @@ async function loadFlightsDes()
   }
 }
 
-function changeDepartureColor(color,div)
+/*-----------------------------------
+-----------------------------------------
+-----------------------------------------------
+-----------------------------------------------------*/
+
+/*-----------------------------------
+-----------------------------------------
+-----------------------------------------------
+-----------------------------------------------------*/
+async function changeDepartureColor(color,div)
 {
   if(div=="classOfTime1")
   {
     let a=document.querySelector(".classOfTime1");
     a.style.background=color ;
     a.style.color='white';
-
     let i=document.querySelector(".classOfTime2");
     i.style.background='white' ;
     i.style.color='black' ;
-
     let j=document.querySelector(".classOfTime3");
     j.style.background='white' ;
     j.style.color='black' ;
+
+    let myNode = document.querySelector(".display");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+  let sizeOfData=data.length;
+  let displayDiv=document.querySelector(".display");
+  for(let i=0;i<sizeOfData;i++)
+  {
+
+      let str = data[i].departTime;
+           matches = str.match(/\d+/g);  
+             str   = matches[0] + matches[1] ;
+    if(str>500 && str<1159)
+    {
+    let displayClass=document.createElement("div")
+    displayDiv.appendChild(displayClass);
+    displayClass.className="classInDisplay";
+     displayClass.addEventListener("click",move);  
+      let div=document.createElement("div")
+      div.className="inDisplay";
+      let divv=document.createElement("div")
+      let divvv=document.createElement("div")
+      div.appendChild(divv)
+      div.appendChild(divvv)
+      let div1=document.createElement("div")
+      let div2=document.createElement("div")
+      displayClass.appendChild(div)
+      displayClass.appendChild(div1)
+      displayClass.appendChild(div2)
+      divv.innerHTML=data[i].time;
+      divvv.innerHTML=data[i].airline;
+      div1.innerHTML=data[i].stop;
+      div2.innerHTML="Rs"+data[i].price;
+    }
+  }
 
   }
   else if(div=="classOfTime2")
@@ -658,14 +702,48 @@ function changeDepartureColor(color,div)
     let b=document.querySelector(".classOfTime2");
     b.style.background=color ;
     b.style.color='white';
-
     let c=document.querySelector(".classOfTime1");
     c.style.background='white' ;
     c.style.color='black' ;
-
     let d=document.querySelector(".classOfTime3");
     d.style.background='white' ;
     d.style.color='black' ;
+    let myNode = document.querySelector(".display");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+    let sizeOfData=data.length;
+  let displayDiv=document.querySelector(".display");
+  for(let i=0;i<sizeOfData;i++)
+  {
+
+      let str = data[i].departTime;
+           matches = str.match(/\d+/g);  
+             str   = matches[0] + matches[1] ;
+    if(str>=1200 && str<=1759)
+    {
+    let displayClass=document.createElement("div")
+    displayDiv.appendChild(displayClass);
+    displayClass.className="classInDisplay";
+     displayClass.addEventListener("click",move);  
+      let div=document.createElement("div")
+      div.className="inDisplay";
+      let divv=document.createElement("div")
+      let divvv=document.createElement("div")
+      div.appendChild(divv)
+      div.appendChild(divvv)
+      let div1=document.createElement("div")
+      let div2=document.createElement("div")
+      displayClass.appendChild(div)
+      displayClass.appendChild(div1)
+      displayClass.appendChild(div2)
+      divv.innerHTML=data[i].time;
+      divvv.innerHTML=data[i].airline;
+      div1.innerHTML=data[i].stop;
+      div2.innerHTML="Rs"+data[i].price;
+    }
+  }
+
 
   }
    else if(div=="classOfTime3")
@@ -673,14 +751,49 @@ function changeDepartureColor(color,div)
     let e=document.querySelector(".classOfTime3");
     e.style.background=color ;
     e.style.color='white';
-
     let f=document.querySelector(".classOfTime1");
     f.style.background='white' ;
     f.style.color='black' ;
-
     let g=document.querySelector(".classOfTime2");
     g.style.background='white' ;
     g.style.color='black' ;
+   
+    let myNode = document.querySelector(".display");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+    let sizeOfData=data.length;
+  let displayDiv=document.querySelector(".display");
+  for(let i=0;i<sizeOfData;i++)
+  {
+
+      let str = data[i].departTime;
+           matches = str.match(/\d+/g);  
+             str   = matches[0] + matches[1] ;
+    if(str>=1700 && str<=2359)
+    {
+    let displayClass=document.createElement("div")
+    displayDiv.appendChild(displayClass);
+    displayClass.className="classInDisplay";
+     displayClass.addEventListener("click",move);  
+      let div=document.createElement("div")
+      div.className="inDisplay";
+      let divv=document.createElement("div")
+      let divvv=document.createElement("div")
+      div.appendChild(divv)
+      div.appendChild(divvv)
+      let div1=document.createElement("div")
+      let div2=document.createElement("div")
+      displayClass.appendChild(div)
+      displayClass.appendChild(div1)
+      displayClass.appendChild(div2)
+      divv.innerHTML=data[i].time;
+      divvv.innerHTML=data[i].airline;
+      div1.innerHTML=data[i].stop;
+      div2.innerHTML="Rs"+data[i].price;
+    }
+  }
+
 
   }
 }
