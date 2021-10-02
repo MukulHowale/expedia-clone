@@ -7,6 +7,20 @@ Array.from(year_div).forEach(div => {
     div.append(opt);
     }
 });
+
+
+
+let days = document.getElementsByClassName("day");
+Array.from(days).forEach(div => {
+    for(let i=1; i<=31; i++){
+    let opt = document.createElement("option");
+    opt.innerText = i;
+    div.append(opt);
+    }
+});
+
+
+
 let card = document.getElementById("code");
 let code = document.getElementById("security");
 code.addEventListener("focusin",() =>{

@@ -164,3 +164,6 @@ ol + p{
     color: blue;
     font-size: 12px;
 }
+#t2, #t3, #t4{
+    display: none;
+}
