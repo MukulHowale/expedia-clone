@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href=".\CSS\calender.css">
 </head>
 <body>
     <div class="navbar">
@@ -75,6 +77,10 @@
 
                 </div>
             </div>
+        </div>
+        <div class="cal">
+            <!--       calender        -->
+            
         </div>
     </div>
 
@@ -242,6 +248,10 @@
 
     import searchCityComponent from "./components/searchCityComponent.js"
 
+    //calender
+    import calComponent from "./components/calenderComponent.js"
+    import cal from "./JavaScripts/calender.js"
+
     import {re, oneWay, multi} from "./JavaScripts/flightTravel.js";
 
     import {clickStay, clickFlights, clickCars, clickPack, clickThings, seaCity} from "./JavaScripts/index.js";
@@ -260,6 +270,30 @@
 
         clickFlights(flightComponent);
 
+        let sb = document.getElementsByClassName("s_b");
+
+        // calender
+        let calCall = sb;
+
+        let departBtn = sb[0].children[1].children[2];
+
+        let ariveBtn = sb[0].children[1].children[3];
+        
+        let dDate = new Date().toString().split(" ");
+
+        departBtn.children[1].children[1].innerText = `${dDate[2]} ${dDate[1]}`;
+
+        let tem;
+
+        if(dDate[2].split("")[0] == "0"){
+            tem = `0${Number(dDate[2]) + 1}`
+        }
+
+        ariveBtn.children[1].children[1].innerText = `${tem} ${dDate[1]}`;
+
+
+        
+
         let re1 = document.getElementById("re");
 
         let oneWay1 = document.getElementById("oneWay");
@@ -272,8 +306,6 @@
 
         oneWay1.addEventListener("click", () =>{
             oneWay();
-
-            let sb = document.getElementsByClassName("s_b");
 
             let btn1 = sb[0].children[2].children[0];
 
@@ -312,7 +344,16 @@
                 check(2);
             })
 
+            // calender
+            departBtn.addEventListener("click", () =>{
+                let cale = document.getElementsByClassName("cal")[0];
+                cale.innerHTML = calComponent();
+
+                cal();
+            })
+
         })
+        
 
         multi1.addEventListener("click", ()=>{
             multi();
@@ -337,6 +378,7 @@
     thing.addEventListener("click", () =>{
         clickThings(thingsComponent);
     })
+
 
     window.onload = () =>{
         clickStay(stayComponent);
