@@ -9,11 +9,18 @@ let putText;
 // console.log(show);
 
 let showDetails = (e) =>{
+    let eve;
+    if(e.path[1].className == "divp1"){
+        eve = e.path[1];
+    }
+    else{
+        eve = e.path[2];
+    }
 
     leaveText.setAttribute("class","font_size_3")
     leaveText.style.fontSize = "12px";
 
-    putText.innerText = `${e.target.children[0].innerText} ${e.target.children[1].innerText}`
+    putText.innerText = `${eve.children[0].children[0].innerText} ${eve.children[0].children[1].innerText}`
 
     let sC = document.getElementsByClassName("temp")[0];
 
