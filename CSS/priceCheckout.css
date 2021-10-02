@@ -1,0 +1,166 @@
+*{
+    font-family: 'Noto Sans', sans-serif;
+}
+.heading{
+    width: 75%;
+    margin: auto;
+}
+.heading > h2{
+    font-size: 24px;
+}
+body,.grayc,select{
+    background-color: #ededed;
+}
+#checkout{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    gap: 1%;
+}
+#left-div > div:nth-child(1){
+    margin-top: 0px;
+}
+#left-div{
+    width: 65%;
+}
+#travellers > h2{
+    margin-top: 0px;
+}
+#right-div{
+    width: 34%;
+    background-color: white;
+    height: 600px;
+}
+#left-div > div{
+    background-color: white;
+    padding:20px;
+    margin-top: 20px;
+}
+.line{
+    margin: 20px 0px 10px;
+    border-top: 1px solid lightgray;
+}
+.black-bold{
+    font-weight: 700;
+    font-size: 15px;
+    margin: 15px 0px;
+    color: black;
+}
+.gray-bold{
+    color: rgb(73, 73, 73);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+#code > img{
+    width: 20%;
+}
+#code > p:nth-child(1){
+    color: rgb(184, 7, 7);
+}
+.input-text:focus{
+    border: 2.5px solid black;
+}
+.input-text{
+    border: 1px solid rgb(85, 84, 84);
+    padding: 3px 10px;
+    height: 30px;
+    border-radius: 3px;
+    width: 400px;
+    font-size: 14px;
+}
+.wide{
+    width: 420px;
+}
+.size1{
+    width: 200px;
+}
+.size2{
+    width: 150px;
+}
+.size3{
+    width: 100px;
+}
+select{
+    height: 37px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+.name{
+    display: flex;
+    gap: 2%;
+}
+span,label{
+    font-size: 13px;
+}
+.check{
+    margin: 10px 0px 15px;
+}
+#payhead{
+    margin: 5px 0px 15px;
+}
+#payhead > span{
+    font-size: 20px;
+    font-weight: 700;
+}
+#payhead > i{
+    font-size: 20px;
+}
+#images > img{
+    width: 35px;
+}
+#info > h2{
+    font-size: 20px;
+    margin-top: 0px;
+}
+li,p,span{
+    font-size: 13px;
+    margin: 5px 0px;
+    line-height: 20px;
+    color: rgb(85, 83, 83);
+}
+ol + p{
+    margin: 20px 0px;
+}
+#info > h3{
+    margin-top: 20px;
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+#info > h3+p{
+    margin-bottom: 20px;
+}
+#info > button{
+    width: 200px;
+    height: 45px;
+    background-color: #ffbd25;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+}
+#info > button:hover{
+    cursor: pointer;
+    background-color: #f1cf7f;
+}
+.greenc{
+    color: rgb(1, 92, 1);
+}
+.greenc > i{
+    font-size: 14px;
+}
+.greenc > span{
+    color: rgb(1, 92, 1);
+    margin-right: 10px;
+}
+.size4{
+    width: 250px;
+}
+#booking > br ~ span{
+    font-size: 12px;
+}
+.bluec{
+    color: blue;
+    font-size: 12px;
+}

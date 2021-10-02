@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expedia: Payment</title>
+    <link rel="stylesheet" href="../CSS/priceCheckout.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="image/x-icon" href="https://www.expedia.co.in/favicon.ico" sizes="16x16 32x32" rel="icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar"></div>
+    <div class="heading">
+        <h2>Secure booking - only takes a few minutes!</h2>
+    </div>
+    <div id="checkout">
+        <div id="left-div">
+            <div id="travellers">
+                <h2>Who's travelling?</h2>
+                <div class="line"></div>
+                <p class="black-bold">Flight</p>
+                <div>
+                    <p class="black-bold">Traveller <span class="adult">1</span>: Adult, primary contact</p>
+                    <p class="gray-bold">Traveller name*</p>
+                    <input type="text" class="grayc input-text">
+                    <div class="name">
+                        <div>
+                            <p class="gray-bold">Title*</p>
+                            <select>
+                                <option value="Mr.">Mr.</option>
+                                <option value="Ms.">Ms.</option>
+                                <option value="Mrs.">Mrs.</option>
+                                <option value="Miss.">Miss.</option>
+                                <option value="Master">Master</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p class="gray-bold">Surname*</p>
+                            <input type="text" class="input-text size1">
+                        </div>
+                        <div>
+                            <p class="gray-bold">First name*</p>
+                            <input type="text" class="input-text size2">
+                        </div>
+                        
+                    </div>
+                    <p class="gray-bold">Country/Territory Code*</p>
+                    <select class="wide">
+                        <option value="code">Country code</option>
+                        <option value="+93,Afghanistan">Afghanistan +93</option>
+                        <option value="+672,Antarctica">Antarctica +672</option>
+                        <option value="+54,Argentina">Argentina +54</option>
+                        <option value="+61,Australia">Australia +61</option>
+                        <option value="+43,Austria">Austria +43</option>
+                        <option value="+880,Bangladesh">Bangladesh +880</option>
+                        <option value="+32,Belgium">Belgium +32</option>
+                        <option value="+975,Bhutan">Bhutan +975</option>
+                        <option value="+55,Brazil">Brazil +55</option>
+                        <option value="+1,Canada">Canada +1</option>
+                        <option value="+86,China">China +86</option>
+                        <option value="+45,Denmark">Denmark +45</option>
+                        <option value="+20,Egypt">Egypt +20</option>
+                        <option value="+33,France">France +33</option>
+                        <option value="+49,Germany">Germany +49</option>
+                        <option value="+30,Greece">Greece +30</option>
+                        <option value="+299,Greenland">Greenland +299</option>
+                        <option value="+852,HongKong">Hong Kong SAR +852</option>
+                        <option value="+36,Hungary">Hungary +36</option>
+                        <option value="+354,Iceland">Iceland +354</option>
+                        <option selected="" value="+91,India">India +91</option>
+                        <option value="+62,Indonesia">Indonesia +62</option>
+                        <option value="+98,Iran">Iran +98</option>
+                        <option value="+964,Iraq">Iraq +964</option>
+                        <option value="+353,Ireland">Ireland +353</option>
+                        <option value="+972,Israel">Israel +972</option>
+                        <option value="+39,Italy">Italy +39</option>
+                        <option value="+1,Jamaica">Jamaica +1</option>
+                        <option value="+81,Japan">Japan +81</option>
+                        <option value="+60,Malaysia">Malaysia +60</option>
+                        <option value="+960,Maldives">Maldives +960</option>
+                        <option value="+230,Mauritius">Mauritius +230</option>
+                        <option value="+52,Mexico">Mexico +52</option>
+                        <option value="+977,Nepal">Nepal +977</option>
+                        <option value="+31,Netherlands">Netherlands +31</option>
+                        <option value="+64,New_Zealand">New Zealand +64</option>
+                        <option value="+234,Nigeria">Nigeria +234</option>
+                        <option value="+850,North_Korea">North Korea +850</option>
+                        <option value="+47,Norway">Norway +47</option>
+                        <option value="+968,Oman">Oman +968</option>
+                        <option value="+92,Pakistan">Pakistan +92</option>
+                        <option value="+63,Philippines">Philippines +63</option>
+                        <option value="+48,Poland">Poland +48</option>
+                        <option value="+351,Portugal">Portugal +351</option>
+                        <option value="+40,Romania">Romania +40</option>
+                        <option value="+7,Russia">Russia +7</option>
+                        <option value="+966,Saudi_Arabia">Saudi Arabia +966</option>
+                        <option value="+65,Singapore">Singapore +65</option>
+                        <option value="+421,Slovakia">Slovakia +421</option>
+                        <option value="+27,South_Africa">South Africa +27</option>
+                        <option value="+82,South_Korea">South Korea +82</option>
+                        <option value="+94,Sri_Lanka">Sri Lanka +94</option>
+                        <option value="+46,Sweden">Sweden +46</option>
+                        <option value="+41,Switzerland">Switzerland +41</option>
+                        <option value="+886,Taiwan">Taiwan +886</option>
+                        <option value="+992,Tajikistan">Tajikistan +992</option>
+                        <option value="+66,Thailand">Thailand +66</option>
+                        <option value="+993,Turkmenistan">Turkmenistan +993</option>
+                        <option value="+688,Tuvalu">Tuvalu +688</option>
+                        <option value="+380,Ukraine">Ukraine +380</option>
+                        <option value="+971,United_Arab_Emirates">United Arab Emirates +971</option>
+                        <option value="+44,United_Kingdom">United Kingdom +44</option>
+                        <option value="+1,USA">United States of America +1</option>
+                        <option value="+39,Vatican_City">Vatican City +39</option>
+                        <option value="+58,Venezuela">Venezuela +58</option>
+                        <option value="+84,Vietnam">Vietnam +84</option>
+                        <option value="+263,Zimbabwe">Zimbabwe +263</option>
+                    </select>
+                    <p class="gray-bold">Phone number*</p>
+                    <input type="text" class="input-text" placeholder="In case we need to reach you">
+                    <div class="check">
+                        <input type="checkbox">
+                        <span>Receive text alerts about this trip (free of charge).</span>
+                    </div>
+                    
+                    <p class="gray-bold">Gender*</p>
+                    <form action="">
+                        <input type="radio" name="gender">
+                        <label>Male</label>
+                        <input type="radio" name="gender">
+                        <label>Female</label>
+                    </form>
+                    <p class="gray-bold">Date of birth*</p>
+                    <select>
+                        <option>Day</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
+                    <select>
+                        <option>Month</option>
+                        <option>1-Jan</option>
+                        <option>2-Feb</option>
+                        <option>3-Mar</option>
+                        <option>4-Apr</option>
+                        <option>5-May</option>
+                        <option>6-Jun</option>
+                        <option>7-Jul</option>
+                        <option>8-Aug</option>
+                        <option>9-Sep</option>
+                        <option>10-Oct</option>
+                        <option>11-Nov</option>
+                        <option>12-Dec</option>
+                    </select>
+                    <select class="year">
+                        <option>Year</option>
+                    </select>
+                    <div class="line"></div>
+                </div>
+                <div>
+                    <p class="gray-bold">Seat selection</p>
+                    <p>Your specific seat will be assigned by the airline before your flight.</p>
+                </div>
+            </div>
+
+            <div id="pay">
+                <div id="payhead">
+                    <i class="fa fa-lock"></i>
+                    <span>How would you like to pay?</span>
+                </div>
+                
+                <div id="images">
+                    <img src="https://a.travel-assets.com/dms-svg/payments/cards-cc_master_card.svg">
+                    <img src="https://a.travel-assets.com/dms-svg/payments/cards-cc_american_express.svg" alt="">
+                    <img src="https://a.travel-assets.com/dms-svg/payments/cards-cc_visa.svg" alt="">
+                    <img src="https://a.travel-assets.com/dms-svg/payments/cards-cc_visa_electron.svg" alt="">
+                </div>
+                <p class="gray-bold">Name on Card*</p>
+                <input type="text" class="input-text">
+                <p class="gray-bold">Debit/Credit card number*</p>
+                <input type="text" class="input-text size1">
+                <p class="gray-bold">Expiry date*</p>
+                <select>
+                    <option>Month</option>
+                    <option>1-Jan</option>
+                    <option>2-Feb</option>
+                    <option>3-Mar</option>
+                    <option>4-Apr</option>
+                    <option>5-May</option>
+                    <option>6-Jun</option>
+                    <option>7-Jul</option>
+                    <option>8-Aug</option>
+                    <option>9-Sep</option>
+                    <option>10-Oct</option>
+                    <option>11-Nov</option>
+                    <option>12-Dec</option>
+                </select>
+                <select class="year">
+                    <option>Year</option>
+                </select>
+                <p class="gray-bold">Security code*</p>
+                <input type="text" class="input-text size3" id="security">
+                <div id="code" style="display: none;">
+                    <p>Please enter a valid card security code.</p>
+                    <img src="https://a.travel-assets.com/dms-svg/payments/cards-cvv_nonamex.svg" alt="">
+                    <p>3 digit security code</p>
+                </div>
+                <div class="line"></div>
+                <p class="gray-bold">Country/Territory Code*</p>
+                <select class="wide">
+                    <option value="code">Country code</option>
+                    <option value="+93,Afghanistan">Afghanistan +93</option>
+                    <option value="+672,Antarctica">Antarctica +672</option>
+                    <option value="+54,Argentina">Argentina +54</option>
+                    <option value="+61,Australia">Australia +61</option>
+                    <option value="+43,Austria">Austria +43</option>
+                    <option value="+880,Bangladesh">Bangladesh +880</option>
+                    <option value="+32,Belgium">Belgium +32</option>
+                    <option value="+975,Bhutan">Bhutan +975</option>
+                    <option value="+55,Brazil">Brazil +55</option>
+                    <option value="+1,Canada">Canada +1</option>
+                    <option value="+86,China">China +86</option>
+                    <option value="+45,Denmark">Denmark +45</option>
+                    <option value="+20,Egypt">Egypt +20</option>
+                    <option value="+33,France">France +33</option>
+                    <option value="+49,Germany">Germany +49</option>
+                    <option value="+30,Greece">Greece +30</option>
+                    <option value="+299,Greenland">Greenland +299</option>
+                    <option value="+852,HongKong">Hong Kong SAR +852</option>
+                    <option value="+36,Hungary">Hungary +36</option>
+                    <option value="+354,Iceland">Iceland +354</option>
+                    <option selected="" value="+91,India">India</option>
+                    <option value="+62,Indonesia">Indonesia +62</option>
+                    <option value="+98,Iran">Iran +98</option>
+                    <option value="+964,Iraq">Iraq +964</option>
+                    <option value="+353,Ireland">Ireland +353</option>
+                    <option value="+972,Israel">Israel +972</option>
+                    <option value="+39,Italy">Italy +39</option>
+                    <option value="+1,Jamaica">Jamaica +1</option>
+                    <option value="+81,Japan">Japan +81</option>
+                    <option value="+60,Malaysia">Malaysia +60</option>
+                    <option value="+960,Maldives">Maldives +960</option>
+                    <option value="+230,Mauritius">Mauritius +230</option>
+                    <option value="+52,Mexico">Mexico +52</option>
+                    <option value="+977,Nepal">Nepal +977</option>
+                    <option value="+31,Netherlands">Netherlands +31</option>
+                    <option value="+64,New_Zealand">New Zealand +64</option>
+                    <option value="+234,Nigeria">Nigeria +234</option>
+                    <option value="+850,North_Korea">North Korea +850</option>
+                    <option value="+47,Norway">Norway +47</option>
+                    <option value="+968,Oman">Oman +968</option>
+                    <option value="+92,Pakistan">Pakistan +92</option>
+                    <option value="+63,Philippines">Philippines +63</option>
+                    <option value="+48,Poland">Poland +48</option>
+                    <option value="+351,Portugal">Portugal +351</option>
+                    <option value="+40,Romania">Romania +40</option>
+                    <option value="+7,Russia">Russia +7</option>
+                    <option value="+966,Saudi_Arabia">Saudi Arabia +966</option>
+                    <option value="+65,Singapore">Singapore +65</option>
+                    <option value="+421,Slovakia">Slovakia +421</option>
+                    <option value="+27,South_Africa">South Africa +27</option>
+                    <option value="+82,South_Korea">South Korea +82</option>
+                    <option value="+94,Sri_Lanka">Sri Lanka +94</option>
+                    <option value="+46,Sweden">Sweden +46</option>
+                    <option value="+41,Switzerland">Switzerland +41</option>
+                    <option value="+886,Taiwan">Taiwan +886</option>
+                    <option value="+992,Tajikistan">Tajikistan +992</option>
+                    <option value="+66,Thailand">Thailand +66</option>
+                    <option value="+993,Turkmenistan">Turkmenistan +993</option>
+                    <option value="+688,Tuvalu">Tuvalu +688</option>
+                    <option value="+380,Ukraine">Ukraine +380</option>
+                    <option value="+971,United_Arab_Emirates">United Arab Emirates +971</option>
+                    <option value="+44,United_Kingdom">United Kingdom +44</option>
+                    <option value="+1,USA">United States of America +1</option>
+                    <option value="+39,Vatican_City">Vatican City +39</option>
+                    <option value="+58,Venezuela">Venezuela +58</option>
+                    <option value="+84,Vietnam">Vietnam +84</option>
+                    <option value="+263,Zimbabwe">Zimbabwe +263</option>
+                </select>
+                <p class="gray-bold">Billing address 1*</p>
+                <input type="text" class="input-text" placeholder="(ex. 123 Main)">
+                <p class="gray-bold">Billing address 2</p>
+                <input type="text" class="input-text" placeholder="(ex. Suite 400, Apt. 4B)">
+                <p class="gray-bold">City*</p>
+                <input type="text" class="input-text size1">
+                <p class="gray-bold">Postal code*</p>
+                <input type="text" class="input-text size2">
+                <div class="check">
+                    <input type="checkbox">
+                    <span>Remember this card for future use</span>
+                </div>
+                
+            </div>
+            <div id="booking">
+                <h2>Manage your booking</h2>
+                <div class="line"></div>
+                <p class="black-bold">Confirmation email</p>
+                <p>Please enter the email address where you would like to receive your confirmation.</p>
+                <p class="gray-bold">Email address*</p>
+                <input type="email" class="input-text">
+                <div class="check">
+                    <input type="checkbox">
+                    <span>Please send me Expedia emails with travel deals, special offers and other information.</span>
+                </div>
+                <div class="line"></div>
+                <p class="black-bold">Create an account</p>
+                <div class="greenc">
+                    <i class="fa fa-check"></i>
+                    <span>Earn points for free travel</span>
+                    <i class="fa fa-check"></i>
+                    <span>Save with Member Prices</span>
+                    <i class="fa fa-check"></i>
+                    <span>Easily access your itineraries</span>
+                    
+                </div>
+                <p>Enter a password to create an account using the email address above.</p>
+                <p class="gray-bold">Create password</p>
+                <input type="password" class="input-text size4" placeholder="6 - 30 characters, no spaces">
+                <p class="gray-bold">Confirm password</p>
+                <input type="password" class="input-text size4">
+                <br>
+                <span>By creating an account, I agree to the</span> <span class="bluec">Terms of Use, Privacy Policy</span> <span> and </span><span class="bluec">Expedia Rewards Terms and Conditions.</span>
+            </div>
+            <div id="info">
+                <h2>Review and book your trip</h2>
+                <ol>
+                    <li>Please note that BEX Travel Asia Pte Ltd and the airline will not issue a tax invoice. You will receive a commercial
+                    receipt for the purpose of the transaction.</li>
+                    <li>Review your trip details to make sure the dates and times are correct</li>
+                    <li>Check your spelling. Flight passenger names must match government-issued photo ID exactly.</li>
+                    <li>Review the terms of your booking:</li>
+                        <ul>
+                            <li>We understand that sometimes plans change. In case of change or cancellation, please note that additional fees are
+                            applicable per passenger per journey.</li>
+                            <li>Please read the complete penalty rules for changes and cancellations or charter contract.</li>
+                            <li>Please read important information regarding airline liability limitations.</li>
+                            <li>Prices may not include baggage fees or other fees charged directly by the airline.</li>
+                            <li>Fares are not guaranteed until ticketed.</li>
+                        </ul>
+                </ol>
+                <p>By clicking on the button below, I acknowledge that I have reviewed the Privacy Statement. and
+                Government Travel Advice and have reviewed and accept the above Rules & Restrictions and Terms of
+                Use.</p>
+                <button>Complete booking</button>
+                <h3>Unlock trip savings up to 10% off select hotels when you book this flight</h3>
+                <p>Your discount lasts until your trip starts</p>
+                <i class="fa fa-lock"></i>
+                <span>
+                    We use secure transmission and encrypted storage to protect your personal information. <br>
+                    This payment will be processed in India. This does not apply when the travel provider (airline/hotel/rail, etc.) processes your payment.
+                </span>
+            </div>
+        </div>
+        <div id="right-div">
+
+        </div>
+    </div>
+
+
+    <script type="module">
+        import navbar from "../components/navbarImport.js"
+        let nav = document.querySelector(".navbar");
+        nav.innerHTML = navbar();
+    </script>
+    <script src="../JavaScripts/priceCheckout.js"></script>
+</body>
+</html>
