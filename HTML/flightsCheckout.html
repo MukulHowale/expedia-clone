@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight details</title>
+    <link type="image/x-icon" href="https://www.expedia.co.in/favicon.ico" sizes="16x16 32x32" rel="icon" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en"/>
     <link rel="stylesheet" href="../CSS/flightsCheckout.css">
 </head>
@@ -27,7 +28,7 @@
             <h1 class="journey">Pune to Indore</h1>
             <div class="lastDiv">
                 <div><img src="../Images/takeoff.svg"></div>
-                <div class="source">Pune</div>
+                <div class="source"> Pune</div>
             </div>
             
             <p>1h 45m flight</p>
@@ -63,7 +64,7 @@
          </div>
     <div class="right">
     <h1>Price Summmary</h1>
-     <div class="useFlex">
+     <div class="useFlex" id="topClass">
          <div id="travellers">Travellers</div>
          <div><h4 id="travellerAmount">Rs9,940</h4></div>
      </div>
@@ -76,11 +77,11 @@
         <div class="amountGST">Rs1,890</div>
     </div>
     <hr style="margin-top: 2%;">
-    <div class="useFlex">
+    <div class="useFlex" id="lastClasss">
         <div><h3>Trip Total</h3></div>
         <div class="finalAmount">Rs9,070.00</div>
     </div>
-  <button>Checkout</button>
+  <button onclick="move()">Checkout</button>
     </div>
    </div>
 

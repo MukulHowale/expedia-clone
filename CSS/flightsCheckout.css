@@ -3,7 +3,6 @@
     font-family: 'Open Sans', sans-serif;  
     margin: 0;
     padding: 0;
-    font-weight: 600 !important;
 }
 
 
@@ -73,14 +72,16 @@
 
 .right button
 {
-  font-size: 25px;
+  font-size: 20px;
   width: 100%;
   background-color: #3662D8;
   border: none;
+  height: 45px;
   border-radius: 5px;
   color: white;
   margin-top: 5%;
 }
+
 
 .right h1
 {
@@ -124,6 +125,16 @@
     margin-top: 2%;
 }
 
+#lastClasss div , #topClass div
+{
+    font-weight: 700 ;
+    font-size: 17px;
+}
+
+#topClass
+{
+    padding-top: 5%;
+}
 /*---------------------------------navbar-----------------*/
 
 .navbar

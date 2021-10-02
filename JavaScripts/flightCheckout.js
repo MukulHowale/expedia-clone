@@ -5,11 +5,14 @@ function onLoad() {
     let city = JSON.parse(localStorage.getItem('storeCityDate'));
     let from=city[0].DepartCity;
     let to=city[0].ArriveCity;
-    document.querySelector(".journey").innerHTML=from+" to "+to
-    document.querySelector(".source").innerHTML=from
-    document.querySelector(".destination").innerHTML=to
-  
     let priceOfEach=JSON.parse(localStorage.getItem('flightDetails'));
+
+    let source=priceOfEach[0].slice(0, 5) 
+    let destination=priceOfEach[0].slice(7, 13) 
+    document.querySelector(".journey").innerHTML=from+" to "+to
+    document.querySelector(".source").innerHTML="  "+source+"  "+from
+    document.querySelector(".destination").innerHTML="  "+destination+"  "+from
+  
     document.getElementById("travellerAmount").innerHTML="Rs "+priceOfEach[2]*a
     document.querySelector(".finalAmount").innerHTML="Rs "+priceOfEach[2]*a
     document.getElementById("priceOfOneFlight").innerHTML="Rs "+priceOfEach[2]
@@ -21,3 +24,10 @@ function onLoad() {
 }
 
 onLoad()
+
+function move()
+{
+  window.location="priceCheckout.html"
+}
+
+
