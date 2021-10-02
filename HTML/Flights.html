@@ -829,6 +829,9 @@ function move(m)
   let time=data[m].time
   let stop=data[m].stop
    let price= data[m].price
-   
+   let arr=[time,stop,price];
+   console.log(arr)
+   localStorage.setItem("flightDetails", arr);
+  window.location="flightsCheckout.html"
 }
 </script>
