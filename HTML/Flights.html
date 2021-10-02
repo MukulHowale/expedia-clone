@@ -819,8 +819,6 @@ async function changeDepartureColor(color,div)
       div2.innerHTML="Rs"+data[i].price;
     }
   }
-
-
   }
 }
 
@@ -829,9 +827,10 @@ function move(m)
   let time=data[m].time
   let stop=data[m].stop
    let price= data[m].price
-   let arr=[time,stop,price];
+   let Airlines= data[m].airline
+   let arr=[time,stop,price,Airlines];
    console.log(arr)
-   localStorage.setItem("flightDetails", arr);
+   localStorage.setItem("flightDetails",JSON.stringify (arr));
   window.location="flightsCheckout.html"
 }
 </script>

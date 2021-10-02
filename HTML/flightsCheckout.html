@@ -24,18 +24,18 @@
         </div>
 
         <div class="bottom">
-            <h1>Pune to Indore</h1>
+            <h1 class="journey">Pune to Indore</h1>
             <div class="lastDiv">
                 <div><img src="../Images/takeoff.svg"></div>
-                <div>Pune</div>
+                <div class="source">Pune</div>
             </div>
             
             <p>1h 45m flight</p>
-            <p>IndiGo</p>
+            <p class="airline">IndiGo</p>
 
-            <div class="lastDiv">
+            <div style="margin-top: 4%;" class="lastDiv">
                 <div><img src="../Images/landing.svg"></div>
-                <div>Indore</div>
+                <div class="destination">Indore</div>
             </div>
             <hr style="margin-top: 2%; margin-bottom: 2%;">
 
@@ -64,21 +64,21 @@
     <div class="right">
     <h1>Price Summmary</h1>
      <div class="useFlex">
-         <div><h4>Travellers</h4></div>
-         <div><h4>Rs9,940</h4></div>
+         <div id="travellers">Travellers</div>
+         <div><h4 id="travellerAmount">Rs9,940</h4></div>
      </div>
      <div class="useFlex">
-        <div><p>flight</p></div>
-        <div><p>Rs7,230</p></div>
+        <div><p>Per flight</p></div>
+        <div><p id="priceOfOneFlight">Rs7,230</p></div>
     </div>
     <div class="useFlex">
         <div>Taxes and Fees</div>
-        <div>Rs1,890</div>
+        <div class="amountGST">Rs1,890</div>
     </div>
     <hr style="margin-top: 2%;">
     <div class="useFlex">
         <div><h3>Trip Total</h3></div>
-        <div>Rs9,070.00</div>
+        <div class="finalAmount">Rs9,070.00</div>
     </div>
   <button>Checkout</button>
     </div>
@@ -116,3 +116,4 @@
     divfooterCopyright.innerHTML=footerCopyright();
   
 </script>
+<script src="../JavaScripts/flightCheckout.js"></script>
