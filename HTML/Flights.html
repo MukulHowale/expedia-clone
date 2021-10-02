@@ -93,34 +93,34 @@
             <div class="stops">
               <div style="grid-area: 'a';"><p>Stops</p></div>
               <div style="grid-area: 'b';"><p>From</p></div>
-              <div style="grid-area: 'c';"> <input onclick="selectDirectFlights()" type="checkbox">__Direct</div>
+              <div style="grid-area: 'c';"> <input onclick="selectDirectFlights()" type="checkbox">   Direct</div>
               <div style="grid-area: 'd';"><p>Rs4,211</p></div>
-              <div style="grid-area: 'e';"><input onclick="selectOneStopFlights()" type="checkbox">__1 stop</div>
+              <div style="grid-area: 'e';"><input onclick="selectOneStopFlights()" type="checkbox">    1 stop</div>
               <div style="grid-area: 'f';"><p>Rs3,451</p></div>
             </div>
 
             <div class="stops">
               <div style="grid-area: 'a';"><p>Airlines</p></div>
               <div style="grid-area: 'b';"><p>From</p></div>
-              <div style="grid-area: 'c';"> <input onclick="selectIndigo()" type="checkbox">__Indigo</div>
+              <div style="grid-area: 'c';"> <input onclick="selectIndigo()" type="checkbox">  Indigo</div>
               <div style="grid-area: 'd';"><p>Rs3,451</p></div>
-              <div style="grid-area: 'e';"><input onclick="selectVistara()" type="checkbox">__Vistara</div>
+              <div style="grid-area: 'e';"><input onclick="selectVistara()" type="checkbox">  Vistara</div>
               <div style="grid-area: 'f';"><p>Rs4,433</p></div>
             </div>
             <h1>Departure time </h1>  
             <div class="time">
                 <div class="classOfTime1" onclick="changeDepartureColor('#3662D8','classOfTime1');">
-                    <img src="/Images/sunrise.svg" >
+                    <img src="../Images/sunrise.svg" >
                     <p>Morning</p>
                     <p>(05.00-11.59)</p>
                 </div>
                 <div  class="classOfTime2" onclick="changeDepartureColor('#3662D8','classOfTime2');">
-                  <img src="/Images/noon.svg" >
+                  <img src="../Images/noon.svg" >
                     <p>Afternoon</p>
                     <p>(12.00-17.59)</p>
                 </div>
                 <div class="classOfTime3"  onclick="changeDepartureColor('#3662D8','classOfTime3');">
-                  <img src="/Images/evening.png" >
+                  <img src="../Images/evening.png" >
                     <p>Evening</p>
                     <p>(17.00-23.59)</p>
                 </div>
@@ -239,11 +239,20 @@
      sTemp2.children[0].children[2].children[1].children[1].children[0].value = StoredData[0].Date;
 
     //  console.log(StoredData);
-
-   
 </script>
 
 <script>
+function peopleBooked()
+{
+  let traveller=document.getElementById("totalTraveller")
+  let people=traveller.innerHTML
+  thenum = people.match(/\d+/)[0] 
+  //console.log(thenum)
+  localStorage.setItem("totalTraveller", thenum);
+  let anyName=document.querySelector(".traveller_part");
+    anyName.style.display = "none";
+}
+
  function travellerFunction()
  {
      let anyName=document.querySelector(".traveller_part");
@@ -351,10 +360,6 @@ function infantsCountPlus()
   }
 }
 
-function peopleBooked()
-{
-  
-}
 
 /*-----------------------------------
 -----------------------------------------
@@ -370,12 +375,14 @@ async function selectDirectFlights()
   let displayDiv=document.querySelector(".display");
   for(let i=0;i<sizeOfData;i++)
   {
+    var index=i;
     if(data[i].stop==="Direct")
     {
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
+     displayClass.addEventListener('click', function(){
+    move(i)});
       let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
@@ -415,8 +422,9 @@ async function selectIndigo()
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
-      let div=document.createElement("div")
+    displayClass.addEventListener('click', function(){
+    move(i)});
+          let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
       let divvv=document.createElement("div")
@@ -455,7 +463,8 @@ async function selectVistara()
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
+    displayClass.addEventListener('click', function(){
+    move(i)});
       let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
@@ -496,7 +505,8 @@ async function selectOneStopFlights()
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
+    displayClass.addEventListener('click', function(){
+    move(i)}); 
       let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
@@ -523,6 +533,7 @@ async function selectOneStopFlights()
 var data;
 async function loadFlights()
 {
+
   let myNode = document.querySelector(".display");
   while (myNode.firstChild) {
     myNode.removeChild(myNode.firstChild);
@@ -562,7 +573,8 @@ async function loadFlights()
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
+    displayClass.addEventListener('click', function(){
+    move(i)});
    
       let div=document.createElement("div")
       div.className="inDisplay";
@@ -618,8 +630,9 @@ async function loadFlightsDes()
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
-      let div=document.createElement("div")
+    displayClass.addEventListener('click', function(){
+    move(i)});     
+     let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
       let divvv=document.createElement("div")
@@ -677,8 +690,8 @@ async function changeDepartureColor(color,div)
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
-      let div=document.createElement("div")
+    displayClass.addEventListener('click', function(){
+    move(i)});           let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
       let divvv=document.createElement("div")
@@ -725,8 +738,8 @@ async function changeDepartureColor(color,div)
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
-      let div=document.createElement("div")
+    displayClass.addEventListener('click', function(){
+    move(i)});           let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
       let divvv=document.createElement("div")
@@ -758,7 +771,7 @@ async function changeDepartureColor(color,div)
     g.style.background='white' ;
     g.style.color='black' ;
    
-    let myNode = document.querySelector(".display");
+  let myNode = document.querySelector(".display");
   while (myNode.firstChild) {
     myNode.removeChild(myNode.firstChild);
   }
@@ -775,8 +788,8 @@ async function changeDepartureColor(color,div)
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
-      let div=document.createElement("div")
+    displayClass.addEventListener('click', function(){
+    move(i)});           let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
       let divvv=document.createElement("div")
@@ -798,9 +811,11 @@ async function changeDepartureColor(color,div)
   }
 }
 
-function move()
+function move(m)
 {
-   window.location="flightsCheckout.html";
+  let time=data[m].time
+  let stop=data[m].stop
+   let price= data[m].price
+   
 }
 </script>
-<!-- <script src="../index.js"></script> -->
