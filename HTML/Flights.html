@@ -242,6 +242,9 @@
 </script>
 
 <script>
+
+  let count = 0;
+
 function peopleBooked()
 {
   let traveller=document.getElementById("totalTraveller")
@@ -255,6 +258,7 @@ function peopleBooked()
 
  function travellerFunction()
  {
+   count++;
      let anyName=document.querySelector(".traveller_part");
      if(anyName.style.display==="none" ){
         anyName.style.display = "block";
@@ -262,12 +266,21 @@ function peopleBooked()
      else{
         anyName.style.display = "none";
      }
+
+     if(count == 2){
+      let sb = document.getElementsByClassName("s_b");
+      sb[0].children[0].children[1].children[0].style.visibility = "hidden";
+      count = 1;
+     }
 }
 
 function travellerFunctionHide()
 {
     let anyName=document.querySelector(".traveller_part");
     anyName.style.display = "none";
+
+    let sb = document.getElementsByClassName("s_b");
+     sb[0].children[0].children[1].children[0].style.visibility = "visible"
 }
 
 function adultCountMinus()
