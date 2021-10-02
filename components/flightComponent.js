@@ -50,7 +50,7 @@ let flightComponent = () =>{
                 Departing
             </span>
             <div id="depart" class="font_color_1">
-                <input class="d" type="date">
+
             </div>
         </div>
     </div>
@@ -61,7 +61,7 @@ let flightComponent = () =>{
                 Returning
             </span>
             <div id="return" class="font_color_1">
-                <input class="d" type="date">
+
             </div>
         </div>
     </div>

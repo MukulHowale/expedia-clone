@@ -144,13 +144,17 @@ let saveCityDate = () =>{
 
     let g = sb[0].children[1].children[1].children[2].children[1].innerText;
 
-    let d = sb[0].children[1].children[2].children[1].children[1].children[0].value;
+    let d = sb[0].children[1].children[2].children[1].children[1].innerText;
+
+    let dDate = new Date();
+
+    let dd = `${d.split(" ")[0]}-${dDate.getMonth()+1}-${dDate.getFullYear()}`
 
     localStorage.setItem("storeCityDate", JSON.stringify([
         {
             "DepartCity" : l,
             "ArriveCity" : g,
-            "Date" : d
+            "Date" : dd
         }
     ]))
 
