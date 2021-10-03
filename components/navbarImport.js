@@ -14,8 +14,10 @@ function navbar()
         <div><img src="/Images/language.png" alt=""><p>English</p></div>
         <div><p>Support</p></div>
         <div><p>Trips</p></div>
-        <div><p>Sign in</p></div>
-        <div><p>Sign up</p></div>
+        <div id="in"><p>Sign in</p></div>
+        <div id="up"><p>Sign up</p></div>
+        <div id="out"><p>logout</p></div>
+        <div id="username"></div>
         `
 }
 

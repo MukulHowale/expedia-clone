@@ -172,12 +172,19 @@ ol + p{
     padding: 0px 15px;
 }
 #place{
-    font-size: 17px;
+    font-size: 14px;
     color: black;
-}
-#total{
-    text-align: right;
 }
 #total + p{
     margin-top: 25px;
+}
+#date{
+    margin: 0px;
+}
+#airline{
+    font-size: 14px;
+}
+#nomargin{
+    margin-top: -20px !important;
+    padding-top: 0px !important;
 }

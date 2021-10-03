@@ -210,6 +210,23 @@
      let divNavbar = document.querySelector(".navbar");
      divNavbar.innerHTML=navbar();
 
+     import { show, signin, signup, logout } from "../JavaScripts/navbar.js"
+      show();
+
+      let statusIn = document.getElementById("in");
+      let statusUp = document.getElementById("up");
+      let statusout = document.getElementById("out");
+
+      statusIn.onclick = () => {
+        signin();
+      };
+      statusUp.onclick = () => {
+        signup();
+      };
+      statusout.onclick = () => {
+        logout();
+      };
+
      import footer from "../components/footerImport.js";
      let divFooter = document.querySelector(".footer");
      divFooter.innerHTML=footer();

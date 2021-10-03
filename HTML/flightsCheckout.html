@@ -106,6 +106,23 @@
     let divNavbar = document.querySelector(".navbar");
     divNavbar.innerHTML=navbar();
 
+    import { show, signin, signup, logout } from "../JavaScripts/navbar.js"
+    show();
+
+    let statusIn = document.getElementById("in");
+    let statusUp = document.getElementById("up");
+    let statusout = document.getElementById("out");
+
+    statusIn.onclick = () => {
+        signin();
+    };
+    statusUp.onclick = () => {
+        signup();
+    };
+    statusout.onclick = () => {
+        logout();
+    };
+
     import midPart from "../components/midPartImport.js";
     let divMidPart = document.querySelector(".mid_part");
     divMidPart.innerHTML=midPart();
