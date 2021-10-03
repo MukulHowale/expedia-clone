@@ -1,3 +1,4 @@
+// let count = 0;
 
 let cal = () =>{
     // console.log(depDiv);
@@ -240,11 +241,11 @@ let putDate = () =>{
 }
 
 let goLeftMonth = () =>{
-    console.log("left");
+
 }
 
 let gotRightMonth = () =>{
-    console.log("right");
+
 }
 
 export {cal,putDate, goLeftMonth, gotRightMonth};
