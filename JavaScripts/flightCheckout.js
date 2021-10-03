@@ -1,4 +1,5 @@
 
+var totalPrice;
 function onLoad() {   
     let a=localStorage.getItem("totalTraveller");
     document.getElementById("travellers").innerHTML = "Travellers (" +a+")" ;
@@ -6,7 +7,7 @@ function onLoad() {
     let from=city[0].DepartCity;
     let to=city[0].ArriveCity;
     let priceOfEach=JSON.parse(localStorage.getItem('flightDetails'));
-
+     totalPrice=priceOfEach[2]*a;
     let source=priceOfEach[0].slice(0, 5) 
     let destination=priceOfEach[0].slice(7, 13) 
     document.querySelector(".journey").innerHTML=from+" to "+to
@@ -27,6 +28,7 @@ onLoad()
 
 function move()
 {
+  localStorage.setItem("finalAmount",JSON.stringify (totalPrice));
   window.location="priceCheckout.html"
 }
 
