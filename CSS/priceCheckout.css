@@ -26,11 +26,7 @@ body,.grayc,select{
 #travellers > h2{
     margin-top: 0px;
 }
-#right-div{
-    width: 34%;
-    background-color: white;
-    height: 600px;
-}
+
 #left-div > div{
     background-color: white;
     padding:20px;
@@ -164,6 +160,24 @@ ol + p{
     color: blue;
     font-size: 12px;
 }
-#t2, #t3, #t4{
+#t2, #t3, #t4,#t5,#t6{
     display: none;
+}
+
+#right-div{
+    color: black;
+    width: 30%;
+    background-color: white;
+    max-height: 450px;
+    padding: 0px 15px;
+}
+#place{
+    font-size: 17px;
+    color: black;
+}
+#total{
+    text-align: right;
+}
+#total + p{
+    margin-top: 25px;
 }

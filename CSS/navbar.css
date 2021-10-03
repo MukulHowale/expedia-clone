@@ -154,3 +154,7 @@
     cursor: text;
     color: rgb(39, 38, 38);    
 }
+a{
+    text-decoration: none;
+    color: black;
+}
