@@ -44,7 +44,7 @@ let airline = document.getElementById("airline");
 let total = document.getElementById("total");
 
 number.innerText = num + " tickets";
-place.innerText = city[0].DepartCity + " to " + city[0].ArriveCity;
+place.innerText = city[0].DepartCity.split("\n")[0] + " to " + city[0].ArriveCity.split("\n")[0];
 date.innerText = city[0].Date;
 time.innerText = flight[0];
 airline.innerText = flight[3];
