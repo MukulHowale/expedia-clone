@@ -210,7 +210,7 @@ let saveCityDate = () =>{
 
     console.log(temp);
 
-    // window.location = "./HTML/Flights.html";
+    window.location = "./HTML/Flights.html";
 }
 
 export {wait, main, check, saveCityDate};
