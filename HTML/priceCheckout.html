@@ -519,12 +519,17 @@
 
         </div>
     </div>
-
+    <div class="footer_Copyright"></div>
 
     <script type="module">
         import navbar from "../components/navbarImport.js"
         let nav = document.querySelector(".navbar");
         nav.innerHTML = navbar();
+
+        import footerCopyright from "../components/footerCopyright.js"
+        let foot = document.querySelector(".footer_Copyright");
+        foot.innerHTML = footerCopyright();
+
     </script>
     <script src="../JavaScripts/priceCheckout.js"></script>
 </body>

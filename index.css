@@ -135,9 +135,10 @@
    border-bottom: 1px solid rgb(201, 201, 201);
 }
 .navbar > div:nth-child(3) > img{
+    margin-top: 3px;
     margin-right: 10px;
-    width: 30%;
-    height: 45%;
+    width: 34%;
+    height: 50%;
 }
 .navbar >:first-child
 {

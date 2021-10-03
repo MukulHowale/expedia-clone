@@ -1,7 +1,7 @@
 function navbar()
 {
     return `
-        <div><img src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27&2" alt="logo"></div>
+        <div><a href="../index.html"><img src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27&2" alt="logo"></a></div>
         <div><p id="category" style="width:20%;">More travel ˅</p>
          <div class="category">
              <ul><img src="../Images/stays.svg" >  Stays</ul>
@@ -15,8 +15,8 @@ function navbar()
         <div><p>Support</p></div>
         <div><p>Trips</p></div>
         <div><p>Sign in</p></div>
-   
-          `
+        <div><p>Sign up</p></div>
+        `
 }
 
 export default navbar

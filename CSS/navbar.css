@@ -17,9 +17,10 @@
    background-color: white;
 }
 .navbar > div:nth-child(3) > img{
+    margin-top: 3px;
     margin-right: 10px;
-    width: 30%;
-    height: 45%;
+    width: 34%;
+    height: 50%;
 }
 .navbar >:first-child
 {
@@ -139,3 +140,17 @@
     padding-right: 10px;
 }
 
+.footer_Copyright
+{
+    background-color: white;
+    text-align: center;
+    font-size: 11px;
+    margin:auto;
+    margin-top: 2%;
+    padding: 20px;
+}
+.footer_Copyright p:hover
+{
+    cursor: text;
+    color: rgb(39, 38, 38);    
+}
