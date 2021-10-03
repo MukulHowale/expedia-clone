@@ -9,10 +9,10 @@
 
 .navbar
 {
-    margin: 0;
-    padding: 0;
+   margin: 0;
+   padding: 0;
    display: grid;
-   grid-template-columns:15% 45%  12% 7% 7% 7% ;
+   grid-template-columns:15% 39%  12% 7% 7% 7% 7% ;
    height: 50px;
    padding-top: 15px ;
    font-size: 15px;
@@ -88,11 +88,12 @@
   position:absolute;
   border-radius: 7px;
   width: 20%;
-  margin-top: 1%;
   font-size: 17px;
   box-shadow: 5px 10px 18px #272727;
   display: none;
+  z-index: 5;
 }
+
 .category >:nth-child(1)
 {
   margin-top: 7%;
