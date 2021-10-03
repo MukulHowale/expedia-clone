@@ -21,10 +21,10 @@ let flightComponent = () =>{
     <div class="font_family font_size_2 font_weight_2">
         <span class="iconify font_color_1" data-icon="carbon:location-filled" data-width="22" data-height="22"></span>
         <div>
-            <span class="goingTo font_color_1">
+            <span class="goingTo font_color_1 font_family">
                 Leaving from
             </span>
-            <div id="leavePlace">
+            <div id="leavePlace" class="font_family">
                 
             </div>
         </div>
@@ -35,10 +35,10 @@ let flightComponent = () =>{
         </div>
         <span class="iconify font_color_1" data-icon="carbon:location-filled" data-width="22" data-height="22"></span>
         <div>
-            <span class="goingTo font_color_1">
+            <span class="goingTo font_color_1 font_family">
                 Going to
             </span>
-            <div id="goPlace">
+            <div id="goPlace" class="font_family">
                 
             </div>
         </div>
@@ -49,7 +49,7 @@ let flightComponent = () =>{
             <span class="font_color_1 font_size_3">
                 Departing
             </span>
-            <div id="depart" class="font_color_1">
+            <div id="depart" class="font_color_1 font_family">
 
             </div>
         </div>
@@ -60,7 +60,7 @@ let flightComponent = () =>{
             <span class="font_color_1 font_size_3">
                 Returning
             </span>
-            <div id="return" class="font_color_1">
+            <div id="return" class="font_color_1 font_family">
 
             </div>
         </div>
