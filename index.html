@@ -250,7 +250,7 @@
 
     //calender
     import calComponent from "./components/calenderComponent.js"
-    import cal from "./JavaScripts/calender.js"
+    import {cal, putDate, goLeftMonth, gotRightMonth} from "./JavaScripts/calender.js"
 
     import {re, oneWay, multi} from "./JavaScripts/flightTravel.js";
 
@@ -358,6 +358,14 @@
                 cale.innerHTML = calComponent();
 
                 cal();
+
+                cale.children[0].children[2].children[0].addEventListener("click", putDate);
+
+                cale.children[0].children[1].children[0].children[0].children[0].addEventListener("click", goLeftMonth);
+
+                cale.children[0].children[1].children[0].children[2].children[0].addEventListener("click", gotRightMonth);
+
+                // console.log(cale.children[0].children[1].children[0].children[2].children[0]);
             })
 
         })

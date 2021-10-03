@@ -150,7 +150,52 @@ let saveCityDate = () =>{
 
     let dDate = new Date();
 
-    let dd = `${d.split(" ")[0]}-${dDate.getMonth()+1}-${dDate.getFullYear()}`
+    let monD;
+
+    let temp2 = d.split(" ")[1];
+
+    switch(temp2){
+        case "Jan":
+            monD = "01";
+            break;
+        case "Feb":
+            monD = "02";
+            break;
+        case "Mar":
+            monD = "03";
+            break;
+        case "Apr":
+            monD = "04";
+            break;
+        case "May":
+            monD = "05";
+            break;
+        case "Jun":
+            monD = "06";
+            break;
+        case "Jul":
+            monD = "07";
+            break;
+        case "Aug":
+            monD = "08";
+            break;
+        case "Sep":
+            monD = "09";
+            break;
+        case "Oct":
+            monD = "10"
+            break;
+        case "Nov":
+            monD = "11";
+            break;
+        case "Dec":
+            monD = "12";
+            break;
+        default:
+            break;
+    }
+
+    let dd = `${d.split(" ")[0]}-${monD}-${dDate.getFullYear()}`
 
     localStorage.setItem("storeCityDate", JSON.stringify([
         {
@@ -165,7 +210,7 @@ let saveCityDate = () =>{
 
     console.log(temp);
 
-    window.location = "./HTML/Flights.html";
+    // window.location = "./HTML/Flights.html";
 }
 
 export {wait, main, check, saveCityDate};

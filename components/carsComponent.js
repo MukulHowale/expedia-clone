@@ -10,7 +10,7 @@ let carsComponent = () =>{
                         <div class="font_family font_size_2 font_weight_2">
                             <span class="iconify font_color_1" data-icon="carbon:location-filled" data-width="22" data-height="22"></span>
                             <div>
-                                <span class="goingTo font_color_1">
+                                <span class="goingTo font_color_1 font_family">
                                     Pick-up
                                 </span>
                                 <div id="leavePlace">
@@ -21,7 +21,7 @@ let carsComponent = () =>{
                         <div class="font_family font_size_2 font_weight_2">
                             <span class="iconify font_color_1" data-icon="carbon:location-filled" data-width="22" data-height="22"></span>
                             <div>
-                                <span class="goingTo font_color_1">
+                                <span class="goingTo font_color_1 font_family">
                                     Drop-off
                                 </span>
                                 <div id="goPlace">
@@ -37,7 +37,7 @@ let carsComponent = () =>{
                                 <span class="goingTo font_color_1">
                                     Pick-up date
                                 </span>
-                                <div id="leavePlace">
+                                <div id="leavePlace" class="font_family">
                                     
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ let carsComponent = () =>{
                                 <span class="goingTo font_color_1">
                                     Drop-off date
                                 </span>
-                                <div id="goPlace">
+                                <div id="goPlace" class="font_family">
                                     
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ let carsComponent = () =>{
                                 <span class="goingTo font_color_1">
                                     Pick-up time
                                 </span>
-                                <div id="leavePlace">
+                                <div id="leavePlace" class="font_family">
                                     
                                 </div>
                             </div>
@@ -70,7 +70,7 @@ let carsComponent = () =>{
                                 <span class="goingTo font_color_1">
                                     Drop-off time
                                 </span>
-                                <div id="goPlace">
+                                <div id="goPlace" class="font_family">
                                     
                                 </div>
                             </div>

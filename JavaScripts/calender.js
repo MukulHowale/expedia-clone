@@ -78,8 +78,6 @@ let cal = () =>{
 
     monthDiv[0].children[1].innerText = `${mon} ${yea}`;
 
-
-
     let da = document.getElementsByClassName("dates")[0].children;
 
     let newDate = new Date(`${mon} 1, ${yea}`);
@@ -90,6 +88,10 @@ let cal = () =>{
         da[j].innerText = i;
         if(i < d.getDate()){
             da[j].style.color = "rgb(150, 150, 150, 0.527)";
+        }
+        else if(i == d.getDate()){
+            da[j].style.backgroundColor = "#3662d8";
+            da[j].style.color = "white";
         }
         else{
             da[j].style.color = "#343b53";
@@ -102,12 +104,63 @@ let cal = () =>{
 }
 
 let selectDate = (e) =>{
+    let d1 = new Date();
+
+    let mon1 = d1.getMonth();
+
+    // let yea = d.getFullYear();
+
+    let startDate = d1.getDate();
+
+    switch(mon1){
+        case 0:
+            mon1 = "January";
+            break;
+        case 1:
+            mon1 = "February";
+            break;
+        case 2:
+            mon1 = "March";
+            break;
+        case 3:
+            mon1 = "April";
+            break;
+        case 4:
+            mon1 = "May";
+            break;
+        case 5:
+            mon1 = "June";
+            break;
+        case 6:
+            mon1 = "July";
+            break;
+        case 7:
+            mon1 = "August";
+            break;
+        case 8:
+            mon1 = "September";
+            break;
+        case 9:
+            mon1 = "October";
+            break;
+        case 10:
+            mon1 = "November";
+            break;
+        case 11:
+            mon1 = "December";
+            break;
+        default:
+            break;
+    }
+
     let da = document.getElementsByClassName("dates")[0].children
     // console.log(da);
-    for(let i=6; i<=35; i++){
+    for(let i=0; i<=41; i++){
         if(da[i] != e.target){
             da[i].style.backgroundColor = "white";
-            da[i].style.color = "#343b53";
+            if(da[i].innerText >= startDate){
+                da[i].style.color = "#343b53";
+            }
         }
     }
     e.target.style.backgroundColor = "#3662d8";
@@ -167,4 +220,31 @@ let selectDate = (e) =>{
 
 }
 
-export default cal;
+let putDate = () =>{
+    
+    let calDiv2 = document.getElementsByClassName("calDiv")[0];
+
+    let d1 =  calDiv2.children[0].children[0].innerText.split(" ")[1];
+
+    let m1 = calDiv2.children[0].children[0].innerText.split(" ")[2];
+    
+    let depBtnDiv = document.getElementsByClassName("s_b")[0];
+
+    depBtnDiv.children[1].children[2].children[1].children[1].innerText = `${d1} ${m1}`;
+
+    // console.log();
+
+    calDiv2.style.display = "none";
+
+    // console.log();
+}
+
+let goLeftMonth = () =>{
+    console.log("left");
+}
+
+let gotRightMonth = () =>{
+    console.log("right");
+}
+
+export {cal,putDate, goLeftMonth, gotRightMonth};

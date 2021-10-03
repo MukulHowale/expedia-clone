@@ -4,7 +4,7 @@ let stayComponent = () =>{
     <div class="font_family font_size_2 font_weight_2">
         <span class="iconify font_color_1" data-icon="carbon:location-filled" data-width="22" data-height="22"></span>
         <div>
-            <span class="goingTo font_color_1">
+            <span class="goingTo font_color_1 font_family">
                 Going to
             </span>
             <div id="place">
@@ -18,7 +18,7 @@ let stayComponent = () =>{
             <span class="font_color_1">
                 Check-in
             </span>
-            <div id="checkIn" class="font_color_1">
+            <div id="checkIn" class="font_color_1 font_family">
 
             </div>
         </div>
@@ -29,7 +29,7 @@ let stayComponent = () =>{
             <span class="font_color_1">
                 Check-out
             </span>
-            <div id="checkOut" class="font_color_1">
+            <div id="checkOut" class="font_color_1 font_family">
 
             </div>
         </div>
@@ -41,10 +41,10 @@ let stayComponent = () =>{
                 Travellers
             </span>
             <div id="roomTravel" class="font_size_2 font_color_1">
-                <span>
+                <span class="font_family">
                     1 room,
                 </span>
-                <span>
+                <span class="font_family">
                     2 travellers
                 </span>
             </div>
