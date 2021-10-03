@@ -262,6 +262,22 @@
 
     stays.addEventListener("click", () =>{
         clickStay(stayComponent);
+
+        // calender
+        let sb = document.getElementsByClassName("s_b");
+        let calCall = sb;
+        let departBtn = sb[0].children[0].children[1];
+        departBtn.children[1].children[0].style.fontSize = "12px";
+        let ariveBtn = sb[0].children[0].children[2];
+        ariveBtn.children[1].children[0].style.fontSize = "12px";
+        let dDate = new Date().toString().split(" ");
+        departBtn.children[1].children[1].innerText = `${dDate[2]} ${dDate[1]}`;
+        let tem;
+        if(dDate[2].split("")[0] == "0"){
+            tem = `0${Number(dDate[2]) + 1}`
+        }
+        ariveBtn.children[1].children[1].innerText = `${tem} ${dDate[1]}`;
+
     });
 
     let fly = document.getElementById("flights");
@@ -274,23 +290,15 @@
 
         // calender
         let calCall = sb;
-
         let departBtn = sb[0].children[1].children[2];
-
         let ariveBtn = sb[0].children[1].children[3];
-        
         let dDate = new Date().toString().split(" ");
-
         departBtn.children[1].children[1].innerText = `${dDate[2]} ${dDate[1]}`;
-
         let tem;
-
         if(dDate[2].split("")[0] == "0"){
             tem = `0${Number(dDate[2]) + 1}`
         }
-
         ariveBtn.children[1].children[1].innerText = `${tem} ${dDate[1]}`;
-
 
         
 
@@ -365,23 +373,100 @@
 
     car.addEventListener("click", () =>{
         clickCars(carsComponent);
+
+        //calender
+        let sb = document.getElementsByClassName("s_b");
+        let calCall = sb;
+        let departBtn = sb[0].children[2].children[0];
+        departBtn.children[1].children[0].style.fontSize = "12px";
+        let ariveBtn = sb[0].children[2].children[1];
+        ariveBtn.children[1].children[0].style.fontSize = "12px";
+        let pickTime = sb[0].children[2].children[2];
+        pickTime.children[1].children[0].style.fontSize = "12px";
+        let dropTime = sb[0].children[2].children[3];
+        dropTime.children[1].children[0].style.fontSize = "12px";
+        let dDate = new Date().toString().split(" ");
+        // console.log(dDate[4]);
+        departBtn.children[1].children[1].innerText = `${dDate[2]} ${dDate[1]}`;
+        let tem;
+        if(dDate[2].split("")[0] == "0"){
+            tem = `0${Number(dDate[2]) + 1}`
+        }
+        ariveBtn.children[1].children[1].innerText = `${tem} ${dDate[1]}`;
+        pickTime.children[1].children[1].innerText = `${dDate[4].toString().slice(0,5)}`;
+        dropTime.children[1].children[1].innerText = `${dDate[4].toString().slice(0,5)}`;
     })
 
     let pack = document.getElementById("packages");
 
     pack.addEventListener("click", () =>{
         clickPack(packageComponent);
+        
+        // calender
+        let sb = document.getElementsByClassName("s_b");
+        let calCall = sb;
+        let departBtn = sb[0].children[1].children[2];
+        departBtn.children[1].children[0].style.fontSize = "12px";
+        let ariveBtn = sb[0].children[1].children[3];
+        ariveBtn.children[1].children[0].style.fontSize = "12px";
+        let dDate = new Date().toString().split(" ");
+        departBtn.children[1].children[1].innerText = `${dDate[2]} ${dDate[1]}`;
+        let tem;
+        if(dDate[2].split("")[0] == "0"){
+            tem = `0${Number(dDate[2]) + 1}`
+        }
+        ariveBtn.children[1].children[1].innerText = `${tem} ${dDate[1]}`;
     })
 
     let thing = document.getElementById("things");
 
     thing.addEventListener("click", () =>{
         clickThings(thingsComponent);
+
+        // calender
+        let sb = document.getElementsByClassName("s_b");
+        let calCall = sb;
+        let departBtn = sb[0].children[0].children[1];
+        departBtn.children[1].children[0].style.fontSize = "12px";
+        let ariveBtn = sb[0].children[0].children[2];
+        ariveBtn.children[1].children[0].style.fontSize = "12px";
+        let dDate = new Date().toString().split(" ");
+        departBtn.children[1].children[1].innerText = `${dDate[2]} ${dDate[1]}`;
+        let tem;
+        if(dDate[2].split("")[0] == "0"){
+            tem = `0${Number(dDate[2]) + 1}`
+        }
+        ariveBtn.children[1].children[1].innerText = `${tem} ${dDate[1]}`;
     })
 
 
     window.onload = () =>{
         clickStay(stayComponent);
+
+        // calender
+        let sb = document.getElementsByClassName("s_b");
+
+        let calCall = sb;
+
+        let departBtn = sb[0].children[0].children[1];
+
+        departBtn.children[1].children[0].style.fontSize = "12px";
+
+        let ariveBtn = sb[0].children[0].children[2];
+
+        ariveBtn.children[1].children[0].style.fontSize = "12px";
+        
+        let dDate = new Date().toString().split(" ");
+
+        departBtn.children[1].children[1].innerText = `${dDate[2]} ${dDate[1]}`;
+
+        let tem;
+
+        if(dDate[2].split("")[0] == "0"){
+            tem = `0${Number(dDate[2]) + 1}`
+        }
+
+        ariveBtn.children[1].children[1].innerText = `${tem} ${dDate[1]}`;
     }
 </script>
 <script src="index.js"></script>

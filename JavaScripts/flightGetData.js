@@ -146,6 +146,8 @@ let saveCityDate = () =>{
 
     let d = sb[0].children[1].children[2].children[1].children[1].innerText;
 
+    console.log(d);
+
     let dDate = new Date();
 
     let dd = `${d.split(" ")[0]}-${dDate.getMonth()+1}-${dDate.getFullYear()}`
@@ -154,7 +156,8 @@ let saveCityDate = () =>{
         {
             "DepartCity" : l,
             "ArriveCity" : g,
-            "Date" : dd
+            "Date" : dd,
+            "showDate" : d
         }
     ]))
 
