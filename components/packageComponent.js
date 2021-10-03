@@ -16,7 +16,7 @@ let packageComponent = () =>{
     <div class="font_family font_size_2 font_weight_2">
         <span class="iconify font_color_1" data-icon="carbon:location-filled" data-width="22" data-height="22"></span>
         <div>
-            <span class="goingTo font_color_1">
+            <span class="goingTo font_color_1 font_family">
                 Leaving from
             </span>
             <div id="leavePlace">
@@ -30,7 +30,7 @@ let packageComponent = () =>{
         </div>
         <span class="iconify font_color_1" data-icon="carbon:location-filled" data-width="22" data-height="22"></span>
         <div>
-            <span class="goingTo font_color_1">
+            <span class="goingTo font_color_1 font_family">
                 Going to
             </span>
             <div id="goPlace">
@@ -44,7 +44,7 @@ let packageComponent = () =>{
             <span class="font_color_1">
                 Departing
             </span>
-            <div id="depart" class="font_color_1">
+            <div id="depart" class="font_color_1 font_family">
 
             </div>
         </div>
@@ -55,14 +55,14 @@ let packageComponent = () =>{
             <span class="font_color_1">
                 Returning
             </span>
-            <div id="return" class="font_color_1">
+            <div id="return" class="font_color_1 font_family">
 
             </div>
         </div>
     </div>
 </div>
 <div id="need">
-    <span class="font_size_1 font_color_1">
+    <span class="font_size_1 font_color_1 font_family">
         <input type="checkbox">
         I only need accommodation for part of my trip
     </span>
