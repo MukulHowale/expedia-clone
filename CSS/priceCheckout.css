@@ -166,10 +166,10 @@ ol + p{
 
 #right-div{
     color: black;
-    width: 30%;
+    width: 28%;
     background-color: white;
-    max-height: 450px;
-    padding: 0px 15px;
+    max-height: 350px;
+    padding: 0px 20px;
 }
 #place{
     font-size: 14px;

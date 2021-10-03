@@ -413,7 +413,7 @@
         let tdiv = document.getElementById("travellers");
         import tvllr from "../components/traveller.js"
 
-        for(let i=0; i<Number(num); i++){
+        for(let i=1; i<Number(num); i++){
             let temp = document.createElement("div");
             temp.innerHTML = tvllr();
             tdiv.append(temp);
