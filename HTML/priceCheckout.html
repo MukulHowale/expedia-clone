@@ -12,8 +12,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="..\CSS\thankYou.css">
 </head>
 <body>
+    <div class="m">
     <div class="navbar"></div>
     <div class="heading">
         <h2>Secure booking - only takes a few minutes!</h2>
@@ -505,7 +507,7 @@
                 <p>By clicking on the button below, I acknowledge that I have reviewed the Privacy Statement. and
                 Government Travel Advice and have reviewed and accept the above Rules & Restrictions and Terms of
                 Use.</p>
-                <button>Complete booking</button>
+                <button class="thank">Complete booking</button>
                 <h3>Unlock trip savings up to 10% off select hotels when you book this flight</h3>
                 <p>Your discount lasts until your trip starts</p>
                 <i class="fa fa-lock"></i>
@@ -515,13 +517,23 @@
                 </span>
             </div>
         </div>
+        
         <div id="right-div">
 
         </div>
     </div>
     <div class="footer_Copyright"></div>
+    </div>
+    <div class="showThank">
+
+    </div>
+
 
     <script type="module">
+        var myVar;
+
+        var myVar2;
+
         import navbar from "../components/navbarImport.js"
         let nav = document.querySelector(".navbar");
         nav.innerHTML = navbar();
@@ -529,6 +541,27 @@
         import footerCopyright from "../components/footerCopyright.js"
         let foot = document.querySelector(".footer_Copyright");
         foot.innerHTML = footerCopyright();
+        import thankYouComponent from "../components/thankYouComponent.js"
+        let showThank = document.getElementsByClassName("showThank");
+
+        let thank1 = document.getElementsByClassName("thank");
+
+        thank1[0].addEventListener("click", () =>{
+            let m = document.getElementsByClassName("m")[0];
+            m.style.filter = "blur(6px)";
+            showThank[0].innerHTML = thankYouComponent();
+            myVar = setTimeout(showPage, 3000);
+        });
+
+        let showPage = () =>{
+            document.getElementsByClassName("loader")[0].style.display = "none";
+            document.getElementsByClassName("myDiv")[0].style.display = "block";
+            myVar2 = setTimeout(takeToMain, 4000);
+        }
+
+        let takeToMain = () =>{
+            window.location = "../index.html"
+        }
 
     </script>
     <script src="../JavaScripts/priceCheckout.js"></script>

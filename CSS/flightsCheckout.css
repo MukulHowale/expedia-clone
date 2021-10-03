@@ -16,9 +16,14 @@
     margin: auto;
 }
 
+.lastDiv>:nth-child(2) 
+{
+    font-size: 14px;
+    font-weight: 600;
+}
 .left
 {
-    font-size: 12px;
+    font-size: 13px;
     display: flex;
 }
 .left >:first-child
@@ -67,13 +72,26 @@
 
 .right button
 {
-  font-size: 25px;
+  font-size: 20px;
   width: 100%;
   background-color: #3662D8;
   border: none;
+  height: 45px;
   border-radius: 5px;
   color: white;
   margin-top: 5%;
+}
+
+
+.right h1
+{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.right div
+{
+    margin-top: 5%;
 }
 
 .right button:hover
@@ -107,6 +125,16 @@
     margin-top: 2%;
 }
 
+#lastClasss div , #topClass div
+{
+    font-weight: 700 ;
+    font-size: 17px;
+}
+
+#topClass
+{
+    padding-top: 5%;
+}
 /*---------------------------------navbar-----------------*/
 
 .navbar

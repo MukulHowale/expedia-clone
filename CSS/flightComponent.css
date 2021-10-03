@@ -83,6 +83,10 @@
     background-color: white;
 }
 
+#flightBtnDiv > div > div{
+    width: 70%;
+}
+
 .d{
     border: none;
     width: 130px;

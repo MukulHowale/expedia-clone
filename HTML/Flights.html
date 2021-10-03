@@ -7,6 +7,7 @@
     <title>Cheap Flights, Airfares and Air Tickets | Expedia</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en"/>
     <link rel="stylesheet" href="../CSS/Flights.css">
+    <link type="image/x-icon" href="https://www.expedia.co.in/favicon.ico" sizes="16x16 32x32" rel="icon" />
     <link rel="stylesheet" href="..\CSS\flightComponent.css">
 </head>
 <body>
@@ -92,34 +93,34 @@
             <div class="stops">
               <div style="grid-area: 'a';"><p>Stops</p></div>
               <div style="grid-area: 'b';"><p>From</p></div>
-              <div style="grid-area: 'c';"> <input onclick="selectDirectFlights()" type="checkbox">__Direct</div>
+              <div style="grid-area: 'c';"> <input onclick="selectDirectFlights()" type="checkbox">   Direct</div>
               <div style="grid-area: 'd';"><p>Rs4,211</p></div>
-              <div style="grid-area: 'e';"><input onclick="selectOneStopFlights()" type="checkbox">__1 stop</div>
+              <div style="grid-area: 'e';"><input onclick="selectOneStopFlights()" type="checkbox">    1 stop</div>
               <div style="grid-area: 'f';"><p>Rs3,451</p></div>
             </div>
 
             <div class="stops">
               <div style="grid-area: 'a';"><p>Airlines</p></div>
               <div style="grid-area: 'b';"><p>From</p></div>
-              <div style="grid-area: 'c';"> <input onclick="selectIndigo()" type="checkbox">__Indigo</div>
+              <div style="grid-area: 'c';"> <input onclick="selectIndigo()" type="checkbox">  Indigo</div>
               <div style="grid-area: 'd';"><p>Rs3,451</p></div>
-              <div style="grid-area: 'e';"><input onclick="selectVistara()" type="checkbox">__Vistara</div>
+              <div style="grid-area: 'e';"><input onclick="selectVistara()" type="checkbox">  Vistara</div>
               <div style="grid-area: 'f';"><p>Rs4,433</p></div>
             </div>
             <h1>Departure time </h1>  
             <div class="time">
                 <div class="classOfTime1" onclick="changeDepartureColor('#3662D8','classOfTime1');">
-                    <img src="/Images/sunrise.svg" >
+                    <img src="../Images/sunrise.svg" >
                     <p>Morning</p>
                     <p>(05.00-11.59)</p>
                 </div>
                 <div  class="classOfTime2" onclick="changeDepartureColor('#3662D8','classOfTime2');">
-                  <img src="/Images/noon.svg" >
+                  <img src="../Images/noon.svg" >
                     <p>Afternoon</p>
                     <p>(12.00-17.59)</p>
                 </div>
                 <div class="classOfTime3"  onclick="changeDepartureColor('#3662D8','classOfTime3');">
-                  <img src="/Images/evening.png" >
+                  <img src="../Images/evening.png" >
                     <p>Evening</p>
                     <p>(17.00-23.59)</p>
                 </div>
@@ -238,13 +239,26 @@
      sTemp2.children[0].children[2].children[1].children[1].children[0].value = StoredData[0].Date;
 
     //  console.log(StoredData);
-
-   
 </script>
 
 <script>
+
+  let count = 0;
+
+function peopleBooked()
+{
+  let traveller=document.getElementById("totalTraveller")
+  let people=traveller.innerHTML
+  thenum = people.match(/\d+/)[0] 
+  //console.log(thenum)
+  localStorage.setItem("totalTraveller", thenum);
+  let anyName=document.querySelector(".traveller_part");
+    anyName.style.display = "none";
+}
+
  function travellerFunction()
  {
+   count++;
      let anyName=document.querySelector(".traveller_part");
      if(anyName.style.display==="none" ){
         anyName.style.display = "block";
@@ -252,12 +266,21 @@
      else{
         anyName.style.display = "none";
      }
+
+     if(count == 2){
+      let sb = document.getElementsByClassName("s_b");
+      sb[0].children[0].children[1].children[0].style.visibility = "hidden";
+      count = 1;
+     }
 }
 
 function travellerFunctionHide()
 {
     let anyName=document.querySelector(".traveller_part");
     anyName.style.display = "none";
+
+    let sb = document.getElementsByClassName("s_b");
+     sb[0].children[0].children[1].children[0].style.visibility = "visible"
 }
 
 function adultCountMinus()
@@ -350,10 +373,6 @@ function infantsCountPlus()
   }
 }
 
-function peopleBooked()
-{
-  
-}
 
 /*-----------------------------------
 -----------------------------------------
@@ -369,12 +388,14 @@ async function selectDirectFlights()
   let displayDiv=document.querySelector(".display");
   for(let i=0;i<sizeOfData;i++)
   {
+    var index=i;
     if(data[i].stop==="Direct")
     {
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
+     displayClass.addEventListener('click', function(){
+    move(i)});
       let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
@@ -414,8 +435,9 @@ async function selectIndigo()
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
-      let div=document.createElement("div")
+    displayClass.addEventListener('click', function(){
+    move(i)});
+          let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
       let divvv=document.createElement("div")
@@ -454,7 +476,8 @@ async function selectVistara()
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
+    displayClass.addEventListener('click', function(){
+    move(i)});
       let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
@@ -495,7 +518,8 @@ async function selectOneStopFlights()
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
+    displayClass.addEventListener('click', function(){
+    move(i)}); 
       let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
@@ -522,6 +546,7 @@ async function selectOneStopFlights()
 var data;
 async function loadFlights()
 {
+
   let myNode = document.querySelector(".display");
   while (myNode.firstChild) {
     myNode.removeChild(myNode.firstChild);
@@ -561,7 +586,8 @@ async function loadFlights()
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
+    displayClass.addEventListener('click', function(){
+    move(i)});
    
       let div=document.createElement("div")
       div.className="inDisplay";
@@ -617,8 +643,9 @@ async function loadFlightsDes()
     let displayClass=document.createElement("div")
     displayDiv.appendChild(displayClass);
     displayClass.className="classInDisplay";
-     displayClass.addEventListener("click",move);  
-      let div=document.createElement("div")
+    displayClass.addEventListener('click', function(){
+    move(i)});     
+     let div=document.createElement("div")
       div.className="inDisplay";
       let divv=document.createElement("div")
       let divvv=document.createElement("div")
@@ -636,21 +663,64 @@ async function loadFlightsDes()
   }
 }
 
-function changeDepartureColor(color,div)
+/*-----------------------------------
+-----------------------------------------
+-----------------------------------------------
+-----------------------------------------------------*/
+
+/*-----------------------------------
+-----------------------------------------
+-----------------------------------------------
+-----------------------------------------------------*/
+async function changeDepartureColor(color,div)
 {
   if(div=="classOfTime1")
   {
     let a=document.querySelector(".classOfTime1");
     a.style.background=color ;
     a.style.color='white';
-
     let i=document.querySelector(".classOfTime2");
     i.style.background='white' ;
     i.style.color='black' ;
-
     let j=document.querySelector(".classOfTime3");
     j.style.background='white' ;
     j.style.color='black' ;
+
+    let myNode = document.querySelector(".display");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+  let sizeOfData=data.length;
+  let displayDiv=document.querySelector(".display");
+  for(let i=0;i<sizeOfData;i++)
+  {
+
+      let str = data[i].departTime;
+           matches = str.match(/\d+/g);  
+             str   = matches[0] + matches[1] ;
+    if(str>500 && str<1159)
+    {
+    let displayClass=document.createElement("div")
+    displayDiv.appendChild(displayClass);
+    displayClass.className="classInDisplay";
+    displayClass.addEventListener('click', function(){
+    move(i)});           let div=document.createElement("div")
+      div.className="inDisplay";
+      let divv=document.createElement("div")
+      let divvv=document.createElement("div")
+      div.appendChild(divv)
+      div.appendChild(divvv)
+      let div1=document.createElement("div")
+      let div2=document.createElement("div")
+      displayClass.appendChild(div)
+      displayClass.appendChild(div1)
+      displayClass.appendChild(div2)
+      divv.innerHTML=data[i].time;
+      divvv.innerHTML=data[i].airline;
+      div1.innerHTML=data[i].stop;
+      div2.innerHTML="Rs"+data[i].price;
+    }
+  }
 
   }
   else if(div=="classOfTime2")
@@ -658,14 +728,48 @@ function changeDepartureColor(color,div)
     let b=document.querySelector(".classOfTime2");
     b.style.background=color ;
     b.style.color='white';
-
     let c=document.querySelector(".classOfTime1");
     c.style.background='white' ;
     c.style.color='black' ;
-
     let d=document.querySelector(".classOfTime3");
     d.style.background='white' ;
     d.style.color='black' ;
+    let myNode = document.querySelector(".display");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+    let sizeOfData=data.length;
+  let displayDiv=document.querySelector(".display");
+  for(let i=0;i<sizeOfData;i++)
+  {
+
+      let str = data[i].departTime;
+           matches = str.match(/\d+/g);  
+             str   = matches[0] + matches[1] ;
+    if(str>=1200 && str<=1759)
+    {
+    let displayClass=document.createElement("div")
+    displayDiv.appendChild(displayClass);
+    displayClass.className="classInDisplay";
+    displayClass.addEventListener('click', function(){
+    move(i)});           let div=document.createElement("div")
+      div.className="inDisplay";
+      let divv=document.createElement("div")
+      let divvv=document.createElement("div")
+      div.appendChild(divv)
+      div.appendChild(divvv)
+      let div1=document.createElement("div")
+      let div2=document.createElement("div")
+      displayClass.appendChild(div)
+      displayClass.appendChild(div1)
+      displayClass.appendChild(div2)
+      divv.innerHTML=data[i].time;
+      divvv.innerHTML=data[i].airline;
+      div1.innerHTML=data[i].stop;
+      div2.innerHTML="Rs"+data[i].price;
+    }
+  }
+
 
   }
    else if(div=="classOfTime3")
@@ -673,21 +777,60 @@ function changeDepartureColor(color,div)
     let e=document.querySelector(".classOfTime3");
     e.style.background=color ;
     e.style.color='white';
-
     let f=document.querySelector(".classOfTime1");
     f.style.background='white' ;
     f.style.color='black' ;
-
     let g=document.querySelector(".classOfTime2");
     g.style.background='white' ;
     g.style.color='black' ;
+   
+  let myNode = document.querySelector(".display");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+    let sizeOfData=data.length;
+  let displayDiv=document.querySelector(".display");
+  for(let i=0;i<sizeOfData;i++)
+  {
 
+      let str = data[i].departTime;
+           matches = str.match(/\d+/g);  
+             str   = matches[0] + matches[1] ;
+    if(str>=1700 && str<=2359)
+    {
+    let displayClass=document.createElement("div")
+    displayDiv.appendChild(displayClass);
+    displayClass.className="classInDisplay";
+    displayClass.addEventListener('click', function(){
+    move(i)});           let div=document.createElement("div")
+      div.className="inDisplay";
+      let divv=document.createElement("div")
+      let divvv=document.createElement("div")
+      div.appendChild(divv)
+      div.appendChild(divvv)
+      let div1=document.createElement("div")
+      let div2=document.createElement("div")
+      displayClass.appendChild(div)
+      displayClass.appendChild(div1)
+      displayClass.appendChild(div2)
+      divv.innerHTML=data[i].time;
+      divvv.innerHTML=data[i].airline;
+      div1.innerHTML=data[i].stop;
+      div2.innerHTML="Rs"+data[i].price;
+    }
+  }
   }
 }
 
-function move()
+function move(m)
 {
-   window.location="flightsCheckout.html";
+  let time=data[m].time
+  let stop=data[m].stop
+   let price= data[m].price
+   let Airlines= data[m].airline
+   let arr=[time,stop,price,Airlines];
+   console.log(arr)
+   localStorage.setItem("flightDetails",JSON.stringify (arr));
+  window.location="flightsCheckout.html"
 }
 </script>
-<!-- <script src="../index.js"></script> -->

@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href=".\CSS\calender.css">
 </head>
 <body>
     <div class="navbar">
@@ -26,20 +28,19 @@
         <div><p id="category" >More travel ˅</p>
          <div class="category">
              <ul><span class="iconify font_color_1" data-icon="fa-solid:hotel" data-width="15" data-height="15"></span> Stays</ul>
-             <ul><img src="Images/flights.svg" alt="FlightsLogo"> Flights</ul>
-             <ul><img src="Images/cars.svg" alt="carsLogo"> Cars</ul>
+             <ul><img src="./Images/flights.svg" alt="FlightsLogo"> Flights</ul>
+             <ul><img src="./Images/cars.svg" alt="carsLogo"> Cars</ul>
              <ul><span class="iconify font_color_1" data-icon="ic:baseline-luggage" data-width="20" data-height="20"></span> Packages</ul>
              <ul><span class="iconify font_color_1" data-icon="jam:inbox-f" data-width="20" data-height="20"></span> Holiday activities</ul>
          </div>        
         </div>
-        <div><img src="/Images/language.png" alt=""><p>English</p></div>
+        <div><img src="./Images/language.png" alt=""><p>English</p></div>
         <div><p>Support</p></div>
         <div><p>Trips</p></div>
         <div onclick="signin()" id="in"><p>Sign in</p></div>
         <div onclick="signup()" id="up"><p>Sign up</p></div>
         <div onclick="logout()" id="out"><p>logout</p></div>
         <div id="username"></div>
-
     </div>
 
     <div class="search_part">
@@ -76,6 +77,10 @@
 
                 </div>
             </div>
+        </div>
+        <div class="cal">
+            <!--       calender        -->
+            
         </div>
     </div>
 
@@ -243,6 +248,10 @@
 
     import searchCityComponent from "./components/searchCityComponent.js"
 
+    //calender
+    import calComponent from "./components/calenderComponent.js"
+    import cal from "./JavaScripts/calender.js"
+
     import {re, oneWay, multi} from "./JavaScripts/flightTravel.js";
 
     import {clickStay, clickFlights, clickCars, clickPack, clickThings, seaCity} from "./JavaScripts/index.js";
@@ -261,6 +270,30 @@
 
         clickFlights(flightComponent);
 
+        let sb = document.getElementsByClassName("s_b");
+
+        // calender
+        let calCall = sb;
+
+        let departBtn = sb[0].children[1].children[2];
+
+        let ariveBtn = sb[0].children[1].children[3];
+        
+        let dDate = new Date().toString().split(" ");
+
+        departBtn.children[1].children[1].innerText = `${dDate[2]} ${dDate[1]}`;
+
+        let tem;
+
+        if(dDate[2].split("")[0] == "0"){
+            tem = `0${Number(dDate[2]) + 1}`
+        }
+
+        ariveBtn.children[1].children[1].innerText = `${tem} ${dDate[1]}`;
+
+
+        
+
         let re1 = document.getElementById("re");
 
         let oneWay1 = document.getElementById("oneWay");
@@ -273,8 +306,6 @@
 
         oneWay1.addEventListener("click", () =>{
             oneWay();
-
-            let sb = document.getElementsByClassName("s_b");
 
             let btn1 = sb[0].children[2].children[0];
 
@@ -313,7 +344,16 @@
                 check(2);
             })
 
+            // calender
+            departBtn.addEventListener("click", () =>{
+                let cale = document.getElementsByClassName("cal")[0];
+                cale.innerHTML = calComponent();
+
+                cal();
+            })
+
         })
+        
 
         multi1.addEventListener("click", ()=>{
             multi();
@@ -338,6 +378,7 @@
     thing.addEventListener("click", () =>{
         clickThings(thingsComponent);
     })
+
 
     window.onload = () =>{
         clickStay(stayComponent);
