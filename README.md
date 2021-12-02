@@ -26,6 +26,10 @@ Expedia is a booking website which helps to book Flights, Cars, Stays, Holidays 
 Google Fonts - (https://fonts.google.com/)
 Font awesome icons - (https://fontawesome.com/v4.7/)
 
+## Live Demo Link
+
+https://expediaclone.netlify.app
+
 # Screenshots of flow of the website
 
 ## Landing Page
