@@ -10,6 +10,9 @@ let putText;
 
 let showDetails = (e) =>{
     let eve;
+
+    console.log(e);
+
     if(e.path[1].className == "divp1"){
         eve = e.path[1];
     }
@@ -20,7 +23,9 @@ let showDetails = (e) =>{
     leaveText.setAttribute("class","font_size_3")
     leaveText.style.fontSize = "12px";
 
-    putText.innerText = `${eve.children[0].children[0].innerText} ${eve.children[0].children[1].innerText}`
+    // console.log(eve.children[0].children[2].innerText);
+
+    putText.innerText = `${eve.children[0].children[0].innerText}, India`
 
     let sC = document.getElementsByClassName("temp")[0];
 
@@ -32,9 +37,11 @@ let appendCity = (m) =>{
 
     show.innerHTML = null;
 
-    let n = m.Places
+    // let n = m.Places
+
+    // console.log(m);
   
-    n.forEach(({PlaceName,PlaceId,CountryName}) =>{
+    m.forEach(({PlaceName,PlaceId,CountryName}) =>{
         let div = document.createElement('div');
         div.setAttribute("class","cityDiv")
         div.addEventListener('click',showDetails);
@@ -58,12 +65,14 @@ let appendCity = (m) =>{
         let p1 = document.createElement('p');
         p1.innerText = PlaceName;
 
-        let placeid = PlaceId.slice(0, 3);
+        // let placeid = PlaceId.slice(0, 3);
   
-        let p2 = document.createElement('p');
-        p2.innerText = `(${placeid})`;
+        // let p2 = document.createElement('p');
+        // p2.innerText = `(${placeid})`;
 
-        d2.append(p1, p2);
+        // d2.append(p1, p2);
+
+        d2.append(p1);
 
         let p3 = document.createElement('p');
         p3.innerText = CountryName;
@@ -88,6 +97,10 @@ let main = async () =>{
     }
   
     let cityNames = await get(name);
+
+    // let cityNames = get(name);
+
+    // console.log(cityNames);
   
     if(cityNames === undefined){
         return false;
@@ -109,17 +122,29 @@ let wait = (fun,t) =>{
   }
 
 let get = async (city) =>{
-    let getRes = await fetch(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/IN/INR/en-IN/?query=${city}`, {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-            "x-rapidapi-key": "cf35843300msh73cf41c7deccac4p18c0e9jsn631048041f5c"
+    // let getRes = await fetch(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/IN/INR/en-IN/?query=${city}`, {
+    //     "method": "GET",
+    //     "headers": {
+    //         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
+    //         "x-rapidapi-key": "cf35843300msh73cf41c7deccac4p18c0e9jsn631048041f5c"
+    //     }
+    // })
+
+    // let res = await getRes.json()
+
+    let temp = [];
+
+    let res = await fetch("http://localhost:5000/api/data");
+
+    let data = await res.json();
+
+    data.forEach(({name}) =>{
+        if(name.startsWith(city)){
+            temp.push({"PlaceName":name,"CountryName":"India"})
         }
     })
 
-    let res = await getRes.json()
-
-    return res;
+    return temp;
 }
 
 let check = (pl) =>{
@@ -129,6 +154,9 @@ let check = (pl) =>{
         f = sb[0].children[1].children[0];
         leaveText = f.children[1].children[0];
         putText = f.children[1].children[1];
+
+        console.log(leaveText);
+        console.log(putText);
     }
     else{
         f = sb[0].children[1].children[1];
