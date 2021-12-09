@@ -134,7 +134,7 @@ let get = async (city) =>{
 
     let temp = [];
 
-    let res = await fetch("http://localhost:5000/api/data");
+    let res = await fetch("https://expediaclone.netlify.app/api/data");
 
     let data = await res.json();
 
