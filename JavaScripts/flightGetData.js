@@ -6246,8 +6246,11 @@ let get = async (city) =>{
         }
       ]
 
+      let c = city.toLowerCase();
+
     data.forEach(({name}) =>{
-        if(name.startsWith(city)){
+        let t = name.toLowerCase()
+        if(t.startsWith(c)){
             temp.push({"PlaceName":name,"CountryName":"India"})
         }
     })
