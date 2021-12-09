@@ -66,5 +66,5 @@ Here we can enter the details of travellers and payment details and on complete 
 To use the project 
 1. Clone the repository.
 2. And then go inside the folder "expedia-clone" using "cd expedia-clone", Locate the file "index.html" and run it in the browser using live server.
-3. To start the JSON server go inside "server" folder using "cd server", locate the file "server.js" and run it using "node server.js" in terminal.
+3. To start the JSON server go inside "server" folder using "cd server", run the command "npm install" which will download all the required node_modules, then run the command "node server.js" in terminal.
 
